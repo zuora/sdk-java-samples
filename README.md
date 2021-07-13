@@ -2,7 +2,9 @@
 
 Before Zuora releases the SDK jar to a public maven repo, there are two ways for users to add it into your development repo.
 
-#### Option1: Use zuora-sdk-java-{version-string}-with-dependencies.jar with all dependencies packaged
+
+
+#### Option 1: Use zuora-sdk-java-{version-string}-with-dependencies.jar with all dependencies packaged
 ##### 1. Download jar to your development environment from {url}
 
 ##### 2. Install this into your local maven repo.
@@ -22,7 +24,9 @@ mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string
         </dependency>
 ```
 
-#### Option2: Use zuora-sdk-java-{version}.jar will dependencies
+
+
+#### Option 2: Use zuora-sdk-java-{version}.jar will dependencies
 ##### 1. Download jar to your development environment from {url}
 
 ##### 2. Install this into your local maven repo.
