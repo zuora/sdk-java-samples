@@ -26,7 +26,7 @@ mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string
 
 
 
-### Option 2: Use zuora-sdk-java-{version}.jar will dependencies
+### Option 2: Use zuora-sdk-java-{version}.jar without dependencies
 #### 1. Download jar to your development environment from {url}
 
 #### 2. Install this into your local maven repo.
