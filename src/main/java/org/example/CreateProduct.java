@@ -1,15 +1,18 @@
 package org.example;
 
 import com.zuora.sdk.core.APIContext;
-import com.zuora.sdk.core.internal.DotEnv;
 import com.zuora.sdk.models.ZProduct;
 
 public class CreateProduct {
     public static void main(String[] args) {
-        // Configure client_id and client_secret from the .env file you created above.
-        final String CLIENT_ID = DotEnv.get("CLIENT_ID");
-        final String CLIENT_SECRET = DotEnv.get("CLIENT_SECRET");
-        final String ENDPOINT = DotEnv.get("ENDPOINT_BASE");
+
+        if(args.length != 2) {
+            System.err.println("clientId and clientSecret is required");
+            return;
+        }
+        final String CLIENT_ID = args[0];
+        final String CLIENT_SECRET = args[1];
+        final String ENDPOINT = "https://rest.apisandbox.zuora.com";
 
         // Initialize SDK context
         APIContext context = APIContext.builder()

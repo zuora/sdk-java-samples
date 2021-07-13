@@ -1,28 +1,44 @@
 
 
-### 1. Install jar 
-```
-mvn install:install-file -Dfile=/Users/wqu/Downloads/zuora-sdk-java-1.0-SNAPSHOT.jar -DgroupId=com.zuora.sdk -DartifactId=zuora-sdk-java -Dversion=1.0-SNAPSHOT -Dpackaging=jar
-```
+Before Zuora releases the SDK jar to a public maven repo, there are two ways for users to add it into your development repo.
 
-[more..](https://mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
+#### Option1: Use zuora-sdk-java-{version-string}-with-dependencies.jar with all dependencies packaged
+##### 1. Download jar to your development environment from {url}
 
-
-### 2. Configure .env file
-create a .env file in your classpath, e.g. `src/main/java/resources`  
-please use it 
+##### 2. Install this into your local maven repo.
+**Replace the download-folder and version-string with actual values.**  
 ```
-CLIENT_ID=xxx
-CLIENT_SECRET=yyy
-ENDPOINT_BASE=https://rest.apisandbox.zuora.com
+mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string}-with-dependencies.jar -DgroupId=com.zuora.sdk -DartifactId=zuora-sdk-java -Dversion={version-string} -Dpackaging=jar
 ```
-### 3. Add Dependencies into your pom.xml
+[help document](https://mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
 
+##### 3. Add below Dependency into your project pom.xml
+**Replace the version-string with actual value.**  
 ```
        <dependency>
             <groupId>com.zuora.sdk</groupId>
             <artifactId>zuora-sdk-java</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>{version-string}</version>
+        </dependency>
+```
+
+#### Option2: Use zuora-sdk-java-{version}.jar will dependencies
+##### 1. Download jar to your development environment from {url}
+
+##### 2. Install this into your local maven repo.
+**Replace the download-folder and version-string with actual values.**  
+```
+mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string}.jar -DgroupId=com.zuora.sdk -DartifactId=zuora-sdk-java -Dversion={version-string} -Dpackaging=jar
+```
+[help document](https://mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
+
+##### 3. Add Below dependencies into your pom.xml
+**Replace the version-string with actual value.**  
+```
+       <dependency>
+            <groupId>com.zuora.sdk</groupId>
+            <artifactId>zuora-sdk-java</artifactId>
+            <version>{version-string}</version>
         </dependency>
 
         <dependency>
@@ -60,7 +76,6 @@ ENDPOINT_BASE=https://rest.apisandbox.zuora.com
             <artifactId>kotlin-stdlib</artifactId>
             <version>1.4.21</version>
         </dependency>
-
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
@@ -75,5 +90,20 @@ ENDPOINT_BASE=https://rest.apisandbox.zuora.com
             <groupId>net.bytebuddy</groupId>
             <artifactId>byte-buddy</artifactId>
             <version>1.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.apollographql.apollo</groupId>
+            <artifactId>apollo-runtime</artifactId>
+            <version>2.5.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okio</groupId>
+            <artifactId>okio</artifactId>
+            <version>3.0.0-alpha.6</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>4.0.5</version>
         </dependency>
 ```
