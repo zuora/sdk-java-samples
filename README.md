@@ -5,10 +5,10 @@ Before Zuora releases the SDK jar to a public maven repo, there are two ways for
 
 
 ### Option 1: Use zuora-sdk-java-{version-string}-with-dependencies.jar with all dependencies packaged
-#### 1. Download jar to your development environment from {url}
+#### 1. Download jar to your development environment, e.g. https://nexus.zias.io/nexus/content/repositories/releases/com/zuora/sdk/zuora-sdk-java/1.0-beta/zuora-sdk-java-1.0-beta-with-dependencies.jar
 
 #### 2. Install this into your local maven repo.
-**Replace the download-folder and version-string with actual values.**  
+**Replace the download-folder and version-string(e.g. 1.0-beta) with actual values.**  
 ```
 mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string}-with-dependencies.jar -DgroupId=com.zuora.sdk -DartifactId=zuora-sdk-java -Dversion={version-string} -Dpackaging=jar
 ```
@@ -27,7 +27,7 @@ mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string
 
 
 ### Option 2: Use zuora-sdk-java-{version}.jar without dependencies
-#### 1. Download jar to your development environment from {url}
+#### 1. Download jar to your development environment, e.g. https://nexus.zias.io/nexus/content/repositories/releases/com/zuora/sdk/zuora-sdk-java/1.0-beta/zuora-sdk-java-1.0-beta.jar
 
 #### 2. Install this into your local maven repo.
 **Replace the download-folder and version-string with actual values.**  
