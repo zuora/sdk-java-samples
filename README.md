@@ -4,17 +4,17 @@ Before Zuora releases the SDK jar to a public maven repo, there are two ways for
 
 
 
-#### Option 1: Use zuora-sdk-java-{version-string}-with-dependencies.jar with all dependencies packaged
-##### 1. Download jar to your development environment from {url}
+### Option 1: Use zuora-sdk-java-{version-string}-with-dependencies.jar with all dependencies packaged
+#### 1. Download jar to your development environment from {url}
 
-##### 2. Install this into your local maven repo.
+#### 2. Install this into your local maven repo.
 **Replace the download-folder and version-string with actual values.**  
 ```
 mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string}-with-dependencies.jar -DgroupId=com.zuora.sdk -DartifactId=zuora-sdk-java -Dversion={version-string} -Dpackaging=jar
 ```
 [help document](https://mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
 
-##### 3. Add below Dependency into your project pom.xml
+#### 3. Add below Dependency into your project pom.xml
 **Replace the version-string with actual value.**  
 ```
        <dependency>
@@ -26,17 +26,17 @@ mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string
 
 
 
-#### Option 2: Use zuora-sdk-java-{version}.jar will dependencies
-##### 1. Download jar to your development environment from {url}
+### Option 2: Use zuora-sdk-java-{version}.jar will dependencies
+#### 1. Download jar to your development environment from {url}
 
-##### 2. Install this into your local maven repo.
+#### 2. Install this into your local maven repo.
 **Replace the download-folder and version-string with actual values.**  
 ```
 mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string}.jar -DgroupId=com.zuora.sdk -DartifactId=zuora-sdk-java -Dversion={version-string} -Dpackaging=jar
 ```
 [help document](https://mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
 
-##### 3. Add Below dependencies into your pom.xml
+#### 3. Add Below dependencies into your pom.xml
 **Replace the version-string with actual value.**  
 ```
        <dependency>
