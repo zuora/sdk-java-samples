@@ -71,11 +71,6 @@ mvn install:install-file -Dfile={download-folder}/zuora-sdk-java-{version-string
             <version>3.2.1</version>
         </dependency>
         <dependency>
-            <groupId>io.github.cdimascio</groupId>
-            <artifactId>java-dotenv</artifactId>
-            <version>5.2.2</version>
-        </dependency>
-        <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>1.4.21</version>
