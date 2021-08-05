@@ -1,0 +1,103 @@
+# Plan Item
+
+Plan items define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products. Products help you track inventory or provisioning, and plans and plan items help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by plan items. This approach lets you change prices without having to change your provisioning scheme.
+
+For example, you might have a single "enterprise" product that has prices for $100/month, $1000/year, and $50 once.
+
+## Class Name
+
+
+
+## Methods
+
+* [Create plan item](/doc/plan-item.md#create-plan-item)
+* [Get plan item](/doc/plan-item.md#get-plan-item)
+* [Update plan item](/doc/plan-item.md#update-plan-item)
+
+
+
+# Create Plan Item
+
+Creates a new plan item.
+
+```java
+PlanItem planitem = productAPI.createPlanItem(createPlanItemRequest);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `body` | [`CreatePlanItemRequest`](/doc/models/create-plan-item-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+
+## Response Type
+
+[`PlanItem`](/doc/models/plan-item.md)
+
+## Example
+
+```java
+CreatePlanItemRequest createRequest = new CreatePlanItemRequest.Builder()
+    .name("Plan X")
+    .build();
+PlanItem planItem = productAPI.create(createRequest);
+```
+
+
+# Get Plan Item
+
+```java
+PlanItem planItem = productAPI.get(planItemId);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier of the plan item. |
+
+
+## Response Type
+
+[`PlanItem`](/doc/models/plan-item.md)
+
+
+## Example 
+
+```java
+String planItemId = "plan_item_id8";
+
+PlanItem planItem = productAPI.get(planItemId);
+```
+
+# Update Plan Item
+
+```java
+PlanItem planItem = productAPI.update(updateRequest);
+```
+
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `body` | [`PlanItem`](/doc/models/plan-item.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+
+
+## Response Type
+
+[`PlanItem`](/doc/models/plan-item.md)
+
+
+## Example 
+
+```java
+String planItemId = "plan_item_id8";
+PlanItem planItem = productAPI.get(planItemId);
+
+PlanItem updateRequest = planItem.builder()
+    .name("Plan Y")
+    .build();
+    
+PlanItem planItem = productAPI.update(updateRequest);
+```
