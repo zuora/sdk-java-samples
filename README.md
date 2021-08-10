@@ -69,7 +69,7 @@ If you're not sure where to start [this simple example](src/main/java/com/zuora/
 * [Plan Item](doc/plan-item.md)
 
 ### Account
-* [Account](doc/account.md)
+* [Account](doc/account-api.md)
 
 ### Subscription
 * [Subscription](doc/subscription.md)

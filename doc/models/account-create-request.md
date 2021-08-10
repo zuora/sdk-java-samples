@@ -1,21 +1,20 @@
 
-# Account
+# Create Account Request
 
-Accounts represent your customers and are the response returned by [CreateAccount](/doc/account-api.md#create-account), [UpdateAccount](/doc/account-api.md#update-account) and [GetAccount](/doc/account-api.md#get-account).
-
+Describes a request to create an account using
+[CreateAccount](/doc/account-api.md#create-account).
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter |
+| Name | Type | Tags | Description | Getters
 |  --- | --- | --- | --- | --- |
-| `id` | `String` | ReadOnly | Unique identifier for the object. | String getId() |
 | `accountKey` | `String` | Required | The unique customer account key.<br>**Constraints**: *Maximum Length*: `255` | String getAccountKey()
-| `name` | `String` | Required | The name of the customer account.<br>**Constraints**: *Maximum Length*: `255` | String getName()
-| `billCycleDay` | `Integer` | Optional | The day of the month on which your customer will be invoiced. For month end specify 31. | Integer getBillCycleDay()
+| `name` | `String` | Required | The name of the customer account.<br>**Constraints**: *Maximum Length*: `255` | String getName() 
+| `billCycleDay` | `Integer` | Optional | The day of the month on which your customer will be invoiced. For month end specify 31. | Integer getBillCycleDay() 
 | `currency` | [`String`](/doc/models/currency.md) | Optional | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | String getCurrency() |
 | `autoPay` | `Boolean` | Optional | | String getAutoPay() |
-| `billTo` | [`Contact`](/doc/models/contact.md) | Required | A customer's billing address. | Contact getBillTo() |
-| `soldTo` | [`Contact`](/doc/models/contact.md) | Optional | A customer's soldTo address.  | Contact getSoldTo() |
+| `billTo` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Required | A customer's billing address. | Contact getBillTo() |
+| `soldTo` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Optional | A customer's soldTo address. (defaults to billTo if none is set) | Contact getSoldTo() |
 | `parentAccount` | `String` | Optional | The identifier of the customer account that owns this account's invoices. | String getParentAccount() |
 | `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | String getCrmId() |
 | `paymentTerms` | `String` | Optional |  | String getPaymentTerms() |

@@ -1,6 +1,6 @@
 # Tax Certificate
 
-Represents a customer [Account](/doc/account.md) tax certificate.
+Represents a customer [Account](/doc/account-api.md) tax certificate.
 
 ## Structure
 

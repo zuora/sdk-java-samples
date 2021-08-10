@@ -2,10 +2,6 @@
 
 Represents a physical address.
 
-## Structure
-
-`Address`
-
 ## Fields
 
 | Name | Type | Tags | Description | Getter |
@@ -16,16 +12,3 @@ Represents a physical address.
 | `state` | `String` | Optional | The state of the address. | String getState() |
 | `postalCode` | `String` | Optional | The address's postal code. | String getPostalCode() |
 | `country` | [`String`](/doc/models/country.md) | Optional | Indicates the country associated with another entity, such as a business.<br>Values are in [ISO 3166-1-alpha-2 format](http://www.iso.org/iso/home/standards/country_codes.htm). | String getCountry() |
-
-## Example (as JSON)
-
-```json
-{
-  "line_1": "680 Folsom Street, Floor 3",
-  "line_2": "",
-  "city": "San Francisco",
-  "postalCode": "94107",
-  "state": "CA",
-  "country": "US"
-}
-```

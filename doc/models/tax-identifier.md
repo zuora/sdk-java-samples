@@ -1,6 +1,6 @@
 # Tax Identifier
 
-Represents a customer [Account](/doc/account.md) tax identifier.
+Represents a customer [Account](/doc/account-api.md) tax identifier.
 
 ## Structure
 

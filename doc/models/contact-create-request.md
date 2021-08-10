@@ -2,12 +2,10 @@
 
 Contacts represent [Account](/doc/models/account.md) contacts as well as billTo and shipTo addresses.
 
-
 ## Fields
 
 | Name | Type | Tags | Description | Getter |
 |  --- | --- | --- | --- | --- |
-| `id` | `String` | Required | The contact's id. | String getId() |
 | `firstName` | `String` | Required | The contact's first name. | String getFirstName() |
 | `lastName` | `String` | Required | The contact's last name. | String getLastName() |
 | `phone` | `String` | Optional | The contact's phone number. | String getPhone() |

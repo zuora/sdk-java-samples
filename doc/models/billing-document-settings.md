@@ -1,6 +1,6 @@
 # Billing Document Settings
 
-Represents the billing document configuration settings for a customer [Account](/doc/account.md).
+Represents the billing document configuration settings for a customer [Account](/doc/account-api.md).
 
 ## Structure
 
