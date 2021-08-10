@@ -12,7 +12,7 @@ Payment methods represent your customers' payment instruments and are the respon
 | Name | Type | Tags | Description | Getter |
 |  --- | --- | --- | --- | --- |
 | `id` | `String` | ReadOnly | Unique identifier for the object. | String getId() |
-| `billTo` | [`Contact`](/doc/models/contact.md) | Optional | A customer's billing address. | Contact getBillTo() |
+| `type` | [`Enum`](/doc/models/payment-method-type.md) | Required | The type of the PaymentMethod. | String getType() |
 | `soldTo` | [`Contact`](/doc/models/contact.md) | Optional | A customer's soldTo address. | Contact getSoldTo() |
 | `name` | `String` | Optional | The customer’s full name or business name. | String getName() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
