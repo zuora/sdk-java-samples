@@ -17,7 +17,7 @@
 TODO - Prerequisites here
 
 ## Base URLs
-Different Zuora environments have different base URLs. You can use environment-based variables to manage base URLs and the different credentials you have for these environments.
+Different Zuora environments have different base URLs. You can use environment variables to manage base URLs and the different credentials you have for these environments.
 
 When using the SDK you should select the endpoint base URL you wish to use.
 
