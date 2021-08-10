@@ -40,31 +40,31 @@ If you're not sure where to start, [this minimal end to end example](src/main/ja
 
 <hr />
 
-## API Reference
-[Account](doc/account.md)
+## SDK Technical Reference
 
-[Product](doc/product.md)
+### Product
+* [Product](doc/product.md)
+* [Plan](doc/plan.md)
+* [Plan Item](doc/plan-item.md)
 
-[Plan](doc/plan.md)
+### Account
+* [Account](doc/account.md)
 
-[Plan Item](doc/plan-item.md)
+### Subscription
+* [Subscription](doc/subscription.md)
 
-[Subscription](doc/subscription.md)
+### Billing Document
+* [Billing Document](doc/billing-document.md)
 
-[Billing Document](doc/billing-document.md)
+### Payment
+* [Payment Method](doc/payment-method.md)
+* [Payment](doc/payment.md)
+* [Refund](doc/refund.md)
 
 [Exception](doc/exception.md)
 
-[Payment](doc/payment.md)
 
-[Payment Method](doc/payment-method.md)
 
-[Feature](doc/feature.md)
 
-[Refund](doc/refund.md)
-
-[Taxation Item](doc/taxation-item.md)
-
-[Transaction](doc/transaction.md)
 
 
