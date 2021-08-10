@@ -20,9 +20,9 @@ TODO - instructions on how to do this & make sure their tenant is configured cor
 
 ### Quick Start
 ```
-String CLIENT_ID = System.getenv("CLIENT_ID");
-String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
-String ENDPOINT = System.getenv("ENDPOINT_BASE");
+String CLIENT_ID = System.getenv("{CLIENT_ID}");
+String CLIENT_SECRET = System.getenv("{CLIENT_SECRET}");
+String ENDPOINT = System.getenv("{ENDPOINT_BASE}");
 ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 <hr />
