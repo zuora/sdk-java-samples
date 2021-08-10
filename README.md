@@ -1,71 +1,83 @@
 
 # Getting Started
 
-## Install the SDK
-#### Add the following to your project pom.xml
-** Be sure and set or replace `version-string` as the sdk-version you'd like to use!**  
+## Installation
+#### Add the following to the dependencies your project pom.xml
+  
 ```
 <dependency>
     <groupId>com.zuora.sdk</groupId>
     <artifactId>zuora-sdk-java</artifactId>
-    <version>{version-string}</version>
+    <version>{version}</version>
 </dependency>
 ```
 
+## Prerequisites
+
+TODO - Prerequisites here
+
+## Base URLs
+Different Zuora environments have different base URLs. You can use environment variables to manage base URLs and the different credentials you have for these environments.
+
+When using the SDK you should select the endpoint base URL you wish to use.
+
+| Tenant | Endpoint Base |
+| --- | --- |
+| US Production | https://rest.zuora.com |
+| US API Sandbox | https://rest.apisandbox.zuora.com |
+| US Central Sandbox | https://rest.test.zuora.com |
+| US Performance Test | https://rest.pt1.zuora.com |
+| US Cloud Production | https://rest.na.zuora.com |
+| US Cloud API Sandbox | https://rest.sandbox.na.zuora.com |
+| EU Production | https://rest.eu.zuora.com |
+| EU Sandbox | https://rest.sandbox.eu.zuora.com |
+| EU Central Sandbox | https://rest.test.eu.zuora.com |
+
+## Authentication
+Create a dedicated user for making API calls. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details. This step must be performed by a Zuora administrator from your organization with a company email address.
 
 
-## Create an API key, secret
-TODO - instructions on how to do this & make sure their tenant is configured correctly so all SDK features work. 
 
-
-### Quick Start
+### 
 ```
-String CLIENT_ID = System.getenv("CLIENT_ID");
-String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
-String ENDPOINT = System.getenv("ENDPOINT_BASE");
+String CLIENT_ID = System.getenv("{CLIENT_ID}");
+String CLIENT_SECRET = System.getenv("{CLIENT_SECRET}");
+String ENDPOINT = System.getenv("{ENDPOINT_BASE}");
 ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
-
-// fetch an account
-Account account = zuoraClient.accounts().get("8ad088957aeb73bf017aeb9873627997");
 ```
+<hr />
 
-## See SDK Guides for specific example usage
-
+## Starter Examples
 If you're not sure where to start, [this minimal end to end example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)  shows how to create an `Account` and then make it subscribe to a `Product`'s `Plan`, demonstrating the minimal components required to implement a subscription in Zuora. 
+
+[Simple Example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
+
+[Plan Item examples](src/main/java/com/zuora/sdk/core/example/PlanItemExamples.java)
 <hr />
 
-## SDK Guides
-[Minimal end to end example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
+## SDK Guide
+[SDK Guide](https://www.zuora.com/developer/sdks/)
 
-<!-- [Link to SDK Guides](https://www.zuora.com/sdk-guides) -->
 
 <hr />
 
-## API Reference
-[Account](doc/account.md)
+## SDK Technical Reference
 
-[Product](doc/product.md)
+### Product
+* [Product](doc/product.md)
+* [Plan](doc/plan.md)
+* [Plan Item](doc/plan-item.md)
 
-[Plan](doc/plan.md)
+### Account
+* [Account](doc/account.md)
 
-[Plan Item](doc/plan-item.md)
+### Subscription
+* [Subscription](doc/subscription.md)
 
-[Subscription](doc/subscription.md)
+### Billing Document
+* [Billing Document](doc/billing-document.md)
 
-[Billing Document](doc/billing-document.md)
-
-[Exception](doc/exception.md)
-
-[Payment](doc/payment.md)
-
-[Payment Method](doc/payment-method.md)
-
-[Feature](doc/feature.md)
-
-[Refund](doc/refund.md)
-
-[Taxation Item](doc/taxation-item.md)
-
-[Transaction](doc/transaction.md)
-
-
+### Payment
+* [Payment Method](doc/payment-method.md)
+* [Payment](doc/payment.md)
+* [Refund](doc/refund.md)
