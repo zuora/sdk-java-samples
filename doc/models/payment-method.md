@@ -1,7 +1,7 @@
 
 # PaymentMethod
 
-Payment methods represent your customers' payment instruments and is the response returned by [GetPaymentMethod](/doc/payment-method.md#get-payment-method).
+Payment methods represent your customers' payment instruments and are the response returned by [GetPaymentMethod](/doc/payment-method.md#get-payment-method).
 
 ## Structure
 
