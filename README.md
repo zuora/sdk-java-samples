@@ -53,7 +53,7 @@ ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 <hr />
 
 ## SDK Guide
-[SDK Guide](https://www.zuora.com/developer/sdks/)
+[Minimal end to end example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
 
 
 <hr />
