@@ -4,104 +4,34 @@ PaymentMethod objects represent your customer's payment instruments and must be 
 
 ## Class Name
 
-
+`PaymentMethodAPI`
 
 ## Methods
 
-* [Create payment method](/doc/payment-method.md#create-payment-method)
 * [Get payment method](/doc/payment-method.md#get-payment-method)
-* [Update payment method](/doc/payment-method.md#update-payment-method)
-* [List payment methods](/doc/payment-method.md#list-payment-methods)
-* [Delete payment method](/doc/payment-method.md#delete-payment-method)
-
-
-
-# Create Payment Method
-
-
-
-## Parameters
-
-
-
-## Response Type
-
-
-
-## Example 
 
 
 
 # Get Payment Method
 
-
-
-## Parameters
-
-
-
-## Response Type
-
-
-
-## Example 
-
-
-
-
-
-# Update Payment Method
-
-
+```java
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_ID});
+```
 
 ## Parameters
 
-
-
-## Response Type
-
-
-
-## Example 
-
-
-
-
-# List Payment Methods
-
-
-
-## Parameters
-
-
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier for the payment method. |
 
 ## Response Type
 
-
-
-## Example 
-
-
-
-# Delete Payment Method
-
-
-
-## Parameters
-
-
-
-## Response Type
-
-
+[`PaymentMethod`](/doc/models/payment-method.md)
 
 ## Example 
 
+```java
+String PAYMENT_METHOD_ID = "2c92c0f872c68b450172dad9c61e436b";
 
-
-
-
-
-
-
-
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().get(PAYMENT_METHOD_ID);
+```
