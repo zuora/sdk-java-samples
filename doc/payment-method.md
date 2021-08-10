@@ -15,7 +15,7 @@ PaymentMethod objects represent your customer's payment instruments and must be 
 # Get Payment Method
 
 ```java
-PaymentMethod paymentMethod = zuoraClient.accounts().get({ACCOUNT_ID});
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_ID});
 ```
 
 ## Parameters
@@ -33,5 +33,5 @@ PaymentMethod paymentMethod = zuoraClient.accounts().get({ACCOUNT_ID});
 ```java
 String PAYMENT_METHOD_ID = "2c92c0f872c68b450172dad9c61e436b";
 
-PaymentMethod paymentMethod = zuoraClient.accounts().get(PAYMENT_METHOD_ID);
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().get(PAYMENT_METHOD_ID);
 ```
