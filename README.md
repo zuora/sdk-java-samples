@@ -34,10 +34,9 @@ Account account = zuoraClient.accounts().get("8ad088957aeb73bf017aeb9873627997")
 If you're not sure where to start, [this minimal end to end example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)  shows how to create an `Account` and then make it subscribe to a `Product`'s `Plan`, demonstrating the minimal components required to implement a subscription in Zuora. 
 <hr />
 
-## SDK Guides
-[Minimal end to end example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
+## SDK Guide
+[SDK Guide](https://www.zuora.com/developer/sdks/)
 
-<!-- [Link to SDK Guides](https://www.zuora.com/sdk-guides) -->
 
 <hr />
 
