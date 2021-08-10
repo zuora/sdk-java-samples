@@ -40,9 +40,9 @@ Create a dedicated user for making API calls. See [Create an API User](https://k
 
 ### 
 ```
-String CLIENT_ID = System.getenv("{CLIENT_ID}");
-String CLIENT_SECRET = System.getenv("{CLIENT_SECRET}");
-String ENDPOINT = System.getenv("{ENDPOINT_BASE}");
+String CLIENT_ID = "{CLIENT_ID}";
+String CLIENT_SECRET = "{CLIENT_SECRET}";
+String ENDPOINT = "{ENDPOINT_BASE}";
 ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 <hr />
