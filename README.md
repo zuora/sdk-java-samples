@@ -48,11 +48,11 @@ ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 <hr />
 
 ## Starter Examples
-If you're not sure where to start, [this simple example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service. 
+If you're not sure where to start [this simple example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service. 
 
 [Simple Example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
 
-[Plan Item examples](src/main/java/com/zuora/sdk/core/example/PlanItemExamples.java)
+[Pricing Examples](src/main/java/com/zuora/sdk/core/example/PlanItemExamples.java)
 <hr />
 
 ## SDK Guide
