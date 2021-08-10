@@ -4,7 +4,7 @@ PaymentMethod objects represent your customer's payment instruments and must be 
 
 ## Class Name
 
-
+'PaymentMethodAPI'
 
 ## Methods
 
