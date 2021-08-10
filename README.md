@@ -60,11 +60,3 @@ If you're not sure where to start, [this minimal end to end example](src/main/ja
 * [Payment Method](doc/payment-method.md)
 * [Payment](doc/payment.md)
 * [Refund](doc/refund.md)
-
-[Exception](doc/exception.md)
-
-
-
-
-
-
