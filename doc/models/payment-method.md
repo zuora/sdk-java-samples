@@ -27,12 +27,21 @@ Payment methods represent your customers' payment instruments and is the respons
 | `accountNumber` | `String` | Optional | The number of the customer's bank account. Used with Direct Debit payment methods. | String getaccountNumber() |
 | `bankCode` | `String` | Optional | The sort code or number that identifies the bank. | String getbankCode() |
 | `bankName` | `String` | Optional | The name of the bank where the ACH payment account is held. | String getbankName() |
+| `branchCode` | `String` | Optional | The branch code of the bank. Used with Direct Debit payment methods. | String getbranchCode() |
+| `businessIdentificationCode` | `String` | Optional | The BIC code. Used with SEPA_DEBIT payment methods. | String getbusinessIdentificationCode() |
+| `identityNumber` | `String` | Optional | The identity number used for bank transfer. | String getIdentityNumber() |
+| `accountName` | `String` | Optional | The name on the Direct Debit bank account or ACH. Use this field for Direct Debit or ACH payment methods. | String getAccountName() |
+| `accountType` | [`BankAccountType`](/doc/models/bank-account-type.md) | Optional | The type of bank account associated with an ACH payment. | String getAccountType() |
+| `BAID` | `String` | Optional | ID of a PayPal billing agreement. For example, I-1TJ3GAGG82Y9. | String getBAID() |
+| `email` | `String` | Optional | Email address associated with the payment method. This is required with a PayPal Express Checkout or a PayPal Adaptive payment method. | String getEmail() |
+| `preapprovalKey` | `String` | Optional | The PayPal preapproval key. | String getPreapprovalKey() |
+| `mandateId` | `String` | Optional | The mandate id. | String getMandateId() |
+| `mandateReceivedStatus` | `String` | Optional | Indicates whether the mandate has been received from the gateway. | String getMandateReceivedStatus() |
 
 
 ## Example (as JSON)
 
 ```json
 {
-    "id": "A-000001"
 }
 ```
