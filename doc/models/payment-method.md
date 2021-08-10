@@ -36,8 +36,12 @@ Payment methods represent your customers' payment instruments and is the respons
 | `email` | `String` | Optional | Email address associated with the payment method. This is required with a PayPal Express Checkout or a PayPal Adaptive payment method. | String getEmail() |
 | `preapprovalKey` | `String` | Optional | The PayPal preapproval key. | String getPreapprovalKey() |
 | `mandateId` | `String` | Optional | The mandate id. | String getMandateId() |
-| `mandateReceivedStatus` | `String` | Optional | Indicates whether the mandate has been received from the gateway. `true` or `false`. | String getMandateReceivedStatus() |
-| `existingMandateStatus` | `String` | Optional | Indicates whether the mandate is an existing mandate. `true` or `false`. | String getExistingMandateStatus() |
+| `mandateReceivedStatus` | `String` | Optional | Indicates whether the mandate has been received from the gateway. Possible values `true` or `false`. | String getMandateReceivedStatus() |
+| `existingMandateStatus` | `String` | Optional | Indicates whether the mandate is an existing mandate. Possible values `true` or `false`. | String getExistingMandateStatus() |
+| `mandateCreationDate` | `String` | Optional | The date on which the mandate was updated. | String getMandateCreationDate() |
+| `mandateStatus` | `String` | Optional | The gateway status of the mandate. | String getMandateStatus() |
+| `mandateReason` | `String` | Optional | The gateway mandate reason. | String getMandateReason() |
+| `state` | [`Enum`](/doc/models/payment-method-state.md)  | Optional | . | PaymentMethodState getState() |
 
 
 ## Example (as JSON)
