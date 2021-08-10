@@ -22,6 +22,7 @@ The base URLs for different Zuora environments are different. You can use enviro
 When using the SDK you should select the endpoint base URL you wish to use.
 
 | Tenant | Endpoint Base |
+| --- | --- |
 | US Production | https://rest.zuora.com |
 | US API Sandbox | https://rest.apisandbox.zuora.com |
 |||
