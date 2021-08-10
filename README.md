@@ -47,13 +47,13 @@ ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 <hr />
 
-## Starter Project
-[Starter Project]()
+## Starter Examples
+[Simple Example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
 
 <hr />
 
 ## SDK Guide
-[Minimal end to end example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
+[SDK Guide](https://www.zuora.com/developer/sdks/)
 
 
 <hr />
