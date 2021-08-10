@@ -1,24 +1,42 @@
 
 # Getting Started
 
-## Install the SDK
-#### Add the following to your project pom.xml
-** Be sure and set or replace `version-string` as the sdk-version you'd like to use!**  
+## Installation
+#### Add the following to the dependencies your project pom.xml
+  
 ```
 <dependency>
     <groupId>com.zuora.sdk</groupId>
     <artifactId>zuora-sdk-java</artifactId>
-    <version>{version-string}</version>
+    <version>{version}</version>
 </dependency>
 ```
 
+## Prerequisites
+
+TODO - Prerequisites here
+
+## Base URLs
+The base URLs for different Zuora environments are different. You can use environment-based variables to manage base URLs and the different credentials you have for different Zuora environments.
+
+When using the SDK you should select the endpoint base URL you wish to use.
+
+| Tenant | Endpoint Base |
+| US Production | https://rest.zuora.com |
+| US API Sandbox | https://rest.apisandbox.zuora.com |
+|||
+|||
+|||
+|||
+|||
+|||
+
+## Authentication
+Create a dedicated user for making API calls. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details. This step must be performed by a Zuora administrator from your organization with a company email address.
 
 
-## Create an API key, secret
-TODO - instructions on how to do this & make sure their tenant is configured correctly so all SDK features work. 
 
-
-### Quick Start
+### 
 ```
 String CLIENT_ID = System.getenv("{CLIENT_ID}");
 String CLIENT_SECRET = System.getenv("{CLIENT_SECRET}");
