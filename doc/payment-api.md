@@ -12,9 +12,9 @@ PaymentAPI paymentAPI = zuora.payments();
 
 ## Methods
 
-* [Create payment](/doc/payment.md#create-payment)
-* [Get payment](/doc/payment.md#get-payment)
-* [Refund payment](/doc/payment.md#update-payment)
+* [Create payment](/doc/payment-api.md#create-payment)
+* [Get payment](/doc/payment-api.md#get-payment)
+* [Refund payment](/doc/payment-api.md#refund-payment)
 
 # Create Payment
 

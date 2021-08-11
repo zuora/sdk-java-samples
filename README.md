@@ -3,7 +3,7 @@
 
 ## Installation
 #### Add the following to the dependencies your project pom.xml
-  
+
 ```
 <dependency>
     <groupId>com.zuora.sdk</groupId>
@@ -38,7 +38,7 @@ Create a dedicated user for making API calls. See [Create an API User](https://k
 
 
 
-### 
+###
 ```
 String CLIENT_ID = "{CLIENT_ID}";
 String CLIENT_SECRET = "{CLIENT_SECRET}";
@@ -48,7 +48,7 @@ ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 <hr />
 
 ## Starter Examples
-If you're not sure where to start [this simple example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service. 
+If you're not sure where to start [this simple example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service.
 
 [Simple Example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
 
@@ -79,5 +79,5 @@ If you're not sure where to start [this simple example](src/main/java/com/zuora/
 
 ### Payment
 * [Payment Method](doc/payment-method.md)
-* [Payment](doc/payment.md)
+* [Payment](doc/payment-api.md)
 * [Refund](doc/refund.md)
