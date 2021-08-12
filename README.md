@@ -36,7 +36,7 @@ When using the SDK you should select the endpoint base URL you wish to use.
 ## Authentication
 Create a dedicated user for making API calls. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details. This step must be performed by a Zuora administrator from your organization with a company email address.
 
-
+Create an OAuth client for the API User. See [Create an OAuth Client](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users#Create_an_OAuth_Client_for_a_User)
 
 ###
 ```
