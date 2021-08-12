@@ -14,6 +14,7 @@ You will also find comprehensive SDK Technical Reference documentation [here](/R
     <version>{version}</version>
 </dependency>
 ```
+[View on Maven Central](https://search.maven.org/artifact/com.zuora.sdk/zuora-sdk-java)
 
 ## Base URLs
 Different Zuora environments have different base URLs. You can use environment variables to manage base URLs and the different credentials you have for these environments.
