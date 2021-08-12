@@ -26,7 +26,7 @@ You must provide at least these values in your request to this endpoint:
 - `name`
 
 ```java
-Plan plan = zuoraClient.products().createPlan(createPlanRequest);
+Plan plan = productAPI.createPlan(createPlanRequest);
 ```
 
 ## Parameters
@@ -45,13 +45,13 @@ Plan plan = zuoraClient.products().createPlan(createPlanRequest);
 PlanCreateRequest planCreateRequest = PlanCreateRequest.builder()
         .name("Monthly Plan")
         .build();
-Plan plan = zuoraClient.products().createPlan(createRequest);
+Plan plan = productAPI.createPlan(createRequest);
 ```
 
 # Get Plan
 
 ```java
-Plan plan = zuoraClient.products().getPlan(planId);
+Plan plan = productAPI.getPlan(planId);
 ```
 
 ## Parameters
@@ -71,14 +71,14 @@ Plan plan = zuoraClient.products().getPlan(planId);
 ```java
 String planId = "plan_id8";
 
-Plan plan = zuoraClient.products().getPlan(planId);
+Plan plan = productAPI.getPlan(planId);
 ```
 
 
 # Update Plan
 
 ```java
-Plan plan = zuoraClient.products().updatePlan(updateRequest);
+Plan plan = productAPI.updatePlan(updateRequest);
 ```
 
 
@@ -98,13 +98,13 @@ Plan plan = zuoraClient.products().updatePlan(updateRequest);
 
 ```java
 String planId = "plan_id8";
-Plan plan = zuoraClient.products().get(planId);
+Plan plan = productAPI.get(planId);
 
 Plan updateRequest = plan.toBuilder()
     .name("Plan Y")
     .build();
     
-Plan plan = zuoraClient.products().update(updateRequest);
+Plan plan = productAPI.update(updateRequest);
 ```
 
 # Add Plan Item
@@ -130,13 +130,13 @@ plan.addPlanItem(PlanItem planItem)
 
 ```java
 String planId = "plan_id8";
-Plan plan = zuoraClient.products().get(planId);
+Plan plan = productAPI.get(planId);
 
 Plan updateRequest = plan.toBuilder()
     .name("Plan Y")
     .build();
     
-Plan plan = zuoraClient.products().update(updateRequest);
+Plan plan = productAPI.update(updateRequest);
 ```
 
 

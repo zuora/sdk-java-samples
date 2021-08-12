@@ -28,36 +28,3 @@ A PlanItem defines the unit cost, currency, and (optional) billing cycle for bot
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the plan item. | String getUpdatedBy() |
 | `updateTime`| `ZonedDateTime` | ReadOnly | The date and time when the plan item was last updated. | ZonedDateTime getUpdateTime() |
 
-## Example (as JSON)
-
-```json
-{
-  "accountingCode": "Professional Services Revenue",
-  "startEvent": "CONTRACT_EFFECTIVE",
-  "chargeModel": {
-    "type": "FLAT_FEE",
-    "amounts": {
-      "USD": 50.0,
-      "EUR": 0.0
-    },
-    "priceBaseInterval": "PER_BILLING_PERIOD"
-  },
-  "name": "Recurring",
-  "planItemType": "RECURRING",
-  "alignment": "SUBSCRIPTION_PLAN_ITEM",
-  "interval": "MONTH",
-  "timing": "IN_ADVANCE",
-  "intervalCount": 1,
-  "on": "ACCOUNT_CYCLE_DATE",
-  "description": "",
-  "taxCode": "",
-  "taxInclusive": false,
-  "createdBy": "2c92c0f971c65e010171c79a08423ccc",
-  "createTime": "2021-07-10T13:23:49.154Z",
-  "updateTime": "2021-07-12T15:33:52.183Z",
-  "updatedBy": "2c92c0f971c65e010171c79a08423ccc",
-  "customFields": {},
-  "id": "8ad08c0f7b3a561f017b3aff69606a4a",
-  "plan": "8ad084a67b3a5621017b3afe9d77032a"
-}
-```

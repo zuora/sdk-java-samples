@@ -107,5 +107,5 @@ PlanItem updateRequest = planItem.toBuilder()
     .name("Plan Y")
     .build();
     
-PlanItem planItem = zuoraClient.products().updatePlanItem(updateRequest);
+PlanItem planItem = productAPI.updatePlanItem(updateRequest);
 ```

@@ -27,7 +27,7 @@ You must provide at least these values in your request to this endpoint:
 
 
 ```java
-Product product = zuoraClient.products().create(createProductRequest);
+Product product = productAPI.create(createProductRequest);
 ```
 
 ## Parameters
@@ -46,13 +46,13 @@ Product product = zuoraClient.products().create(createProductRequest);
 ProductCreateRequest productCreateRequest = ProductCreateRequest.builder()
         .name("Gold")
         .build();
-Product product = zuoraClient.products().create(createRequest);
+Product product = productAPI.create(createRequest);
 ```
 
 # Get Product
 
 ```java
-Product product = zuoraClient.products().get(productId);
+Product product = productAPI.get(productId);
 ```
 
 ## Parameters
@@ -72,14 +72,14 @@ Product product = zuoraClient.products().get(productId);
 ```java
 String productId = "product_id8";
 
-Product product = zuoraClient.products().get(productId);
+Product product = productAPI.get(productId);
 ```
 
 
 # Update Product
 
 ```java
-Product product = zuoraClient.products().update(product);
+Product product = productAPI.update(product);
 ```
 
 
@@ -112,7 +112,7 @@ Product product = productAPI.update(updateRequest);
 # Delete Product
 
 ```java
-zuoraClient.products().delete(product);
+productAPI.delete(product);
 ```
 
 
@@ -131,7 +131,7 @@ None
 
 ```java
 String productId = "product_id8";
-Product product = zuoraClient.products().get(productId);
+Product product = productAPI.get(productId);
    
 productAPI.delete(product);
 ```

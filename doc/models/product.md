@@ -26,31 +26,3 @@ Product represents your products and are the response returned by [CreateProduct
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
 | `plans` | [`List<Plan>`](/doc/models/plan.md) | Optional | The array of plans associated with this product. | List<Plan> getPlans() |
 
-## Example (as JSON)
-
-```json
-{
-    "id": "P-000001",
-    "name": "Product X",
-    "description": "a product X",
-    "startDate": "2021-07-10T13:23:49.154Z",
-    "endDate": "2029-01-03T13:23:49.154Z",
-    "sku": "SKU-000345",
-    "active": true,
-    "type": "Base Product",
-    "customFields": {
-      "region__c": "EMEA"
-    },
-  "createTime": "2021-07-10T13:23:49.154Z",
-  "updateTime": "2021-07-12T15:33:52.183Z",
-  "createdBy": "b64adedc-faba-11eb-9a03-0242ac130003",
-  "updatedBy": "c4a40c56-faba-11eb-9a03-0242ac130003",
-    "plans": [{
-        "id": "01F9E8XVBT3170FF8E2ATH7XS0",
-        "name": "Plan X",
-        "description": "a plan",
-        "startDate": "2021-07-10T13:23:49.154Z",
-        "endDate" : 
-    }]
-}
-```

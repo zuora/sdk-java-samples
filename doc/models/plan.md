@@ -26,31 +26,6 @@ A Plan is a container for a collection of [PlanItems](/doc.models/plan-item.md) 
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
 | `items` | [`List<PlanItem>`](/doc/models/plan-item.md) | Optional | The individual plan items that make up the plan. | List<PlanItem> getItems() |
 
-## Example (as JSON)
-
-```json
-{
-  "id": "PLAN-000001",
-  "name": "Plan Y",
-  "product" : "P-000001",
-  "active": true,
-  "description": "a plan Y",
-  "activeCurrencies": "GBP,USD",
-  "customFields": {
-    "region__c": "EMEA"
-  },
-  "createTime": "2021-07-10T13:23:49.154Z",
-  "updateTime": "2021-07-12T15:33:52.183Z",
-  "createdBy": "b64adedc-faba-11eb-9a03-0242ac130003",
-  "updatedBy": "c4a40c56-faba-11eb-9a03-0242ac130003",
-  "items": [{
-    "id": "01F9E8XVBT3170FF8E2ATH7XS0",
-    "x": "",
-    "startDate": "2021-01-01",
-    "endDate": "2021-12-31"
-  }]
-}
-```
 
 ## Methods
 
