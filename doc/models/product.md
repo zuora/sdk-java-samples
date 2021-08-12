@@ -17,19 +17,12 @@ Product represents your products and are the response returned by [CreateProduct
 | `startDate` | `LocalDate` | Optional | Date on which the product becomes active. | String getStartDate() |
 | `endDate` | `LocalDate` | Optional | Date on which the product is no longer active. | String getEndDate() |
 | `sku` | `String` | Optional | The sku identifier of the product. | String getSku() |
+| `active` | `Boolean` | Optional | A boolean to indicate if the current date is within the start and end date. | Boolean isActive() |
+| `type` | `String` | Optional | The type of product, defaulting to `Base Product` | String getType() |
+| `customFields` | `Map<String, Object>` | Optional | A map of custom fields set on the product | Map<String, Object> getCustomFields() |
+| `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was created | ZonedDateTime getCreateTime() |
+| `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | ZonedDateTime getUpdateTime() |
+| `createdBy` | `String` | ReadOnly | The Id of the user that created the product | String getCreatedBy() |
+| `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
 | `plans` | [`List<Plan>`](/doc/models/plan.md) | Optional | The array of plans associated with this product. | List<Plan> getPlans() |
 
-## Example (as JSON)
-
-```json
-{
-    "id": "P-000001",
-    "name": "Product X",
-    "startDate": "2021-07-10T13:23:49.154Z",
-    "sku" : "SKU-000345",
-    "active" : true,
-    "plans": [{
-        "id": "01F9E8XVBT3170FF8E2ATH7XS0"
-    }]
-}
-```
