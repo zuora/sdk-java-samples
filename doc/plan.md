@@ -13,6 +13,7 @@ For example, you might have a single "gold" product that has prices for $100/mon
 * [Create plan](/doc/plan.md#create-plan)
 * [Get plan](/doc/plan.md#get-plan)
 * [Update plan](/doc/plan.md#update-plan)
+* Add Plan Item
 
 
 
@@ -23,8 +24,6 @@ Creates a new plan.
 You must provide at least these values in your request to this endpoint:
 
 - `name`
-- `startDate`
-- `sku`
 
 ```java
 Plan plan = productAPI.createPlan(createPlanRequest);
@@ -34,7 +33,7 @@ Plan plan = productAPI.createPlan(createPlanRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`CreatePlanRequest`](/doc/models/create-plan-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `createPlanRequest` | [`CreatePlanRequest`](/doc/models/create-plan-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
@@ -43,16 +42,16 @@ Plan plan = productAPI.createPlan(createPlanRequest);
 ## Example
 
 ```java
-CreatePlanRequest createRequest = new CreatePlanRequest.Builder()
-    .name("Plan X")
-    .build();
-Plan plan = productAPI.create(createRequest);
+PlanCreateRequest planCreateRequest = PlanCreateRequest.builder()
+        .name("Monthly Plan")
+        .build();
+Plan plan = productAPI.createPlan(createRequest);
 ```
 
 # Get Plan
 
 ```java
-Plan plan = productAPI.get(planId);
+Plan plan = productAPI.getPlan(planId);
 ```
 
 ## Parameters
@@ -72,14 +71,14 @@ Plan plan = productAPI.get(planId);
 ```java
 String planId = "plan_id8";
 
-Plan plan = productAPI.get(planId);
+Plan plan = productAPI.getPlan(planId);
 ```
 
 
 # Update Plan
 
 ```java
-Plan plan = productAPI.update(updateRequest);
+Plan plan = productAPI.updatePlan(updateRequest);
 ```
 
 
@@ -87,7 +86,7 @@ Plan plan = productAPI.update(updateRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`Plan`](/doc/models/plan.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `plan` | [`Plan`](/doc/models/plan.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 
 ## Response Type
@@ -101,7 +100,39 @@ Plan plan = productAPI.update(updateRequest);
 String planId = "plan_id8";
 Plan plan = productAPI.get(planId);
 
-Plan updateRequest = plan.builder()
+Plan updateRequest = plan.toBuilder()
+    .name("Plan Y")
+    .build();
+    
+Plan plan = productAPI.update(updateRequest);
+```
+
+# Add Plan Item
+
+```java
+plan.addPlanItem(PlanItem planItem)
+```
+
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `planItem` | [`PlanItem`](/doc/models/plan-item.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+
+
+## Response Type
+
+[`Plan`](/doc/models/plan.md)
+
+
+## Example
+
+```java
+String planId = "plan_id8";
+Plan plan = productAPI.get(planId);
+
+Plan updateRequest = plan.toBuilder()
     .name("Plan Y")
     .build();
     
