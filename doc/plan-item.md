@@ -28,7 +28,7 @@ PlanItem planitem = productAPI.createPlanItem(createPlanItemRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`CreatePlanItemRequest`](/doc/models/create-plan-item-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `createPlanItemRequest` | [`CreatePlanItemRequest`](/doc/models/create-plan-item-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
@@ -37,17 +37,25 @@ PlanItem planitem = productAPI.createPlanItem(createPlanItemRequest);
 ## Example
 
 ```java
-CreatePlanItemRequest createRequest = new CreatePlanItemRequest.Builder()
-    .name("Plan X")
-    .build();
-PlanItem planItem = productAPI.create(createRequest);
+PlanItemCreateRequest planItemCreateRequest = PlanItemCreateRequest.recurringBuilder()
+        .name("Monthly Membership")
+        .chargeModel(FlatFee.builder()
+                            .amount(Currency.getInstance(CURRENCY_USD), 5.00)
+                            .build())
+        .accountingCode(defaultAccountingCodeName)
+        .startEvent(PlanItemEnum.Event.CONTRACT_EFFECTIVE)
+        .alignment(PlanItemEnum.Alignment.SUBSCRIPTION_PLAN_ITEM)
+        .interval(PlanItemEnum.Interval.MONTH)
+        .on(PlanItemEnum.RecurringOn.ACCOUNT_CYCLE_DATE)
+        .build();
+PlanItem planItem = zuoraClient.products().createPlanItem(createRequest);
 ```
 
 
 # Get Plan Item
 
 ```java
-PlanItem planItem = productAPI.get(planItemId);
+PlanItem planItem = zuoraClient.products().getPlanItem(planItemId);
 ```
 
 ## Parameters
@@ -67,13 +75,13 @@ PlanItem planItem = productAPI.get(planItemId);
 ```java
 String planItemId = "plan_item_id8";
 
-PlanItem planItem = productAPI.get(planItemId);
+PlanItem planItem = zuoraClient.products().getPlanItem(planItemId);
 ```
 
 # Update Plan Item
 
 ```java
-PlanItem planItem = productAPI.update(updateRequest);
+PlanItem planItem = zuoraClient.products().updatePlanItem(updateRequest);
 ```
 
 
@@ -93,11 +101,11 @@ PlanItem planItem = productAPI.update(updateRequest);
 
 ```java
 String planItemId = "plan_item_id8";
-PlanItem planItem = productAPI.get(planItemId);
+PlanItem planItem = productAPI.getPlanItem(planItemId);
 
-PlanItem updateRequest = planItem.builder()
+PlanItem updateRequest = planItem.toBuilder()
     .name("Plan Y")
     .build();
     
-PlanItem planItem = productAPI.update(updateRequest);
+PlanItem planItem = zuoraClient.products().updatePlanItem(updateRequest);
 ```

@@ -24,18 +24,17 @@ Creates a new product.
 You must provide at least these values in your request to this endpoint:
 
 - `name`
-- `startDate`
-- `sku`
+
 
 ```java
-Product product = productAPI.create(createProductRequest);
+Product product = zuoraClient.products().create(createProductRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`CreateProductRequest`](/doc/models/create-product-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `createProductRequest` | [`CreateProductRequest`](/doc/models/create-product-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
@@ -44,18 +43,16 @@ Product product = productAPI.create(createProductRequest);
 ## Example
 
 ```java
-CreateProductRequest createRequest = new CreateProductRequest.Builder()
-    .name("Product X")
-    .startDate("2021-07-10")
-    .sku("SKU-000345")
-    .build();
-Product product = productsAPI.create(createRequest);
+ProductCreateRequest productCreateRequest = ProductCreateRequest.builder()
+        .name("Gold")
+        .build();
+Product product = zuoraClient.products().create(createRequest);
 ```
 
 # Get Product
 
 ```java
-Product product = productAPI.get(productId);
+Product product = zuoraClient.products().get(productId);
 ```
 
 ## Parameters
@@ -75,14 +72,14 @@ Product product = productAPI.get(productId);
 ```java
 String productId = "product_id8";
 
-Product product = productAPI.get(productId);
+Product product = zuoraClient.products().get(productId);
 ```
 
 
 # Update Product
 
 ```java
-Product product = productAPI.update(updateRequest);
+Product product = zuoraClient.products().update(product);
 ```
 
 
@@ -90,7 +87,7 @@ Product product = productAPI.update(updateRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`Product`](/doc/models/product.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `product` | [`Product`](/doc/models/product.md) | Product, Required | The product to update. |
 
 
 ## Response Type
@@ -115,7 +112,7 @@ Product product = productAPI.update(updateRequest);
 # Delete Product
 
 ```java
-productAPI.delete(product);
+zuoraClient.products().delete(product);
 ```
 
 
@@ -123,18 +120,18 @@ productAPI.delete(product);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`Product`](/doc/models/product.md) | Body, Required | The object to be deleted. |
+| `product` | [`Product`](/doc/models/product.md) | Body, Required | The product to be deleted. |
 
 
 ## Response Type
-
+None
 
 
 ## Example 
 
 ```java
 String productId = "product_id8";
-Product product = productAPI.get(productId);
+Product product = zuoraClient.products().get(productId);
    
 productAPI.delete(product);
 ```
