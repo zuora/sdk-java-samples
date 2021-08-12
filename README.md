@@ -74,7 +74,7 @@ If you're not sure where to start [this basic sample](src/main/java/com/zuora/sd
 * [Account](doc/account-api.md)
 
 ### Subscription
-* [Subscription](doc/subscription.md)
+* [Subscription](doc/subscription-api.md)
 
 ### Billing Document
 * [Billing Document](doc/billing-document.md)

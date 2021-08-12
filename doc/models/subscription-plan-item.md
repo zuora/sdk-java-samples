@@ -1,7 +1,7 @@
 
 # Subscription Plan Item
 
-A Subscription Plan Item defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases and is included in the response returned by [CreateSubscription](/doc/subscription.md#create-subscription), [UpdateSubscription](/doc/subscription.md#update-subscription) and [GetSubscription](/doc/subscription.md#get-subscription).
+A Subscription Plan Item defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases and is included in the response returned by [CreateSubscription](/doc/subscription-api.md#create-subscription), [UpdateSubscription](/doc/subscription-api.md#update-subscription) and [GetSubscription](/doc/subscription-api.md#get-subscription).
 
 ## Structure
 
@@ -32,13 +32,3 @@ A Subscription Plan Item defines the unit cost, currency, and (optional) billing
 | `baseInterval` | [`Enum`](/doc/models/base-interval.md) | Optional | . | String getBaseInterval() |
 | `ratingGroup` | [`Enum`](/doc/models/rating-group.md) | Optional | . | String getRatingGroup() |
 | `amounts` | [`List<Amount>`](/doc/models/amount.md) | Optional | The billing amount for this plan item. | `List<Amount>` getAmounts() |
-
-## Example (as JSON)
-
-```json
-{
-    "id": "PLAN-ITEM-000001",
-    "name": "Plan Item Z",
-    "plan" : "PLAN-000001"
-}
-```
