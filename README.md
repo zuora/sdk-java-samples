@@ -2,7 +2,7 @@
 # Getting Started quickly with Zuora Samples
 Zuora Samples are built by Zuora, and provide all of the server code you need for common integration scenarios, such as creating a subscription with Zuora Billing.
 
-You will also find comprehensive SDK Technical Reference documentation [here](/README.md##sdk-technical-reference).
+You will also find comprehensive SDK Technical Reference documentation [here](/README.md#sdk-technical-reference).
 
 ## Installation
 #### Add the following to the dependencies your project pom.xml
@@ -46,12 +46,12 @@ ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 <hr />
 
-## Starter Examples
-If you're not sure where to start [this simple example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service. 
+## Samples
+If you're not sure where to start [this basic sample](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service. 
 
-[Simple Example](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
+[Basic Sample](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java)
 
-[Pricing Examples](src/main/java/com/zuora/sdk/core/example/PlanItemExamples.java)
+[Pricing Samples](src/main/java/com/zuora/sdk/core/example/PlanItemExamples.java)
 <hr />
 
 ## SDK Guide
