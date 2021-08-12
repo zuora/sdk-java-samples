@@ -1,5 +1,8 @@
 
-# Getting Started
+# Getting Started quickly with Zuora Samples
+Zuora Samples are built by Zuora, and provide all of the server code you need for common integration scenarios, such as creating a subscription with Zuora Billing.
+
+You will also find comprehensive SDK Technical Reference documentation [here](/README.md##sdk-technical-reference).
 
 ## Installation
 #### Add the following to the dependencies your project pom.xml
@@ -11,10 +14,6 @@
     <version>{version}</version>
 </dependency>
 ```
-
-## Prerequisites
-
-TODO - Prerequisites here
 
 ## Base URLs
 Different Zuora environments have different base URLs. You can use environment variables to manage base URLs and the different credentials you have for these environments.
