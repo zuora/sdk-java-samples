@@ -1,4 +1,4 @@
-# Billing Document
+# Billing Document API
 
 Billing Documents represent invoices, credit memos and debit memos.
 
@@ -15,7 +15,7 @@ Any customer credit on the account may be applied before determining the amount 
 
 ## Methods
 
-* [Get a billing document](/doc/billing-document.md#get-billing-document)
+* [Get a billing document](/doc/billing-document-api.md#get-billing-document)
 
 
 
