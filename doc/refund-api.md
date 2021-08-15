@@ -1,4 +1,4 @@
-# Refund
+# Refund API
 
 
 Refund objects allow you to unapply a payment applied to an invoice or debit memo and in some instances refund the charge to the credit or debit card that was originally charged.
@@ -9,11 +9,11 @@ Refund objects allow you to unapply a payment applied to an invoice or debit mem
 
 ## Methods
 
-* [Create refund](/doc/refund.md#create-refund)
-* [Get refund](/doc/refund.md#get-refund)
-* [Update refund](/doc/refund.md#update-refund)
-* [List refunds](/doc/refund.md#list-refunds)
-* [Delete refund](/doc/refund.md#delete-refund)
+* [Create refund](/doc/refund-api.md#create-refund)
+* [Get refund](/doc/refund-api.md#get-refund)
+* [Update refund](/doc/refund-api.md#update-refund)
+* [List refunds](/doc/refund-api.md#list-refunds)
+* [Delete refund](/doc/refund-api.md#delete-refund)
 
 
 
