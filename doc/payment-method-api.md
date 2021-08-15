@@ -22,7 +22,7 @@ PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_I
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the payment method. |
+| `id` | `String` | Required | The unique identifier of a payment method. |
 
 ## Response Type
 
