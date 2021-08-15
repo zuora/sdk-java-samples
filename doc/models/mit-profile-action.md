@@ -10,5 +10,5 @@ Represents the merchant-initiated transaction profile action.
 
 | Name | Description |
 |  --- | --- |
-| ACTIVATE |  |
-| PERSIST |  |
+| `ACTIVATE` |  |
+| `PERSIST` |  |
