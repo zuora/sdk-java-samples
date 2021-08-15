@@ -4,9 +4,9 @@ The AccountAPI gives you access to your Account objects, which store information
 
 The API allows you to create, retrieve, update, and delete your customer accounts. 
 
-```java
-AccountAPI accountAPI = zuora.accounts();
-```
+## Class Name
+
+`AccountAPI`
 
 ## Methods
 
@@ -19,7 +19,7 @@ AccountAPI accountAPI = zuora.accounts();
 # Create Account
 
 ```java
-Account account = accountAPI.create(accountCreateRequest);
+Account account = zuoraClient.accounts().create(accountCreateRequest);
 ```
 
 ## Parameters
