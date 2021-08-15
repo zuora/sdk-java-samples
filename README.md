@@ -66,9 +66,9 @@ If you're not sure where to start [this basic sample](src/main/java/com/zuora/sd
 ## SDK Technical Reference
 
 ### Product
-* [Product](doc/product.md)
-* [Plan](doc/plan.md)
-* [Plan Item](doc/plan-item.md)
+* [Product](doc/product-api.md)
+* [Plan](doc/plan-api.md)
+* [Plan Item](doc/plan-item-api.md)
 
 ### Account
 * [Account](doc/account-api.md)
@@ -77,9 +77,9 @@ If you're not sure where to start [this basic sample](src/main/java/com/zuora/sd
 * [Subscription](doc/subscription-api.md)
 
 ### Billing Document
-* [Billing Document](doc/billing-document.md)
+* [Billing Document](doc/billing-document-api.md)
 
 ### Payment
-* [Payment Method](doc/payment-method.md)
+* [Payment Method](doc/payment-method-api.md)
 * [Payment](doc/payment-api.md)
-* [Refund](doc/refund.md)
+* [Refund](doc/refund-api.md)
