@@ -1,6 +1,6 @@
 # Plan
 
-Plans are collections of [Plan Items](/doc/planitem.md) which define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of [Products](/doc/product.md). While Products help you track inventory or provisioning, plans and plan items help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing and billing cycle options should be represented by plan items grouped together under a plan. This approach lets you change prices without having to change your provisioning scheme.
+Plans are collections of [Plan Items](/doc/plan-item-api.md) which define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of [Products](/doc/product-api.md). While Products help you track inventory or provisioning, plans and plan items help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing and billing cycle options should be represented by plan items grouped together under a plan. This approach lets you change prices without having to change your provisioning scheme.
 
 For example, you might have a single "gold" product that has prices for $100/month, $1000/year, and $50 once with the the alternative billing cycle and pricing options each represented by a different plan and the recurring and one-time prices represented by different plan items
 
@@ -10,9 +10,9 @@ For example, you might have a single "gold" product that has prices for $100/mon
 
  ## Methods
 
-* [Create plan](/doc/plan.md#create-plan)
-* [Get plan](/doc/plan.md#get-plan)
-* [Update plan](/doc/plan.md#update-plan)
+* [Create plan](/doc/plan-api.md#create-plan)
+* [Get plan](/doc/plan-api.md#get-plan)
+* [Update plan](/doc/plan-api.md#update-plan)
 * Add Plan Item
 
 
