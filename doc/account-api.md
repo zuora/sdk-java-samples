@@ -94,9 +94,9 @@ Account account = account.update();
 ## Example 
 
 ```java
-String accountId = "account_id8";
-Account account = zuoraClient.accounts().get(accountId);
-account.setName("Updated Name");
+String ACCOUNT_ID = "account_id8";
+Account account = zuoraClient.accounts().get(ACCOUNT_ID);
+account.setName("New Name");
 account.update();
 ```
 
