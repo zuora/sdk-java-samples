@@ -1,4 +1,4 @@
-# ProductAPI
+# Product API
 
 Products describe the specific goods or services you offer to your customers. For example, if you offer both a Standard and a Premium version of your service, each version would be a separate Product. They can be used in conjunction with Plans and Plan Items to configure pricing.
 
