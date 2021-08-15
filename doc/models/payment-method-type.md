@@ -1,4 +1,4 @@
-# Type
+# Payment Method Type
 
 Represents the type of payment method.
 
