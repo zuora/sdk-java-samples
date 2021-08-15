@@ -10,9 +10,9 @@ Represents the card brand.
 
 | Name | Description |
 |  --- | --- |
-| VISA |  |
-| MASTERCARD |  |
-| AMERICAN EXPRESS |  |
-| DISCOVER |  |
-| JCB |  |
-| DINERS |  |
+| `VISA` |  |
+| `MASTERCARD` |  |
+| `AMERICAN EXPRESS` |  |
+| `DISCOVER` |  |
+| `JCB` |  |
+| `DINERS` |  |
