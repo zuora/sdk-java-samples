@@ -10,5 +10,5 @@ Represents the merchant-initiated transaction type.
 
 | Name | Description |
 |  --- | --- |
-| RECURRING |  |
-| UNSCHEDULED |  |
+| `RECURRING` |  |
+| `UNSCHEDULED` |  |
