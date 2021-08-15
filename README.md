@@ -82,4 +82,3 @@ If you're not sure where to start [this basic sample](src/main/java/com/zuora/sd
 ### Payment
 * [Payment Method](doc/payment-method-api.md)
 * [Payment](doc/payment-api.md)
-* [Refund](doc/refund-api.md)
