@@ -1,6 +1,6 @@
 # RatingGroup
 
-.
+
 
 ## Enumeration
 
@@ -10,8 +10,8 @@
 
 | Name | Description |
 |  --- | --- |
-| billing_period | . |
-| usage_start_date | . |
-| usage_record | . |
-| usage_upload | . |
-| custom_group | . |
+| billing_period |  |
+| usage_start_date |  |
+| usage_record |  |
+| usage_upload |  |
+| custom_group |  |
