@@ -10,10 +10,10 @@ Products describe the specific goods or services you offer to your customers. Fo
 
 ## Methods
 
-* [Create product](/doc/product.md#create-product)
-* [Get product](/doc/product.md#get-product)
-* [Update product](/doc/product.md#update-product)
-* [Delete product](/doc/product.md#delete-product)
+* [Create product](/doc/product-api.md#create-product)
+* [Get product](/doc/product-api.md#get-product)
+* [Update product](/doc/product-api.md#update-product)
+* [Delete product](/doc/product-api.md#delete-product)
 
 
 
