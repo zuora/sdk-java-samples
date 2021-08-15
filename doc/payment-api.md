@@ -1,4 +1,4 @@
-# Payment
+# Payment API
 
 A payment is the money that customers send to pay for billing documents related to their subscriptions.
 
@@ -7,7 +7,7 @@ The Payment object holds all of the information about an individual payment, inc
 ## Class Name
 
 ```java
-PaymentAPI paymentAPI = zuora.payments();
+PaymentAPI
 ```
 
 ## Methods
