@@ -1,4 +1,4 @@
-# Payment Method
+# Payment Method API
 
 PaymentMethod objects represent your customer's payment instruments and must be associated with an Account object. They can be used to collect payments and stored for future payments.
 
@@ -8,7 +8,7 @@ PaymentMethod objects represent your customer's payment instruments and must be 
 
 ## Methods
 
-* [Get payment method](/doc/payment-method.md#get-payment-method)
+* [Get payment method](/doc/payment-method-api.md#get-payment-method)
 
 
 
