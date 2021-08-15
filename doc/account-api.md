@@ -1,4 +1,4 @@
-# AccountAPI
+# Account API
 
 The AccountAPI gives you access to your Account objects, which store information about your customers, such as their contact details, their billing documents, their payment history and on what day of the month they should be billed.
 
