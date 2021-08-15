@@ -26,7 +26,7 @@ Account account = zuoraClient.accounts().create(accountCreateRequest);
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `accountCreateRequest` | [`AccountCreateRequest`](/doc/models/account-create-request.md) | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `accountCreateRequest` | [`AccountCreateRequest`](/doc/models/account-create-request.md) | Account request object. |
 
 ## Response Type
 
@@ -36,22 +36,23 @@ Account account = zuoraClient.accounts().create(accountCreateRequest);
 
 ```java
 ContactCreateRequest billTo = ContactCreateRequest.builder()
-    .firstName("Tien")
-    .lastName("Tzuo")
-    .address(Address.builder().country("USA").state("KY").build())
+    .firstName("Jenny")
+    .lastName("Smith")
+    .address(Address.builder().country("USA").state("CA").build())
     .build();
 
 AccountCreateRequest createRequest = AccountCreateRequest.builder()
-    .name("Tien Tzuo")
+    .name("Jenny Smith")
     .billTo(billTo)
     .build();
-Account account = accountsAPI.create(createRequest);
+    
+Account account = zuoraClient.accounts().create(createRequest);
 ```
 
 # Get Account
 
 ```java
-Account account = accountAPI.get(accountId);
+Account account = zuoraClient.accounts().get(accountId);
 ```
 
 ## Parameters
@@ -71,14 +72,14 @@ Account account = accountAPI.get(accountId);
 ```java
 String accountId = "account_id8";
 
-Account account = accountAPI.get(accountId);
+Account account = zuoraClient.accounts().get(accountId);
 ```
 
 
 # Update Account
 
 ```java
-account.update();
+Account account = account.update();
 ```
 
 [comment]: <> (## Parameters)
@@ -94,7 +95,7 @@ account.update();
 
 ```java
 String accountId = "account_id8";
-Account account = accountAPI.get(accountId);
+Account account = zuoraClient.accounts().get(accountId);
 account.setName("Updated Name");
 account.update();
 ```
@@ -103,21 +104,21 @@ account.update();
 # Delete Account
 
 ```java
-accountsAPI.delete(accountId);
+zuoraClient.accounts().delete(accountId);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the account. |
+| `id` | `String` | Required | The unique identifier of an account. |
 
 
 ## Example
 
 ```java
-String accountId = "account_id8";
-accountsAPI.delete(accountId);
+String ACCOUNT_ID = "account_id8";
+zuoraClient.accounts().delete(accountId);
 ```
 
 
