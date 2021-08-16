@@ -25,7 +25,7 @@ A Plan is a container for a collection of [PlanItems](/doc.models/plan-item.md) 
 | `createdBy` | `String` | ReadOnly | The Id of the user that created the product | String getCreatedBy() |
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
 | `items` | [`List<PlanItem>`](/doc/models/plan-item.md) | Optional | The individual plan items that make up the plan. | List<PlanItem> getItems() |
-
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
 
 ## Methods
 
