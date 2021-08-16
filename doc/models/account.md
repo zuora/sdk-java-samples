@@ -1,7 +1,7 @@
 
 # Account
 
-Accounts represent your customers and are the response returned by [CreateAccount](/doc/account-api.md#create-account), [UpdateAccount](/doc/account-api.md#update-account) and [GetAccount](/doc/account-api.md#get-account).
+Accounts represent your customers and are the response returned by [CreateAccount](/doc/account-api.md#create-account), [UpdateAccount](/doc/account-api.md#update-account), [GetAccount](/doc/account-api.md#get-account) and [DeleteAccount](/doc/account-api.md#delete-account).
 
 
 ## Fields
