@@ -16,12 +16,12 @@ A Billing Document can represent an invoice, a credit memo or a debit memo and i
 | `createTime` | `LocalDateTime` | ReadOnly | Time at which the object was created. | LocalDateTime getCreateTime() |
 | `postedBy` | `String` | ReadOnly | Unique identifier of the user who posted the billing document. | String getPostedBy() |
 | `postedTime` | `LocalDateTime` | ReadOnly | Time at which the object was posted. | LocalDateTime getPostedTime() |
-| `state` | [`Enum`](/doc/models/billing-document-state.md) | ReadOnly | . | String getState() |
+| `state` | [`Enum`](/doc/models/billing-document-state.md) | ReadOnly | State of this billing document, one of DRAFT, POSTED or CANCELED. | String getState() |
 | `type` | [`Enum`](/doc/models/billing-document-type.md) | ReadOnly | . | String getType() |
 | `autoPay` | `Boolean` | ReadOnly | . | Boolean getAutoPay() |
 | `documentDate` | `LocalDate` | ReadOnly | . | LocalDate getDocumentDate() |
 | `dueDate` | `LocalDate` | ReadOnly | . | LocalDate getDueDate() |
-| `currency` | `String` | Required | A currency defined in the web-based UI administrative settings. | `String getCurrency()`|
+| `currency` | `String` | Required | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | `String getCurrency()`|
 | `amount` | `Long` | ReadOnly | . | Long getAmount() |
 | `subtotal` | `Long` | ReadOnly | . | Long getSubtotal() |
 | `tax` | `Long` | ReadOnly | . | Long getTax() |
