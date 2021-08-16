@@ -9,6 +9,9 @@ Describes a request to create a payment using
 |  --- | --- | --- | --- | --- |
 | `account` | `String` | Optional | The ID of the customer account that the payment is created for. | `String getAccount()` |
 | `amount` | `Double` | Required | The total amount of the payment. | `Double getAmount()`|
+
+| Name | Type | Tags | Description | Getters
+|  --- | --- | --- | --- | --- |
 | `authorisationCode` | `String` | Required | The authorization transaction ID from the payment gateway. Use this field for electronic payments, such as credit cards. | `String getAuthorisationCode()`|
 | `description` | `String` | Optional | Additional information related to the payment. | `String getDescription()`|
 | `currency` | `String` | Required | A currency defined in the web-based UI administrative settings. | `String getCurrency()`|
