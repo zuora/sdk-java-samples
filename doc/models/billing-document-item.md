@@ -1,7 +1,7 @@
 
 # Billing Document Item
 
-A Billing Document Item can represent an invoice item, a credit memo item or a debit memo item. These are included in the response returned by [GetBillingDocument](/doc/billing-document.md#get-billing-document).
+A Billing Document Item can represent an invoice item, a credit memo item or a debit memo item. These are included in the response returned by [GetBillingDocument](/doc/billing-document-api.md#get-billing-document).
 
 ## Structure
 
