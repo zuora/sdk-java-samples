@@ -34,7 +34,7 @@ Product product = productAPI.create(createProductRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `createProductRequest` | [`CreateProductRequest`](/doc/models/create-product-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `createProductRequest` | [`CreateProductRequest`](/doc/models/product-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
