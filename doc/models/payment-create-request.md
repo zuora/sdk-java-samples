@@ -1,4 +1,4 @@
-# Create Payment Request
+# Payment Create Request
 
 Describes a request to create a payment using
 [CreatePayment](/doc/payment-api.md#create-payment).
