@@ -13,3 +13,4 @@ Contacts represent [Account](/doc/models/account.md) contacts as well as billTo 
 | `workEmail` | `String` | Optional | The contact's work email address. | String getWorkEmail() |
 | `account` | `String` | Optional |  | String getAccount() |
 | `address` | [`Address`](/doc/models/address.md) | Optional |  | String getAddress() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields used to create a contact. | `Map<String, Object> getCustomFields()`|
