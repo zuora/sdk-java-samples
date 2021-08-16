@@ -25,3 +25,4 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | |
 | `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional | |
 | `billingDocumentSettings` | [`BillingDocumentSettings`](/doc/models/billing-document-settings.md) | Optional | |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
