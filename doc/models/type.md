@@ -10,6 +10,6 @@ Represents the type of plan item.
 
 | Name | Description |
 |  --- | --- |
-| ONE_TIME |  |
-| RECURRING |  |
-| USAGE |  |
+| `ONE_TIME` |  |
+| `RECURRING` |  |
+| `USAGE` |  |
