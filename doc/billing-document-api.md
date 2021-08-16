@@ -40,9 +40,9 @@ BillingDocument billingDocument = BillingDocumentAPI.get(billingDocumentId);
 ## Example 
 
 ```java
-String billingDocumentId = "billing_document_id8";
+String BILLING_DOCUMENT_ID = "billing_document_id8";
 
-BillingDocument billingDocument = billingDocumentAPI.get(billingDocumentId);
+BillingDocument billingDocument = billingDocumentAPI.get(BILLING_DOCUMENT_ID);
 ```
 
 
