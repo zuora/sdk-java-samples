@@ -2,7 +2,7 @@
 # Subscription
 
 
-Subscription allow you to charge a customer on a recurring basis and are the response returned by [CreateSubscription](/doc/subscription-api.md#create-subscription), [UpdateSubscription](/doc/subscription-api.md#update-subscription), [GetSubscription](/doc/subscription-api.md#get-subscription), [RenewSubscription](/doc/subscription-api.md#renew-subscription) and [CancelSubscription](/doc/subscription-api.md#cancel-subscription).
+Subscription allow you to charge a customer on a recurring basis and are the response returned by [CreateSubscription](/doc/subscription-api.md#create-subscription), [AddSubscriptionPlan](/doc/subscription-api.md#add-subscription-plan), [GetSubscription](/doc/subscription-api.md#get-subscription), [RenewSubscription](/doc/subscription-api.md#renew-subscription) and [CancelSubscription](/doc/subscription-api.md#cancel-subscription).
 
 ## Structure
 
