@@ -1,10 +1,6 @@
 # Term
 
-.
-
-## Structure
-
-`Term`
+Defines the duration of a term for a given subscription.
 
 ## Fields
 
