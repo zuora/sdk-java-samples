@@ -2,7 +2,7 @@
 
 `Create Plan Request`
 
-Describes a request to create a plan using [CreatePlan](/doc/plan.md#create-plan).
+Describes a request to create a plan using [CreatePlan](/doc/plan-api.md#create-plan).
 
 ## Structure
 
