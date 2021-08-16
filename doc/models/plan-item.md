@@ -27,4 +27,4 @@ A PlanItem defines the unit cost, currency, and (optional) billing cycle for bot
 | `createTime`| `ZonedDateTime` | ReadOnly | The date and time when the plan item was created. | ZonedDateTime getCreateTime() |
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the plan item. | String getUpdatedBy() |
 | `updateTime`| `ZonedDateTime` | ReadOnly | The date and time when the plan item was last updated. | ZonedDateTime getUpdateTime() |
-
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
