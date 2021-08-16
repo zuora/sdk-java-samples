@@ -1,9 +1,4 @@
-# SubscriptionCreateRequest
-
-
-## Structure
-
-`Subscription`
+# Subscription Create Request
 
 ## Fields
 
