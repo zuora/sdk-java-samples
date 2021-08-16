@@ -47,3 +47,4 @@ and [GetPayment](/doc/payment-api.md#get-payment).
 | `gatewayReconciliationStatus` | `String` | | The status of gateway reconciliation. | ` | `getString()` |
 | `gatewayReconciliationReason` | `String` | | The reason of gateway reconciliation. | `String getGatewayReconciliationReason()` |
 | `financeInformation` | `PaymentFinanceInformation` | | Container for the finance information related to the payment. | `PaymentFinanceInformation getFinanceInformation()` |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
