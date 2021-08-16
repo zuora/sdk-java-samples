@@ -24,6 +24,7 @@ Describes a request to create a plan item using [CreatePlanItem](/doc/plan-item-
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | String getUnitOfMeasure() |
 | `taxCode` | `String` | Optional | The plan item tax code. | String getTaxCode() |
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | String getTaxInclusive() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
 
 ## Methods
 
