@@ -12,3 +12,4 @@ A SubscriptionPlan is a container for a collection of [SubscriptionPlanItems](/d
 | `subscription` | `String` | Required | The identifier of the subscription that this plan will belong to. | String getSubscription() |
 | `plan` | `String` | Required | The identifier of a plan object. | String getPlan() |
 | `subscriptionPlanItems` | [`List<SubscriptionPlanItem>`](/doc/models/subscription-plan-item.md) | Optional | The individual subscription plan items that make up the subscription plan. | List<SubscriptionPlanItem> getItems() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
