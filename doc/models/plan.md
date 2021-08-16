@@ -1,7 +1,7 @@
 
 # Plan
 
-A Plan is a container for a collection of [PlanItems](/doc.models/plan-item.md) and is the response returned by [CreatePlan](/doc/plan.md#create-plan), [UpdatePlan](/doc/plan.md#update-plan) and [GetPlan](/doc/plan.md#get-plan).
+A Plan is a container for a collection of [PlanItems](/doc.models/plan-item.md) and is the response returned by [CreatePlan](/doc/plan-api.md#create-plan), [UpdatePlan](/doc/plan-api.md#update-plan) and [GetPlan](/doc/plan-api.md#get-plan).
 
 ## Structure
 
