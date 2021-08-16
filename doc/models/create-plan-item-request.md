@@ -1,7 +1,7 @@
 
 # Create Plan Item Request
 
-Describes a request to create a plan item using [CreatePlanItem](/doc/plan-item.md#create-plan-item).
+Describes a request to create a plan item using [CreatePlanItem](/doc/plan-item-api.md#create-plan-item).
 
 ## Structure
 
