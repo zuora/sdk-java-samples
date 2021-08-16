@@ -48,7 +48,7 @@ Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateR
 SubscriptionCreateRequest subscriptionCreateRequest=SubscriptionCreateRequest.builder()
         .account(accountInstance)
         .build();
-Subscription subscription=subscriptionAPI.create(subscriptionCreateRequest);
+Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateRequest);
 ```
 
 # Get Subscription
