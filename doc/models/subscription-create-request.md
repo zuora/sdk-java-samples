@@ -7,7 +7,7 @@ Describes a request to create a subscription using [CreateSubscription](/doc/sub
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- | 
-| `key` | `String` | ReadOnly | Unique identifier for the object. |
+| `key` | `String` | Optional | Unique identifier for the object. |
 | `account` | [`Account`](/doc/models/account.md) | Required | The subscriber account. |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | 
 | `startDate` | `LocalDate` | Optional | Date on which the subscription becomes active. | 
