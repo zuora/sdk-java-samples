@@ -18,16 +18,16 @@ A Billing Document can represent an invoice, a credit memo or a debit memo and i
 | `postedTime` | `LocalDateTime` | ReadOnly | Time at which the object was posted. | LocalDateTime getPostedTime() |
 | `state` | [`Enum`](/doc/models/billing-document-state.md) | ReadOnly | State of this billing document, one of `DRAFT`, `POSTED` or `CANCELED`. | String getState() |
 | `type` | [`Enum`](/doc/models/billing-document-type.md) | ReadOnly | The type of the billing document. One of `CREDIT_MEMO`, `DEBIT_MEMO` or `INVOICE`.  | String getType() |
-| `autoPay` | `Boolean` | ReadOnly | . | Boolean getAutoPay() |
-| `documentDate` | `LocalDate` | ReadOnly | . | LocalDate getDocumentDate() |
-| `dueDate` | `LocalDate` | ReadOnly | . | LocalDate getDueDate() |
+| `autoPay` | `Boolean` | ReadOnly | Has the value `true` if payment will be collected automatically in the corresponding payment run or the value `false` if the payment will not automatically be collected. | Boolean getAutoPay() |
+| `documentDate` | `LocalDate` | ReadOnly | The date when the  billing document takes effect. | LocalDate getDocumentDate() |
+| `dueDate` | `LocalDate` | ReadOnly | The date by which the payment for this invoice is due. | LocalDate getDueDate() |
 | `currency` | `String` | Required | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | `String getCurrency()`|
-| `amount` | `Long` | ReadOnly | . | Long getAmount() |
-| `subtotal` | `Long` | ReadOnly | . | Long getSubtotal() |
-| `tax` | `Long` | ReadOnly | . | Long getTax() |
-| `balance` | `Long` | ReadOnly | . | Long getBalance() |
-| `documentNumber` | `String` | ReadOnly | . | String getDocumentNumber() |
-| `description` | `String` | ReadOnly | . | String getDescription() |
+| `amount` | `Long` | ReadOnly | The total amount of the billing document. | Long getAmount() |
+| `subtotal` | `Long` | ReadOnly | The total amount of the billing document exclusive of tax. | Long getSubtotal() |
+| `tax` | `Long` | ReadOnly | The amount of tax on this billing document. This is the sum of all the tax amounts on this billing document. | Long getTax() |
+| `balance` | `Long` | ReadOnly | The remaining balance of the billing document after all payments, adjustments, and refunds are applied. | Long getBalance() |
+| `documentNumber` | `String` | ReadOnly | The number of the billing document. | String getDocumentNumber() |
+| `description` | `String` | ReadOnly | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
 | `key` | `String` | ReadOnly | . | String getKey() |
 | `updatedBy` | `String` | ReadOnly | Unique identifier of the user who last updated the billing document. | String getUpdatedBy() |
 | `updateTime` | `LocalDateTime` | ReadOnly | Time at which the object was last updated. | LocalDateTime getUpdateTime() |
