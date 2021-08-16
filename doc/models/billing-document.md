@@ -1,7 +1,7 @@
 
 # Billing Document
 
-A Billing Document can represent an invoice, a credit memo or a debit memo and is the response returned by [GetBillingDocument](/doc/billing-document.md#get-billing-document).
+A Billing Document can represent an invoice, a credit memo or a debit memo and is the response returned by [GetBillingDocument](/doc/billing-document-api.md#get-billing-document).
 
 ## Structure
 
