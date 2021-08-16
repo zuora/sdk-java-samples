@@ -1,7 +1,7 @@
 
 # Product
 
-Product represents your products and are the response returned by [CreateProduct](/doc/product.md#create-product), [UpdateProduct](/doc/product.md#update-product) and [GetProduct](/doc/product.md#get-product).
+Product represents your products and are the response returned by [CreateProduct](/doc/product-api.md#create-product), [UpdateProduct](/doc/product-api.md#update-product) and [GetProduct](/doc/product-api.md#get-product).
 
 ## Structure
 
