@@ -28,7 +28,7 @@ Payment payment = paymentAPI.create(paymentCreateRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`PaymentCreateRequest`](/doc/models/create-payment-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `body` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
