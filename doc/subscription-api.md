@@ -29,14 +29,14 @@ The Subscription object contains the information needed to create and maintain a
 Creates a new subscription.
 
 ```java
-Subscription subscription=zuoraClient.subscriptions().create(createSubscriptionRequest);
+Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `subscriptionCreateRequest` | [`SubscriptionCreateRequest`](/doc/models/subscription-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `subscriptionCreateRequest` | [`SubscriptionCreateRequest`](/doc/models/subscription-create-request.md) | Required | Subscription request object. |
 
 ## Response Type
 
