@@ -32,3 +32,4 @@ A Subscription Plan Item defines the unit cost, currency, and (optional) billing
 | `baseInterval` | [`Enum`](/doc/models/base-interval.md) | Optional | . | String getBaseInterval() |
 | `ratingGroup` | [`Enum`](/doc/models/rating-group.md) | Optional | . | String getRatingGroup() |
 | `amounts` | [`List<Amount>`](/doc/models/amount.md) | Optional | The billing amount for this plan item. | `List<Amount>` getAmounts() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
