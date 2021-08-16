@@ -26,9 +26,8 @@ A Billing Document can represent an invoice, a credit memo or a debit memo and i
 | `subtotal` | `Long` | ReadOnly | The total amount of the billing document exclusive of tax. | Long getSubtotal() |
 | `tax` | `Long` | ReadOnly | The amount of tax on this billing document. This is the sum of all the tax amounts on this billing document. | Long getTax() |
 | `balance` | `Long` | ReadOnly | The remaining balance of the billing document after all payments, adjustments, and refunds are applied. | Long getBalance() |
-| `documentNumber` | `String` | ReadOnly | The number of the billing document. | String getDocumentNumber() |
 | `description` | `String` | ReadOnly | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
-| `key` | `String` | ReadOnly | . | String getKey() |
+| `key` | `String` | ReadOnly | The number of the billing document. | String getKey() |
 | `updatedBy` | `String` | ReadOnly | Unique identifier of the user who last updated the billing document. | String getUpdatedBy() |
 | `updateTime` | `LocalDateTime` | ReadOnly | Time at which the object was last updated. | LocalDateTime getUpdateTime() |
 | `account` | `Account` | ReadOnly | The customer account that this billing document belongs to. | String getAccount() |
