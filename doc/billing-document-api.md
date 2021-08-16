@@ -16,7 +16,6 @@ Any customer credit on the account may be applied before determining the amount 
 ## Methods
 
 * [Get a billing document](/doc/billing-document-api.md#get-billing-document)
-* [List all billing documents for an account](/doc/billing-document-api.md#list-billing-documents-by-account)
 
 
 
