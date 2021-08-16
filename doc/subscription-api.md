@@ -350,7 +350,7 @@ Subscription canceledSubscription = zuoraClient.subscriptions().cancel(subscript
 # Remove Subscription Plan
 
 ```java
-zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
+Subscription subcription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
 ```
 
 ## Response Type
