@@ -18,18 +18,4 @@ Describes a request to create a plan using [CreatePlan](/doc/plan-api.md#create-
 | `startDate` | `LocalDate` | Optional | Date on which the plan becomes active. | String getStartDate() |
 | `endDate` | `LocalDate` | Optional | Date on which the plan is no longer active. | String getEndDate() |
 | `items` | [`List<PlanItem>`](/doc/models/plan-item.md) | Optional | The individual plan items that make up the plan. | List<PlanItem> getItems() |
-
-## Example (as JSON)
-
-```json
-{
-    "name": "Plan Y",
-    "product" : "P-000001",
-    "items": [{
-        "id": "01F9E8XVBT3170FF8E2ATH7XS0",
-        "x": "",
-        "startDate": "2021-01-01",
-        "endDate": "2021-12-31"
-    }]
-}
-```
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
