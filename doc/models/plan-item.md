@@ -1,6 +1,6 @@
 # PlanItem
 
-A PlanItem defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases and is the response returned by [CreatePlanItem](/doc/plan-item.md#create-plan-item), [UpdatePlanItem](/doc/plan-item.md#update-plan-item) and [GetPlanItem](/doc/plan-item.md#get-plan-item).
+A PlanItem defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases and is the response returned by [CreatePlanItem](/doc/plan-item-api.md#create-plan-item), [UpdatePlanItem](/doc/plan-item-api.md#update-plan-item) and [GetPlanItem](/doc/plan-item-api.md#get-plan-item).
 
 ## Structure
 
