@@ -33,7 +33,7 @@ Plan plan = productAPI.createPlan(createPlanRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `createPlanRequest` | [`CreatePlanRequest`](/doc/models/create-plan-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `createPlanRequest` | [`CreatePlanRequest`](/doc/models/plan-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
