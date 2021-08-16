@@ -42,3 +42,4 @@ Payment methods represent your customers' payment instruments and are the respon
 | `mandateStatus` | `String` | Optional | The gateway status of the mandate. | String getMandateStatus() |
 | `mandateReason` | `String` | Optional | The gateway mandate reason. | String getMandateReason() |
 | `state` | [`Enum`](/doc/models/payment-method-state.md)  | Optional | . | PaymentMethodState getState() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
