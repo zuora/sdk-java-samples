@@ -28,7 +28,7 @@ PlanItem planitem = productAPI.createPlanItem(createPlanItemRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `createPlanItemRequest` | [`CreatePlanItemRequest`](/doc/models/create-plan-item-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `createPlanItemRequest` | [`CreatePlanItemRequest`](/doc/models/plan-item-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
 
 ## Response Type
 
