@@ -32,3 +32,4 @@ A Billing Document can represent an invoice, a credit memo or a debit memo and i
 | `updateTime` | `LocalDateTime` | ReadOnly | Time at which the object was last updated. | LocalDateTime getUpdateTime() |
 | `account` | `Account` | ReadOnly | The customer account that this billing document belongs to. | String getAccount() |
 | `items` | [`List<BillingDocumentItem>`](/doc/models/billing-document-item.md) | ReadOnly | The billing document items that make up the billing document. | `List<BillingDocumentItem>` getItems() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
