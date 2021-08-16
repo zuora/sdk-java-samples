@@ -1,6 +1,6 @@
 
 # Getting Started Quickly with Zuora Samples
-Zuora Samples are built by Zuora, and provide all of the server code you need for common integration scenarios, such as creating a subscription with Zuora Billing.
+Zuora Samples are built by Zuora, and provide all of the server code you need for common integration use cases like creating a subscription with Zuora Billing.
 
 You will also find comprehensive SDK Technical Reference documentation [here](/README.md#sdk-technical-reference).
 
