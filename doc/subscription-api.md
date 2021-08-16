@@ -1,6 +1,6 @@
 # Subscription API
 
-A subscription is a product or service that has recurring charges, such as a monthly flat fee or charges based on usage. Subscriptions can also include one-time charges, such as activation fees. Every subscription must be associated with an account.
+A subscription is a product or service that has recurring charges, such as a monthly flat fee or charges based on usage. Subscriptions can also include one-time charges, such as service activation fees. Every subscription must be associated with an account.
 
 The Subscription object contains the information needed to create and maintain a subscription associated with an Account object.
 
