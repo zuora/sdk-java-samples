@@ -37,3 +37,4 @@ Subscription allow you to charge a customer on a recurring basis and are the res
 | `cancelAtPeriodEnd` | `Boolean` | Optional |  | Boolean getCancelAtPeriodEnd() |
 | `canceledDate` | `LocalDate` | Optional | The date on which the subscription was canceled. | LocalDate getCanceledDate() |
 | `suspendedDate` | `LocalDate` | Optional | The date on which the subscription was suspended. | LocalDate getSuspendedDate() |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
