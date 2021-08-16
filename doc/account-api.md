@@ -1,6 +1,6 @@
 # Account API
 
-The AccountAPI gives you access to your [Account](/doc/models/account.md) objects, which store information about your customers, such as their contact details, their billing documents, their payment history and on what day of the month they should be billed.
+The AccountAPI gives you access to your [Account](/doc/models/account.md) objects, which store information about your customers, including their contact details, payment methods, billing documents, payment history and on what day of the month they will be billed.
 
 The API allows you to create, retrieve, update, and delete your customer accounts. 
 
