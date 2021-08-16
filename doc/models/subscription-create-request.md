@@ -6,7 +6,7 @@ Describes a request to create a subscription using [CreateSubscription](/doc/sub
 ## Fields
 
 | Name | Type | Tags | Description |
-|  --- | --- | --- | --- | --- |
+|  --- | --- | --- | --- | 
 | `key` | `String` | ReadOnly | Unique identifier for the object. |
 | `account` | [`Account`](/doc/models/account.md) | Required | The subscriber account. |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | 
