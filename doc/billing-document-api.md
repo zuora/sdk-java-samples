@@ -22,7 +22,7 @@ Any customer credit on the account may be applied before determining the amount 
 # Get Billing Document
 
 ```java
-BillingDocument billingDocument = BillingDocumentAPI.get(billingDocumentId);
+BillingDocument billingDocument = BillingDocumentAPI.get(BILLING_DOCUMENT_ID);
 ```
 
 ## Parameters
