@@ -25,4 +25,4 @@ Product represents your products and are the response returned by [CreateProduct
 | `createdBy` | `String` | ReadOnly | The Id of the user that created the product | String getCreatedBy() |
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
 | `plans` | [`List<Plan>`](/doc/models/plan.md) | Optional | The array of plans associated with this product. | List<Plan> getPlans() |
-
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
