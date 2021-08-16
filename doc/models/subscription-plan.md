@@ -1,7 +1,7 @@
 
 # Subscription Plan
 
-A SubscriptionPlan is a container for a collection of [SubscriptionPlanItems](/doc.models/subscription-plan-item.md) and is the response returned by [CreateSubscriptionPlan](/doc/subscription-plan.md#create-subscription-plan), [UpdateSubscriptionPlan](/doc/subscription-plan.md#update-subscription-plan) and [GetSubscriptionPlan](/doc/subscription-plan.md#get-subscription-plan).
+A SubscriptionPlan is a container for a collection of [SubscriptionPlanItems](/doc/models/subscription-plan-item.md) and is the response returned by [CreateSubscriptionPlan](/doc/subscription-plan-api.md#create-subscription-plan), [UpdateSubscriptionPlan](/doc/subscription-plan-api.md#update-subscription-plan) and [GetSubscriptionPlan](/doc/subscription-plan-api.md#get-subscription-plan).
 
 ## Fields
 
