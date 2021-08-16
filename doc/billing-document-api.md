@@ -16,31 +16,8 @@ Any customer credit on the account may be applied before determining the amount 
 ## Methods
 
 * [Get a billing document](/doc/billing-document-api.md#get-billing-document)
+* [List all billing documents for an account](/doc/billing-document-api.md#list-billing-documents-by-account)
 
-
-# Create Billing Document
-
-```java
-BillingDocument billingDocument = BillingDocumentAPI.get(creditMemoCreateRequest);
-```
-
-## Parameters
-
-| Parameter | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `creditMemoCreateRequest` | [`CreditMemoCreateRequest`](/doc/models/credit-memo-create-request.md) | Required | Billing document request object. |
-
-
-## Response Type
-
-[`BillingDocument`](/doc/models/billing-document.md)
-
-
-## Example 
-
-```java
-BillingDocument billingDocument = billingDocumentAPI.create(createMemoCreateRequest);
-```
 
 
 # Get Billing Document
