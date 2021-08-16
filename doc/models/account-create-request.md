@@ -24,3 +24,4 @@ Describes a request to create an account using
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | |
 | `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional | |
 | `billingDocumentSettings` | [`BillingDocumentSettings`](/doc/models/billing-document-settings.md) | Optional | |
+| `customFields` | `Map<String, Object>` | Optional | Custom fields used to create an account. | `Map<String, Object> getCustomFields()`|
