@@ -34,15 +34,3 @@ A Billing Document Item can represent an invoice item, a credit memo item or a d
 | `product` | `String` | ReadOnly | . | String getProduct() |
 | `plan` | `String` | ReadOnly | . | String getPlan() |
 | `planItem` | `String` | ReadOnly | . | String getPlan() |
-
-## Example (as JSON)
-
-```json
-{
-    "id": "PLAN-000001",
-    "name": "Plan Y",
-    "createTime": "2021-07-10T13:23:49.154Z",
-    "updateTime": "2021-07-12T15:23:49.154Z",
-    "product" : "P-000001",
-}
-```
