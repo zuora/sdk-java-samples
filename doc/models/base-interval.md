@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| per_month | . |
-| per_billing_period | . |
-| per_week | . |
+| PER_MONTH | . |
+| PER_BILLING_PERIOD | . |
+| PER_WEEK | . |
