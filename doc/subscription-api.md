@@ -4,10 +4,6 @@ A subscription is a product or service that has recurring charges, such as a mon
 
 The Subscription object contains the information needed to create and maintain a subscription associated with an Account object.
 
-```java
-SubscriptionAPI subscriptionAPI=zuora.subscriptions();
-```
-
 ## Methods
 
 * [Create subscription](/doc/subscription-api.md#create-subscription)
@@ -33,7 +29,7 @@ SubscriptionAPI subscriptionAPI=zuora.subscriptions();
 Creates a new subscription.
 
 ```java
-Subscription subscription=subscriptionAPI.create(createSubscriptionRequest);
+Subscription subscription=zuoraClient.subscriptions().create(createSubscriptionRequest);
 ```
 
 ## Parameters
@@ -58,7 +54,7 @@ Subscription subscription=subscriptionAPI.create(subscriptionCreateRequest);
 # Get Subscription
 
 ```java
-Subscription subscription=SubscriptionAPI.get(subscriptionId);
+Subscription subscription=zuoraClient.subscriptions().get(subscriptionId);
 ```
 
 ## Parameters
@@ -75,13 +71,13 @@ Subscription subscription=SubscriptionAPI.get(subscriptionId);
 
 ```java
 String subscriptionId="subscription_id8";
-Subscription subscription=subscriptionAPI.get(subscriptionId);
+Subscription subscription=zuoraClient.subscriptions().get(subscriptionId);
 ```
 
 # Get Subscription Plans
 
 ```java
-List<SubscriptionPlan> subscriptionPlans=SubscriptionAPI.getSubscriptionPlans(subscriptionId);
+List<SubscriptionPlan> subscriptionPlans=zuoraClient.subscriptions().getSubscriptionPlans(subscriptionId);
 ```
 
 ## Parameters
@@ -97,15 +93,15 @@ List<SubscriptionPlan> subscriptionPlans=SubscriptionAPI.getSubscriptionPlans(su
 ## Example
 
 ```java
-String subscriptionId="subscription_id8";
+String SUBSCRIPTION_ID="subscription_id8";
 
-        Subscription subscription=subscriptionAPI.get(subscriptionId);
+Subscription subscription=zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 ```
 
 # Add Subscription Plan
 
 ```java
-Subscription updatedSubscription=subscriptionAPI.addPlan(subscription,plan,LocalDate.now(),LocalDate.now(),LocalDate.now());
+Subscription updatedSubscription=zuoraClient.subscriptions().addPlan(subscription, plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
 ## Response Type
@@ -128,17 +124,17 @@ SubscriptionCreateRequest sub=SubscriptionCreateRequest.builder()
         .customerAcceptanceDate(startDate)
         .build();
 
-Subscription subscriptionV1=zuora.subscriptions().create(sub);
+Subscription subscriptionV1=zuoraClient.subscriptions().create(sub);
 
 Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-"+LocalDate.now());
 Plan plan=product.getPlans().get(0);
-Subscription subscriptionV2=zuora.subscriptions().addPlan(subscriptionV1,plan,LocalDate.now(),LocalDate.now(),LocalDate.now());
+Subscription subscriptionV2=zuoraClient.subscriptions().addPlan(subscriptionV1,plan,LocalDate.now(),LocalDate.now(),LocalDate.now());
 ```
 
 # Update Subscription Plan Item
 
 ```java
-Subscription updatedSubscription=subscriptionAPI.updateSubscriptionPlanItem(subscription,subscriptionPlanItem,LocalDate.now());
+Subscription updatedSubscription=zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription, subscriptionPlanItem, LocalDate.now());
 ```
 
 ## Response Type
@@ -148,7 +144,7 @@ Subscription updatedSubscription=subscriptionAPI.updateSubscriptionPlanItem(subs
 ## Example
 
 ```java
-Account accountResponse=zuora.accounts().create(AccountCreateRequest.builder()
+Account accountResponse=zuoraClient.accounts().create(AccountCreateRequest.builder()
         .name(AccountCreateRequestStub.getMinimumStub().getName())
         .billTo(ContactCreateRequestStub.getMinimumStub())
         .build()
@@ -161,9 +157,9 @@ PlanCreateRequest plan=PlanCreateRequest.builder()
         .endDate("2121-01-01")
         .build();
 
-ProductCreateRequest productReq=ProductCreateRequestStub.getMinimumStub();
+ProductCreateRequest productCreateRequest=ProductCreateRequestStub.getMinimumStub();
 
-String accountingCodeName=zuora.planItemHelper().getDefaultAccountingCodeName();
+String accountingCodeName=zuoraClient.planItemHelper().getDefaultAccountingCodeName();
 
 //recurringPerUnit
 plan.addPlanItem(
@@ -188,10 +184,10 @@ plan.addPlanItem(
         .build()
 );
 
-productReq.addPlan(plan);
-Product product=zuora.products().create(productReq);
+productCreateRequest.addPlan(plan);
+Product product=zuoraClient.products().create(productCreateRequest);
 
-Subscription sub=zuora.subscriptions().create(SubscriptionCreateRequest.builder()
+Subscription subscription=zuoraClient.subscriptions().create(SubscriptionCreateRequest.builder()
         .account(accountResponse)
         .initialTerm(Term.builder().type(TermType.EVERGREEN).build())
         .contractEffectiveDate(startDate.minusMonths(1))
@@ -201,18 +197,18 @@ Subscription sub=zuora.subscriptions().create(SubscriptionCreateRequest.builder(
         .build()
 );
 
-SubscriptionPlanItem subscriptionPlanItem=sub.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
+SubscriptionPlanItem subscriptionPlanItem=subscription.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
 PerUnit perUnit=(PerUnit)subscriptionPlanItem.getChargeModel();
 perUnit.setQuantity(60.0);
 SubscriptionPlanItem subPlanItem=subscriptionPlanItem.toBuilder().chargeModel(perUnit).build();
-Subscription newSub=zuora.subscriptions().updateSubscriptionPlanItem(sub,subPlanItem,LocalDate.now());
-SubscriptionPlanItem updatedSubPlanItem=newSub.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
+Subscription newSubscription=zuoraClient.subscriptions().updateSubscriptionPlanItem(sub,subPlanItem,LocalDate.now());
+SubscriptionPlanItem updatedSubscriptionPlanItem=newSub.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
 ```
 
 # Transfer Owner
 
 ```java
-Subscription updatedSubscription=subscriptionsAPI.ownerTransfer(subscription,currentAccountKey,newAccountKey);
+Subscription updatedSubscription=zuoraClient.subscriptions().ownerTransfer(subscription, currentAccountKey, newAccountKey);
 ```
 
 ## Response Type
@@ -229,7 +225,7 @@ AccountCreateRequest account=AccountCreateRequest.builder()
 Account accountResponse=zuora.accounts().create(account);
 Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-2"+LocalDate.now().toString());
 
-Subscription subscriptionResponse=zuora.subscriptions().create(
+Subscription subscriptionResponse=zuoraClient.subscriptions().create(
         SubscriptionCreateRequest.builder()
         .account(accountResponse)
         .initialTerm(
@@ -263,14 +259,14 @@ AccountCreateRequest newInvoiceAccount=AccountCreateRequest.builder()
         .billTo(ContactCreateRequestStub.getMinimumStub())
         .build();
 Account newInvoiceAccountResponse=zuora.accounts().create(newInvoiceAccount);
-Subscription baseSub=zuora.subscriptions().get(subscriptionResponse.getId());
-Subscription ownertransferSub=subscriptionAPI.ownerTransfer(baseSub,newAccountResponse.getAccountKey(),newInvoiceAccountResponse.getAccountKey());
+Subscription baseSubscription=zuoraClient.subscriptions().get(subscriptionResponse.getId());
+Subscription ownertransferSub=zuoraClient.subscriptions().ownerTransfer(baseSubscription, newAccountResponse.getAccountKey(), newInvoiceAccountResponse.getAccountKey());
 ```
 
 # Renew Subscription
 
 ```java
-Subscription subscription = subscriptionAPI.renew(subscription.getId());
+Subscription subscription = zuoraClient.subscriptions().renew(subscription.getId());
 ```
 
 ## Parameters
@@ -290,9 +286,9 @@ AccountCreateRequest account = AccountCreateRequest.builder()
                 .name(AccountCreateRequestStub.getMinimumStub().getName())
                 .billTo(ContactCreateRequestStub.getMinimumStub())
                 .build();
-Account accountResponse = zuora.accounts().create(account);
+Account accountResponse = zuoraClient.accounts().create(account);
 Product product = ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-" + LocalDate.now().toString());
-Subscription subscription = zuora.subscriptions().create(
+Subscription subscription = zuoraClient.subscriptions().create(
         SubscriptionCreateRequest.builder()
                 .account(accountResponse)
                 .initialTerm(Term.builder()
@@ -314,13 +310,13 @@ Subscription subscription = zuora.subscriptions().create(
                 .build()
 );
 
-zuora.subscriptions().renew(subscription.getId());
+zuoraClient.subscriptions().renew(subscription.getId());
 ```
 
 # Cancel Subscription
 
 ```java
-Subscription canceledSubcription = subscriptionAPI.cancel(subscription);
+Subscription canceledSubcription = zuoraClient.subscriptions().cancel(subscription);
 ```
 
 ## Response Type
@@ -330,13 +326,13 @@ Subscription canceledSubcription = subscriptionAPI.cancel(subscription);
 ## Example
 
 ```java
-Account accountResponse = zuora.accounts().create(AccountCreateRequest.builder()
+Account accountResponse = zuoraClient.accounts().create(AccountCreateRequest.builder()
                 .name(AccountCreateRequestStub.getMinimumStub().getName())
                 .billTo(ContactCreateRequestStub.getMinimumStub())
                 .build());
 Product product = ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-" + LocalDate.now().toString());
 
-Subscription sub = zuora.subscriptions().create(SubscriptionCreateRequest.builder()
+Subscription subscription = zuoraClient.subscriptions().create(SubscriptionCreateRequest.builder()
         .account(accountResponse)
         .initialTerm(Term.builder().type(TermType.TERMED).interval("Month").intervalCount(12).build())
         .renewalTerm(Term.builder().type(TermType.EVERGREEN).build())
@@ -347,14 +343,14 @@ Subscription sub = zuora.subscriptions().create(SubscriptionCreateRequest.builde
         .plans(product.getPlans())
         .build());
 
-Subscription canceledSub = zuora.subscriptions().cancel(sub);
+Subscription canceledSubscription = zuoraClient.subscriptions().cancel(subscription);
 ```
 
 
 # Remove Subscription Plan
 
 ```java
-subscriptionAPI.removeSubscriptionPlan(subscription, subscriptionPlan);
+zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
 ```
 
 ## Response Type
@@ -364,13 +360,13 @@ subscriptionAPI.removeSubscriptionPlan(subscription, subscriptionPlan);
 ## Example
 
 ```java
-Account accountResponse = zuora.accounts().create(AccountCreateRequest.builder()
+Account accountResponse = zuoraClient.accounts().create(AccountCreateRequest.builder()
                 .name(AccountCreateRequestStub.getMinimumStub().getName())
                 .billTo(ContactCreateRequestStub.getMinimumStub())
                 .build());
 Product product = ProductStub.getSeedProduct("SDK-SEED-PRODUCT-1" + LocalDate.now().toString());
 
-Subscription sub = zuora.subscriptions().create(SubscriptionCreateRequest.builder()
+Subscription subscription = zuoraClient.subscriptions().create(SubscriptionCreateRequest.builder()
         .account(accountResponse)
         .initialTerm(Term.builder().type(TermType.EVERGREEN).build())
         .contractEffectiveDate(startDate)
@@ -379,11 +375,11 @@ Subscription sub = zuora.subscriptions().create(SubscriptionCreateRequest.builde
         .plans(product.getPlans())
         .build());
 
-List<SubscriptionPlan> originalSubPlans = null;
+List<SubscriptionPlan> originalSubscriptionPlans = null;
 
-originalSubPlans = zuora.subscriptions().getSubscriptionPlans(sub.getId());
+originalSubscriptionPlans = zuoraClient.subscriptions().getSubscriptionPlans(sub.getId());
 
-sub = zuora.subscriptions().removeSubscriptionPlan(sub, originalSubPlans.get(0));
+subscription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, originalSubsubscriptionPlans.get(0));
 ```
 
 
