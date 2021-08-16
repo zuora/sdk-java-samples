@@ -16,14 +16,4 @@ Product represents your products and are the response returned by [CreateProduct
 | `startDate` | `LocalDate` | Optional | Date on which the product becomes active. | String getStartDate() |
 | `endDate` | `LocalDate` | Optional | Date on which the product is no longer active. | String getEndDate() |
 | `sku` | `String` | Optional | The sku identifier of the product. | String getSku() |
-
-## Example (as JSON)
-
-```json
-{
-    "id": "P-000001",
-    "name": "Product X",
-    "startDate": "2021-07-10",
-    "sku" : "SKU-000345"
-}
-```
+| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
