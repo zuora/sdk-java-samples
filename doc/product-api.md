@@ -21,20 +21,20 @@ Products describe the specific goods or services you offer to your customers. Fo
 
 Creates a new product.
 
-You must provide at least these values in your request to this endpoint:
+You must provide at least this value in your request to this endpoint:
 
 - `name`
 
 
 ```java
-Product product = productAPI.create(createProductRequest);
+Product product = zuoraClient.products().create(productCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `createProductRequest` | [`CreateProductRequest`](/doc/models/product-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `productCreateRequest` | [`ProductCreateRequest`](/doc/models/product-create-request.md) | Required | Product create request. |
 
 ## Response Type
 
@@ -46,20 +46,20 @@ Product product = productAPI.create(createProductRequest);
 ProductCreateRequest productCreateRequest = ProductCreateRequest.builder()
         .name("Gold")
         .build();
-Product product = productAPI.create(createRequest);
+Product product = zuoraClient.products().create(createRequest);
 ```
 
 # Get Product
 
 ```java
-Product product = productAPI.get(productId);
+Product product = zuoraClient.products().get(productId);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the product. |
+| `id` | `String` | Required | The unique identifier of a product. |
 
 
 ## Response Type
@@ -70,16 +70,16 @@ Product product = productAPI.get(productId);
 ## Example 
 
 ```java
-String productId = "product_id8";
+String PRODUCT_ID = "product_id8";
 
-Product product = productAPI.get(productId);
+Product product = zuoraClient.products().get(PRODUCT_ID);
 ```
 
 
 # Update Product
 
 ```java
-Product product = productAPI.update(product);
+Product product = zuoraClient.products().update(product);
 ```
 
 
@@ -98,21 +98,21 @@ Product product = productAPI.update(product);
 ## Example 
 
 ```java
-String productId = "product_id8";
-Product product = productAPI.get(productId);
+String PRODUCT_ID = "product_id8";
+Product product = zuoraClient.products().get(PRODUCT_ID);
 
 Product updateRequest = product.builder()
     .name("Product Y")
     .build();
     
-Product product = productAPI.update(updateRequest);
+Product product = zuoraClient.products().update(updateRequest);
 ```
 
 
 # Delete Product
 
 ```java
-productAPI.delete(product);
+zuoraClient.products().delete(product);
 ```
 
 
@@ -120,7 +120,7 @@ productAPI.delete(product);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `product` | [`Product`](/doc/models/product.md) | Body, Required | The product to be deleted. |
+| `product` | [`Product`](/doc/models/product.md) | Required | The product to be deleted. |
 
 
 ## Response Type
@@ -130,10 +130,10 @@ None
 ## Example 
 
 ```java
-String productId = "product_id8";
-Product product = productAPI.get(productId);
+String PRODUCT_ID = "product_id8";
+Product product = zuoraClient.products().get(PRODUCT_ID);
    
-productAPI.delete(product);
+zuoraClient.products().delete(product);
 ```
 
 
