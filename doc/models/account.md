@@ -20,7 +20,6 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | String getCrmId() |
 | `paymentTerms` | [`Enum`](/doc/models/payment-terms.md) | Optional |  | String getPaymentTerms() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
-| `invoices` | [`List<PaymentMethod>`](/doc/models/payment-method.md) | Readonly | | List<PaymentMethod> getPaymentMethods() |
 | `batch` | `String` | Optional | The identifier of a bill run batch. |
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | |
 | `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional | |
