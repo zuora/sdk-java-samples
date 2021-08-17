@@ -1,10 +1,10 @@
-# Transferred to accounting
+# Transferred to Accounting
 
 Represents the transferral of a payment to an external accounting system.
 
 ## Enumeration
 
-`PyamentCreateRequestFinanceInformation`
+`PaymentCreateRequestFinanceInformation`
 
 ## Fields
 
