@@ -103,9 +103,6 @@ PlanItem planItem = zuoraClient.products().updatePlanItem(planItem);
 String PLAN_ITEM_ID = "plan_item_id8";
 PlanItem planItem = zuoraClient.products().getPlanItem(PLAN_ITEM_ID);
 
-PlanItem updatePlanItemRequest = planItem.toBuilder()
-    .name("Plan Y")
-    .build();
-    
-PlanItem planItem = zuoraClient.products().updatePlanItem(updatePlanItemRequest);
+planItem.setName("Plan Item B")   
+PlanItem planItem = zuoraClient.products().updatePlanItem(planItem);
 ```
