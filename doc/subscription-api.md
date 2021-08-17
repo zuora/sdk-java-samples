@@ -128,7 +128,7 @@ Subscription subscriptionV1=zuoraClient.subscriptions().create(sub);
 
 Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-"+LocalDate.now());
 Plan plan=product.getPlans().get(0);
-Subscription subscriptionV2=zuoraClient.subscriptions().addPlan(subscriptionV1,plan,LocalDate.now(),LocalDate.now(),LocalDate.now());
+Subscription subscriptionV2=zuoraClient.subscriptions().addPlan(subscriptionV1,plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
 # Update Subscription Plan Item
@@ -201,7 +201,7 @@ SubscriptionPlanItem subscriptionPlanItem=subscription.getSubscriptionPlans().ge
 PerUnit perUnit=(PerUnit)subscriptionPlanItem.getChargeModel();
 perUnit.setQuantity(60.0);
 SubscriptionPlanItem subPlanItem=subscriptionPlanItem.toBuilder().chargeModel(perUnit).build();
-Subscription newSubscription=zuoraClient.subscriptions().updateSubscriptionPlanItem(sub,subPlanItem,LocalDate.now());
+Subscription newSubscription=zuoraClient.subscriptions().updateSubscriptionPlanItem(sub, subPlanItem, LocalDate.now());
 SubscriptionPlanItem updatedSubscriptionPlanItem=newSub.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
 ```
 
