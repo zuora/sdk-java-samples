@@ -273,7 +273,8 @@ AccountCreateRequest newInvoiceAccount=AccountCreateRequest.builder()
 Account newInvoiceAccountResponse=zuora.accounts().create(newInvoiceAccount);
 Subscription baseSubscription=zuoraClient.subscriptions().get(subscriptionResponse.getId());
 Subscription ownertransferSub=
-        zuoraClient.subscriptions().ownerTransfer(baseSubscription, newAccountResponse.getAccountKey(), newInvoiceAccountResponse.getAccountKey());
+        zuoraClient.subscriptions().ownerTransfer(baseSubscription,
+                newAccountResponse.getAccountKey(), newInvoiceAccountResponse.getAccountKey());
 ```
 
 # Renew Subscription
