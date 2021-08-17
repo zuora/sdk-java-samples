@@ -131,14 +131,16 @@ Subscription subscriptionV1=zuoraClient.subscriptions().create(sub);
 Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-"+LocalDate.now());
 Plan plan=product.getPlans().get(0);
 Subscription subscriptionV2=
-        zuoraClient.subscriptions().addPlan(subscriptionV1, plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
+        zuoraClient.subscriptions().addPlan(subscriptionV1,
+                plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
 # Update Subscription Plan Item
 
 ```java
 Subscription updatedSubscription=
-        zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription, subscriptionPlanItem, LocalDate.now());
+        zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription,
+                subscriptionPlanItem, LocalDate.now());
 ```
 
 ## Response Type
