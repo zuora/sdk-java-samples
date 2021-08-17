@@ -10,5 +10,5 @@ You can choose to bill in advance or in arrears for recurring plan items. This f
 
 | Name | Description |
 |  --- | --- |
-| in_advance | Bill in advance |
-| in_arrears | Bill in arrears |
+| `IN_ADVANCE` | Bill in advance |
+| `IN_ARREARS` | Bill in arrears |
