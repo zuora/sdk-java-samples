@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| contract_effective | . |
-| service_activation | . |
-| contract_acceptance | . |
+| CONTRACT_EFFECTIVE | . |
+| SERVICE_ACTIVATION | . |
+| CONTRACT_ACCEPTANCE | . |
