@@ -46,8 +46,9 @@ Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateR
 
 ```java
 SubscriptionCreateRequest subscriptionCreateRequest=SubscriptionCreateRequest.builder()
-        .account(accountInstance)
+        .account(account)
         .build();
+        
 Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateRequest);
 ```
 
@@ -70,8 +71,9 @@ Subscription subscription=zuoraClient.subscriptions().get(subscriptionId);
 ## Example
 
 ```java
-String subscriptionId="subscription_id8";
-Subscription subscription=zuoraClient.subscriptions().get(subscriptionId);
+String SUBSCRIPTION_ID="subscription_id8";
+
+Subscription subscription=zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 ```
 
 # Get Subscription Plans
