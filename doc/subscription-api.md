@@ -102,7 +102,8 @@ Subscription subscription=zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 
 ```java
 Subscription updatedSubscription=
-        zuoraClient.subscriptions().addPlan(subscription, plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
+        zuoraClient.subscriptions().addPlan(subscription,
+                plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
 ## Response Type
@@ -129,7 +130,8 @@ Subscription subscriptionV1=zuoraClient.subscriptions().create(sub);
 
 Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-"+LocalDate.now());
 Plan plan=product.getPlans().get(0);
-Subscription subscriptionV2=zuoraClient.subscriptions().addPlan(subscriptionV1, plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
+Subscription subscriptionV2=
+        zuoraClient.subscriptions().addPlan(subscriptionV1, plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
 # Update Subscription Plan Item
@@ -214,7 +216,8 @@ SubscriptionPlanItem updatedSubscriptionPlanItem=
 # Transfer Owner
 
 ```java
-Subscription updatedSubscription=zuoraClient.subscriptions().ownerTransfer(subscription, currentAccountKey, newAccountKey);
+Subscription updatedSubscription=
+        zuoraClient.subscriptions().ownerTransfer(subscription, currentAccountKey, newAccountKey);
 ```
 
 ## Response Type
@@ -229,7 +232,8 @@ AccountCreateRequest account=AccountCreateRequest.builder()
         .billTo(ContactCreateRequestStub.getMinimumStub())
         .build();
 Account accountResponse=zuora.accounts().create(account);
-Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-2"+LocalDate.now().toString());
+Product product=
+        ProductStub.getSeedProduct("SDK-SEED-PRODUCT-2"+LocalDate.now().toString());
 
 Subscription subscriptionResponse=zuoraClient.subscriptions().create(
         SubscriptionCreateRequest.builder()
@@ -357,7 +361,8 @@ Subscription canceledSubscription = zuoraClient.subscriptions().cancel(subscript
 # Remove Subscription Plan
 
 ```java
-Subscription subcription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
+Subscription subcription =
+        zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
 ```
 
 ## Response Type
@@ -386,12 +391,6 @@ List<SubscriptionPlan> originalSubscriptionPlans = null;
 
 originalSubscriptionPlans = zuoraClient.subscriptions().getSubscriptionPlans(sub.getId());
 
-subscription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, originalSubsubscriptionPlans.get(0));
+subscription =
+        zuoraClient.subscriptions().removeSubscriptionPlan(subscription, originalSubsubscriptionPlans.get(0));
 ```
-
-
-
-
-
-
-
