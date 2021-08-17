@@ -18,7 +18,7 @@ A PlanItem defines the unit cost, currency, and (optional) billing cycle for bot
 | `chargeModel` | [`ChargeModelInterface`](/doc/models/charge-model-interface.md) | Required | The charge model for the plan item. | ChargeModelInterface getChargeModel() |
 | `on` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a plan item such as `interval`. | Recurring getRecurring() |
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring plan items. This field is not used with one-time or usage-based plan items. | String getTiming() |
-| `type` | [`Enum`](/doc/models/type.md) | Optional | Describes how to compute the price per period. Either per_unit, one_time or based on usage. | String getType() |
+| `type` | [`Enum`](/doc/models/type.md) | Optional | Describes how to compute the price per period. Either per unit, one time or based on usage. | String getType() |
 | `ends` | [`Ends`](/doc/models/ends.md) | Optional | Defines when the charge ends after the plan item start date. | Ends getEnds() |
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | String getStartEvent() |
 | `taxCode` | `String` | Optional | The plan item tax code. | String getTaxCode() |
