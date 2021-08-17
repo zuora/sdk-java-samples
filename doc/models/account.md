@@ -20,10 +20,60 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | String getCrmId() |
 | `paymentTerms` | [`Enum`](/doc/models/payment-terms.md) | Optional |  | String getPaymentTerms() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
-| `paymentMethods` | [`List<PaymentMethod>`](/doc/models/payment-method.md) | Readonly | | List<PaymentMethod> getPaymentMethods() |
 | `invoices` | [`List<PaymentMethod>`](/doc/models/payment-method.md) | Readonly | | List<PaymentMethod> getPaymentMethods() |
 | `batch` | `String` | Optional | The identifier of a bill run batch. |
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | |
 | `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional | |
 | `billingDocumentSettings` | [`BillingDocumentSettings`](/doc/models/billing-document-settings.md) | Optional | |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
+
+## Methods
+
+* [Get invoices](/doc/models/account.md#get-invoices)
+* [Get subscriptions](/doc/models/account.md#get-subscriptions)
+* [Get payments](/doc/models/account.md#get-payments)
+* [Get payment methods](/doc/models/account.md#get-payment-methods)
+
+
+# Get Invoices
+
+```java
+List<BillingDocument> invoices = account.getInvoices();
+```
+
+## Response Type
+
+[`List<BillingDocument>`](/doc/models/billing-document.md)
+
+
+# Get Subscriptions
+
+```java
+List<Subscription> subscriptions = account.getSubscriptions();
+```
+
+## Response Type
+
+[`List<Subscription>`](/doc/models/subscription.md)
+
+
+# Get Payments
+
+```java
+List<Payment> payments = account.getPayments();
+```
+
+## Response Type
+
+[`List<Payment>`](/doc/models/payment.md)
+
+
+# Get Payment Methods
+
+```java
+List<PaymentMethod> paymentMethods = account.getPaymentMethods();
+```
+
+## Response Type
+
+[`List<PaymentMethod>`](/doc/models/payment-method.md)
