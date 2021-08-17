@@ -22,7 +22,7 @@ and [GetPayment](/doc/payment-api.md#get-payment).
 | `date` | `LocalDate` | | The date when the payment takes effect. | `String getDate()`
 | `name` | `String` | | A unique identification number for the payment. For example, P-00000001. | `String getName()`
 | `gatewayOptions` | `Map<String, String>` | | Used to pass gateway-specific parameters and parameter values. | `Map<String, String> getGatewayOptions()`
-| `financeInformation` | [`FinanceInformation`](doc/models/finance-information.md) | | Payment finance information. | `String getFinanceInformation()`
+| `financeInformation` | [`FinanceInformation`](finance-information.md) | | Payment finance information. | `String getFinanceInformation()`
 | `gateway` | `String` | Optional | Identifier of the gateway used to process the payment. | `String getGateway()`
 | `paymentMethod` | `String` | | Unique identifier of the payment method used to make the payment. | `String getPaymentMethod()`
 | `gatewayOrderId` | `String` | | A merchant-specified natural key value that can be passed to the payment gateway when a payment is created. If not specified, a payment number will be passed in instead. | `String getGatewayOrderId`
