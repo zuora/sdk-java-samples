@@ -1,7 +1,5 @@
 # Plan Create Request
 
-`Plan Create Request`
-
 Describes a request to create a plan using [CreatePlan](/doc/plan-api.md#create-plan).
 
 ## Fields
