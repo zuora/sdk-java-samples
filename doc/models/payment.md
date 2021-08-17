@@ -40,11 +40,11 @@ and [GetPayment](/doc/payment-api.md#get-payment).
 | `submitTime` | `ZonedDateTime` | ReadOnly | The date and time when the payment was submitted, in `yyyy-mm-dd hh:mm:ss` format. | `ZonedDateTime getSubmitTime()` |
 | `secondPaymentReferenceId` | `String` | | The payout ID of the payment from the gateway side. | `String getSecondPaymentReferenceId()`
 | `payoutId` | `String` | | The payout ID of the payment from the gateway side. | `String getPayoutId()` |
-| `gatewayState` | `PaymentGatewayState` | | The status of the payment in the gateway; use for reconciliation. [MarkedForSubmission, Submitted, Settled, NotSubmitted, FailedToSettle] | `PaymentGatewayState getGatewayState()` |
+| `gatewayState` | `Payment Gateway State` | | The status of the payment in the gateway; use for reconciliation. [MarkedForSubmission, Submitted, Settled, NotSubmitted, FailedToSettle] | `PaymentGatewayState getGatewayState()` |
 | `markedForSubmissionOn` | `ZonedDateTime` | | The date and time when a payment was marked and waiting for batch submission to the payment process, in `yyyy-mm-dd hh:mm:ss` format. | `ZonedDateTime getMarkedForSubmissionOn()` |
 | `gatewayResponseCode` | `String` | | The code returned from the payment gateway for the payment. This code is gateway-dependent. | `String getGatewayResponseCode()` |
 | `gatewayResponse` | `String` | | The message returned from the payment gateway for the payment. This message is gateway-dependent. | `String getGatewayResponse()` |
-| `gatewayReconciliationStatus` | `String` | | The status of gateway reconciliation. | ` | `getString()` |
-| `gatewayReconciliationReason` | `String` | | The reason of gateway reconciliation. | `String getGatewayReconciliationReason()` |
+| `gateway Reconciliation Status` | `String` | | The status of gateway reconciliation. | ` | `getString()` |
+| `gateway Reconciliation Reason` | `String` | | The reason of gateway reconciliation. | `String getGatewayReconciliationReason()` |
 | `financeInformation` | `Payment Finance Information` | | Container for the finance information related to the payment. | `Payment Finance Information getFinanceInformation()` |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
