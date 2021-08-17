@@ -4,7 +4,7 @@ Zuora Samples are built by Zuora, and provide all of the server code you need fo
 
 You will also find comprehensive [SDK Technical Reference](/README.md#sdk-technical-reference) documentation here.
 
-Go to the [Zuora Developer Community](https://community.zuora.com/communities/community-home?CommunityKey=e2a932b4-50c4-4019-a3e8-362e38714df3) to report issues or discuss these samples.
+Go to the [Zuora Developer Community](https://community.zuora.com/communities/community-home?CommunityKey=e2a932b4-50c4-4019-a3e8-362e38714df3) to connect with other developers, report issues or discuss these samples.
 
 ## Installation
 #### Add the following to the dependencies your project pom.xml
