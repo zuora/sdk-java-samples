@@ -41,7 +41,7 @@ and [GetPayment](/doc/payment-api.md#get-payment).
 | `secondPayment ReferenceId` | `String` | | The payout ID of the payment from the gateway side. | `String getSecondPaymentReferenceId()`
 | `payoutId` | `String` | | The payout ID of the payment from the gateway side. | `String getPayoutId()` |
 | `gatewayState` | `Payment Gateway State` | | The status of the payment in the gateway; use for reconciliation. [MarkedForSubmission, Submitted, Settled, NotSubmitted, FailedToSettle] | `PaymentGatewayState getGatewayState()` |
-| `markedForSubmissionOn` | `Zoned DateTime` | | The date and time when a payment was marked and waiting for batch submission to the payment process, in `yyyy-mm-dd hh:mm:ss` format. | `ZonedDateTime getMarkedForSubmissionOn()` |
+| `markedFor SubmissionOn` | `Zoned DateTime` | | The date and time when a payment was marked and waiting for batch submission to the payment process, in `yyyy-mm-dd hh:mm:ss` format. | `ZonedDateTime getMarkedForSubmissionOn()` |
 | `gatewayResponseCode` | `String` | | The code returned from the payment gateway for the payment. This code is gateway-dependent. | `String getGatewayResponseCode()` |
 | `gatewayResponse` | `String` | | The message returned from the payment gateway for the payment. This message is gateway-dependent. | `String getGatewayResponse()` |
 | `gateway Reconciliation Status` | `String` | | The status of gateway reconciliation. | ` | `getString()` |
