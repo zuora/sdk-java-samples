@@ -87,7 +87,7 @@ Product product = zuoraClient.products().update(product);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `product` | [`Product`](/doc/models/product.md) | Product, Required | The product to update. |
+| `product` | [`Product`](/doc/models/product.md) | Required | The product to update. |
 
 
 ## Response Type
