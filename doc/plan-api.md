@@ -6,15 +6,13 @@ For example, you might have a single "gold" product that has prices for $100/mon
 
 ## Class Name
 
+`PlanAPI`
 
-
- ## Methods
+## Methods
 
 * [Create plan](/doc/plan-api.md#create-plan)
 * [Get plan](/doc/plan-api.md#get-plan)
 * [Update plan](/doc/plan-api.md#update-plan)
-* Add Plan Item
-
 
 
 # Create Plan
@@ -26,14 +24,14 @@ You must provide at least these values in your request to this endpoint:
 - `name`
 
 ```java
-Plan plan = productAPI.createPlan(createPlanRequest);
+Plan plan = zuoraClient.products().createPlan(planCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `createPlanRequest` | [`CreatePlanRequest`](/doc/models/plan-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `planCreateRequest` | [`PlanCreateRequest`](/doc/models/plan-create-request.md) | Required | Plan request object. |
 
 ## Response Type
 
@@ -45,20 +43,20 @@ Plan plan = productAPI.createPlan(createPlanRequest);
 PlanCreateRequest planCreateRequest = PlanCreateRequest.builder()
         .name("Monthly Plan")
         .build();
-Plan plan = productAPI.createPlan(createRequest);
+Plan plan = zuoraClient.products().createPlan(planCreateRequest);
 ```
 
 # Get Plan
 
 ```java
-Plan plan = productAPI.getPlan(planId);
+Plan plan = zuoraClient.products().getPlan(planId);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the plan. |
+| `id` | `String` | Required | The unique identifier of a plan. |
 
 
 ## Response Type
@@ -69,16 +67,16 @@ Plan plan = productAPI.getPlan(planId);
 ## Example 
 
 ```java
-String planId = "plan_id8";
+String PLAN_ID = "plan_id8";
 
-Plan plan = productAPI.getPlan(planId);
+Plan plan = zuoraClient.products().getPlan(PLAN_ID);
 ```
 
 
 # Update Plan
 
 ```java
-Plan plan = productAPI.updatePlan(updateRequest);
+Plan plan = zuoraClient.products().updatePlan(updatePlanRequest);
 ```
 
 
@@ -86,7 +84,7 @@ Plan plan = productAPI.updatePlan(updateRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `plan` | [`Plan`](/doc/models/plan.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `plan` | [`Plan`](/doc/models/plan.md) | Required | Plan request object. |
 
 
 ## Response Type
@@ -97,14 +95,14 @@ Plan plan = productAPI.updatePlan(updateRequest);
 ## Example 
 
 ```java
-String planId = "plan_id8";
-Plan plan = productAPI.get(planId);
+String PLAN_ID = "plan_id8";
+Plan plan = zuoraClient.products().get(PLAN_ID);
 
-Plan updateRequest = plan.toBuilder()
+Plan updatePlanRequest = plan.toBuilder()
     .name("Plan Y")
     .build();
     
-Plan plan = productAPI.update(updateRequest);
+Plan plan = zuoraClient.products().update(updatePlanRequest);
 ```
 
 # Add Plan Item
