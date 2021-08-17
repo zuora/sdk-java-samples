@@ -70,7 +70,7 @@ If you're not sure where to start [this basic sample](src/main/java/com/zuora/sd
 
 ## SDK Technical Reference
 
-This reference documents every recommended object and method available in Zuora's SDK for Java.
+This technical reference documents every recommended object and method available in Zuora's SDK for Java.
 
 ### Product
 * [Product](doc/product-api.md)
