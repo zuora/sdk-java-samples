@@ -13,6 +13,8 @@ For example, you might have a single "gold" product that has prices for $100/mon
 * [Create plan](/doc/plan-api.md#create-plan)
 * [Get plan](/doc/plan-api.md#get-plan)
 * [Update plan](/doc/plan-api.md#update-plan)
+* [List plans](/doc/plan-api.md#list-plans)
+* [Delete plan](/doc/plan-api.md#delete-plan)
 
 
 # Create Plan
@@ -105,18 +107,45 @@ Plan updatePlanRequest = plan.toBuilder()
 Plan plan = zuoraClient.products().update(updatePlanRequest);
 ```
 
-# Add Plan Item
+# List Plans
 
 ```java
-plan.addPlanItem(PlanItem planItem)
+Plan plan = zuoraClient.products().getPlans(product);
 ```
-
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `planItem` | [`PlanItem`](/doc/models/plan-item.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `product` | `Product` | Required | A product object. |
+
+
+## Response Type
+
+List<[`Plan`](/doc/models/plan.md)>
+
+
+## Example 
+
+```java
+String PRODUCT_ID = "product_id8";
+
+Product product = zuoraClient.products().getProduct(PRODUCT_ID);
+
+List<Plan> plans = zuoraClient.products().getPlans(product);
+```
+
+# Delete Plan
+
+```java
+Plan plan = zuoraClient.products().removePlan(planId);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier of a plan. |
 
 
 ## Response Type
@@ -124,17 +153,13 @@ plan.addPlanItem(PlanItem planItem)
 [`Plan`](/doc/models/plan.md)
 
 
-## Example
+## Example 
 
 ```java
-String planId = "plan_id8";
-Plan plan = productAPI.get(planId);
+String PLAN_ID = "plan_id8";
 
-Plan updateRequest = plan.toBuilder()
-    .name("Plan Y")
-    .build();
-    
-Plan plan = productAPI.update(updateRequest);
+Plan plan = zuoraClient.products().removePlan(PLAN_ID);
 ```
+
 
 
