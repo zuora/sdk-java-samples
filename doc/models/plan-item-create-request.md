@@ -3,9 +3,6 @@
 
 Describes a request to create a plan item using [CreatePlanItem](/doc/plan-item-api.md#create-plan-item).
 
-## Structure
-
-`CreatePlanItemRequest`
 
 ## Fields
 

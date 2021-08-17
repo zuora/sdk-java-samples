@@ -21,14 +21,14 @@ For example, you might have a single "enterprise" product that has prices for $1
 Creates a new plan item.
 
 ```java
-PlanItem planitem = productAPI.createPlanItem(createPlanItemRequest);
+PlanItem planitem = zuoraClient.products().createPlanItem(planItemCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `createPlanItemRequest` | [`CreatePlanItemRequest`](/doc/models/plan-item-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `planItemCreateRequest` | [`PlanItemCreateRequest`](/doc/models/plan-item-create-request.md) | Required | Plan item request object. |
 
 ## Response Type
 
@@ -48,7 +48,7 @@ PlanItemCreateRequest planItemCreateRequest = PlanItemCreateRequest.recurringBui
         .interval(PlanItemEnum.Interval.MONTH)
         .on(PlanItemEnum.RecurringOn.ACCOUNT_CYCLE_DATE)
         .build();
-PlanItem planItem = zuoraClient.products().createPlanItem(createRequest);
+PlanItem planItem = zuoraClient.products().createPlanItem(planItemCreateRequest);
 ```
 
 
@@ -62,7 +62,7 @@ PlanItem planItem = zuoraClient.products().getPlanItem(planItemId);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier of the plan item. |
+| `id` | `String` | Required | The unique identifier of a plan item. |
 
 
 ## Response Type
@@ -73,15 +73,15 @@ PlanItem planItem = zuoraClient.products().getPlanItem(planItemId);
 ## Example 
 
 ```java
-String planItemId = "plan_item_id8";
+String PLAN_ITEM_ID = "plan_item_id8";
 
-PlanItem planItem = zuoraClient.products().getPlanItem(planItemId);
+PlanItem planItem = zuoraClient.products().getPlanItem(PLAN_ITEM_ID);
 ```
 
 # Update Plan Item
 
 ```java
-PlanItem planItem = zuoraClient.products().updatePlanItem(updateRequest);
+PlanItem planItem = zuoraClient.products().updatePlanItem(planItem);
 ```
 
 
@@ -89,7 +89,7 @@ PlanItem planItem = zuoraClient.products().updatePlanItem(updateRequest);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`PlanItem`](/doc/models/plan-item.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `body` | [`PlanItem`](/doc/models/plan-item.md) | Required | Plan item object. |
 
 
 ## Response Type
@@ -100,12 +100,9 @@ PlanItem planItem = zuoraClient.products().updatePlanItem(updateRequest);
 ## Example 
 
 ```java
-String planItemId = "plan_item_id8";
-PlanItem planItem = productAPI.getPlanItem(planItemId);
+String PLAN_ITEM_ID = "plan_item_id8";
+PlanItem planItem = zuoraClient.products().getPlanItem(PLAN_ITEM_ID);
 
-PlanItem updateRequest = planItem.toBuilder()
-    .name("Plan Y")
-    .build();
-    
-PlanItem planItem = productAPI.updatePlanItem(updateRequest);
+planItem.setName("Plan Item B")   
+PlanItem planItem = zuoraClient.products().updatePlanItem(planItem);
 ```

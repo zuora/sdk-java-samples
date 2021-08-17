@@ -3,10 +3,6 @@
 
 Payment methods represent your customers' payment instruments and are the response returned by [GetPaymentMethod](/doc/payment-method-api.md#get-payment-method).
 
-## Structure
-
-`PaymentMethod`
-
 ## Fields
 
 | Name | Type | Tags | Description | Getter |

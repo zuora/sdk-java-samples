@@ -14,21 +14,20 @@ PaymentAPI
 
 * [Create payment](/doc/payment-api.md#create-payment)
 * [Get payment](/doc/payment-api.md#get-payment)
-* [Refund payment](/doc/payment-api.md#refund-payment)
 
 # Create Payment
 
 Creates a new payment.
 
 ```java
-Payment payment = paymentAPI.create(paymentCreateRequest);
+Payment payment = zuoraClient.payments().create(paymentCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Body, Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
+| `body` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | Payment create request. |
 
 ## Response Type
 
@@ -37,16 +36,16 @@ Payment payment = paymentAPI.create(paymentCreateRequest);
 ## Example
 
 ```java
-String accountId = "account_id9";
-String authCode = "justdoit";
+String ACCOUNT_ID = "account_id9";
+String authCode = "7368";
 PaymentCreateRequest paymentCreateRequest = PaymentCreateRequest.builder()
         .amount(10.0d)
-        .account(accountId)
+        .account(ACCOUNT_ID)
         .authorisationCode(authCode)
         .currency("USD")
         .external(true).build();
 
-Payment createdPayment = zuoraClient.payments().create(paymentCreateRequest);
+Payment payment = zuoraClient.payments().create(paymentCreateRequest);
 ```
 
 # Get Payment
@@ -54,14 +53,14 @@ Payment createdPayment = zuoraClient.payments().create(paymentCreateRequest);
 Retrieves a payment by ID.
 
 ```java
-Payment payment = paymentAPI.get(paymentId);
+Payment payment = zuoraClient.payments().get(paymentId);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `paymentId` | `String` | Required | The unique identifier for the payment. |
+| `paymentId` | `String` | Required | The unique identifier of a payment. |
 
 ## Response Type
 
@@ -70,31 +69,5 @@ Payment payment = paymentAPI.get(paymentId);
 ## Example
 
 ```java
-Payment payment = paymentAPI.get(paymentId);
+Payment payment = zuoraClient.payments().get(paymentId);
 ```
-
-# Refund Payment
-
-Refunds a payment.
-
-## Parameters
-
-| Parameter | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `paymentId` | `String` | Required | The unique identifier for the payment to be refunded. |
-| `paymentRefundRequest` | [`PaymentRefundRequest`](/doc/models/payment-refund-request.md) | Required | An object containing the fields to POST for the request.<br>See the corresponding object definition for field details. |
-
-## Response Type
-
-`String`
-
-## Example
-
-```java
-PaymentRefundRequest paymentRefundRequest = PaymentRefundRequest.builder()
-        .amount(5.0d)
-        .external(true).build();
-
-String refundPaymentTypeId = paymentAPI.refund(paymentId, paymentRefundRequest);
-```
-

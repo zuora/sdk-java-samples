@@ -35,18 +35,18 @@ Account account = zuoraClient.accounts().create(accountCreateRequest);
 ## Example
 
 ```java
-ContactCreateRequest billTo = ContactCreateRequest.builder()
+ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder()
     .firstName("Jenny")
     .lastName("Smith")
     .address(Address.builder().country("USA").state("CA").build())
     .build();
 
-AccountCreateRequest createRequest = AccountCreateRequest.builder()
+AccountCreateRequest accountCreateRequest = AccountCreateRequest.builder()
     .name("Jenny Smith")
-    .billTo(billTo)
+    .billTo(contactCreateRequest)
     .build();
     
-Account account = zuoraClient.accounts().create(createRequest);
+Account account = zuoraClient.accounts().create(accountCreateRequest);
 ```
 
 # Get Account
@@ -70,9 +70,9 @@ Account account = zuoraClient.accounts().get(accountId);
 ## Example 
 
 ```java
-String accountId = "account_id8";
+String ACCOUNT_ID = "account_id8";
 
-Account account = zuoraClient.accounts().get(accountId);
+Account account = zuoraClient.accounts().get(ACCOUNT_ID);
 ```
 
 
@@ -96,6 +96,7 @@ Account account = account.update();
 ```java
 String ACCOUNT_ID = "account_id8";
 Account account = zuoraClient.accounts().get(ACCOUNT_ID);
+
 account.setName("New Name");
 account.update();
 ```
@@ -118,7 +119,8 @@ zuoraClient.accounts().delete(accountId);
 
 ```java
 String ACCOUNT_ID = "account_id8";
-zuoraClient.accounts().delete(accountId);
+
+zuoraClient.accounts().delete(ACCOUNT_ID);
 ```
 
 
