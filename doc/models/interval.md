@@ -13,4 +13,4 @@
 | WEEK | . |
 | MONTH | . |
 | YEAR | . |
-| SBSCRIPTION_TERM | . |
+| SUBSCRIPTION_TERM | . |
