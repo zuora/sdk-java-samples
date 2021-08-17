@@ -10,7 +10,7 @@
 
 | Name | Description |
 |  --- | --- |
-| week | . |
-| month | . |
-| year | . |
-| subscription_term | . |
+| WEEK | . |
+| MONTH | . |
+| YEAR | . |
+| SBSCRIPTION_TERM | . |
