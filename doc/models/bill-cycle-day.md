@@ -1,6 +1,6 @@
 # Bill Cycle Day
 
-.
+The day of the month when a bill run generates invoices for an account. Auto-set sets the billing cycle day to the same day as the start date of the first recurring charge on the account. 
 
 ## Enumeration
 
@@ -10,7 +10,7 @@
 
 | Name | Description |
 |  --- | --- |
-| 0 | Auto set. |
+| 0 | Auto-set. |
 | 1 | Day of month. |
 | 2 | Day of month. |
 | 3 | Day of month. |
