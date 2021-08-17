@@ -14,7 +14,6 @@ PaymentAPI
 
 * [Create payment](/doc/payment-api.md#create-payment)
 * [Get payment](/doc/payment-api.md#get-payment)
-* [Refund payment](/doc/payment-api.md#refund-payment)
 
 # Create Payment
 
