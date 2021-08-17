@@ -18,7 +18,7 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `soldTo` | [`Contact`](/doc/models/contact.md) | Optional | A customer's soldTo address.  | Contact getSoldTo() |
 | `parentAccount` | `String` | Optional | The identifier of the customer account that owns this account's invoices. | String getParentAccount() |
 | `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | String getCrmId() |
-| `paymentTerms` | [`Enum`](/doc/models/payment-terms.md) | Optional |  | String getPaymentTerms() |
+| `paymentTerms` | `String` | Optional |  | String getPaymentTerms() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
 | `batch` | `String` | Optional | The identifier of a bill run batch. |
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | |
