@@ -12,6 +12,7 @@ Products describe the specific goods or services you offer to your customers. Fo
 
 * [Create product](/doc/product-api.md#create-product)
 * [Get product](/doc/product-api.md#get-product)
+* [Find product by SKU](/doc/product-api.md#find-product-by-sku)
 * [Update product](/doc/product-api.md#update-product)
 * [Delete product](/doc/product-api.md#delete-product)
 
@@ -74,6 +75,33 @@ String PRODUCT_ID = "product_id8";
 
 Product product = zuoraClient.products().get(PRODUCT_ID);
 ```
+
+# Find Product by Sku
+
+```java
+Product product = zuoraClient.products().findBySku(skuId);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `skuId` | `String` | Required | The unique sku identifier of a product. |
+
+
+## Response Type
+
+[`Product`](/doc/models/product.md)
+
+
+## Example 
+
+```java
+String SKU_ID = "sku_id8";
+
+Product product = zuoraClient.products().findBySku(SKU_ID);
+```
+
 
 
 # Update Product
