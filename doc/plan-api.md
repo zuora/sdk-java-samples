@@ -100,11 +100,8 @@ Plan plan = zuoraClient.products().updatePlan(updatePlanRequest);
 String PLAN_ID = "plan_id8";
 Plan plan = zuoraClient.products().get(PLAN_ID);
 
-Plan updatePlanRequest = plan.toBuilder()
-    .name("Plan Y")
-    .build();
-    
-Plan plan = zuoraClient.products().update(updatePlanRequest);
+plan.setName("Plan Y")
+Plan plan = zuoraClient.products().update(plan);
 ```
 
 # List Plans
