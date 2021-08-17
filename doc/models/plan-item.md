@@ -24,7 +24,7 @@ A PlanItem defines the unit cost, currency, and (optional) billing cycle for bot
 | `taxCode` | `String` | Optional | The plan item tax code. | String getTaxCode() |
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | String getTaxInclusive() |
 | `createdBy`| `String` | ReadOnly | Identifier of the user who created the plan item. |  String getCreatedBy() |
-| `createTime`| `ZonedDateTime` | ReadOnly | The date and time when the plan item was created. | ZonedDateTime getCreateTime() |
+| `createTime`| `ZonedDateTime` | ReadOnly | The time when the plan item was created. | ZonedDateTime getCreateTime() |
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the plan item. | String getUpdatedBy() |
-| `updateTime`| `ZonedDateTime` | ReadOnly | The date and time when the plan item was last updated. | ZonedDateTime getUpdateTime() |
+| `updateTime`| `ZonedDateTime` | ReadOnly | The time when the plan item was last updated. | ZonedDateTime getUpdateTime() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
