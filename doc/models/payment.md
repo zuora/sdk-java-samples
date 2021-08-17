@@ -35,7 +35,7 @@ and [GetPayment](/doc/payment-api.md#get-payment).
 | `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the payment was last updated | `ZonedDateTime getUpdateTime()` |
 | `createdBy` | `String` | ReadOnly | Identifier of the user that created the payment | `String getCreatedBy()` |
 | `updatedBy` | `String` | ReadOnly | Identifier of the user that last updated the payment | `String getUpdatedBy()` |
-| `state` | `PaymentStatus` | | State of the payment. | `PaymentStatus getState()` |
+| `state` | [`PaymentState`](payment-state-md) | | State of the payment. | `PaymentStatus getState()` |
 | `cancelTime` | `ZonedDateTime` | ReadOnly | Time the payment was cancelled. | `ZonedDateTime getCancelTime()` |
 | `submitTime` | `ZonedDateTime` | ReadOnly | Time when the payment was submitted. | `ZonedDateTime getSubmitTime()` |
 | `secondPayment ReferenceId` | `String` | | The payout ID of the payment from the gateway side. | `String getSecondPaymentReferenceId()`
