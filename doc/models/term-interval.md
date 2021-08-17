@@ -10,7 +10,7 @@
 
 | Name | Description |
 |  --- | --- |
-| day | . |
-| week | . |
-| month | . |
-| year | . |
+| `DAY` | . |
+| `WEEK` | . |
+| `MONTH` | . |
+| `YEAR` | . |
