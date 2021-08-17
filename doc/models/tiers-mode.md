@@ -10,5 +10,5 @@ Defines if the tiering price should be graduated or volume based. In volume-base
 
 | Name | Description |
 |  --- | --- |
-| graduated | Pricing can change as the quantity grows. |
-| volume | The maximum quantity within a period determines the per unit price. |
+| `GRADUATED` | Pricing can change as the quantity grows. |
+| `VOLUME` | The maximum quantity within a period determines the per unit price. |
