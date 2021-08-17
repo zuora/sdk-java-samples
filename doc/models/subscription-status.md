@@ -1,6 +1,6 @@
 # Subscription State
 
-Represents the type of plan item.
+Represents the state of a subscription.
 
 ## Enumeration
 
@@ -10,11 +10,11 @@ Represents the type of plan item.
 
 | Name | Description |
 |  --- | --- |
-| draft |  |
-| pending_activation |  |
-| pending_acceptance |  |
-| active |  |
-| inactive |  |
-| ended |  |
-| canceled |  |
-| suspended |  |
+| `DRAFT` |  |
+| `PENDING_ACTIVATION` |  |
+| `PENDING_ACCEPTANCE` |  |
+| `ACTIVE` |  |
+| `INACTIVE` |  |
+| `ENDED` |  |
+| `CANCELED` |  |
+| `SUSPENDED` |  |
