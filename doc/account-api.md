@@ -70,9 +70,9 @@ Account account = zuoraClient.accounts().get(accountId);
 ## Example 
 
 ```java
-String accountId = "account_id8";
+String ACCOUNT_ID = "account_id8";
 
-Account account = zuoraClient.accounts().get(accountId);
+Account account = zuoraClient.accounts().get(ACCOUNT_ID);
 ```
 
 
