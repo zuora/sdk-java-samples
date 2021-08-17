@@ -96,6 +96,7 @@ Account account = account.update();
 ```java
 String ACCOUNT_ID = "account_id8";
 Account account = zuoraClient.accounts().get(ACCOUNT_ID);
+
 account.setName("New Name");
 account.update();
 ```
@@ -118,7 +119,8 @@ zuoraClient.accounts().delete(accountId);
 
 ```java
 String ACCOUNT_ID = "account_id8";
-zuoraClient.accounts().delete(accountId);
+
+zuoraClient.accounts().delete(ACCOUNT_ID);
 ```
 
 
