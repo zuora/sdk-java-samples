@@ -30,18 +30,18 @@ and [GetPayment](/doc/payment-api.md#get-payment).
 | `statementDescriptor` | `String` | | A payment gateway-specific field that maps to Zuora for the gateways Orbital, Vantiv and Verifi. | `String getStatementDescriptor()`
 | `softDescriptorPhone` | `String` | | A payment gateway-specific field that maps to Zuora for the gateways Orbital, Vantiv and Verifi. | `String getSoftDescriptorPhone()`
 | `external` | `Boolean` | | If `true` the payment is external. | `Boolean isExternal()`
-| `customFields` | `Map<String, Object>` | | Custom fields used to create a payment. | `Map<String, Object> getCustomFields()`
-| `createTime` | `Zoned DateTime` | ReadOnly | The date and time, based on the tenant timezone, the payment was created | `ZonedDateTime getCreateTime()` |
-| `updateTime` | `Zoned DateTime` | ReadOnly | The date and time, based on the tenant timezone, the payment was last updated | `ZonedDateTime getUpdateTime()` |
+| `customFields` | `Map<String, Object>` | | Custom fields used to create a payment. | `Map<String, Object> getCustomFields()` |
+| `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the payment was created | `ZonedDateTime getCreateTime()` |
+| `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the payment was last updated | `ZonedDateTime getUpdateTime()` |
 | `createdBy` | `String` | ReadOnly | Identifier of the user that created the payment | `String getCreatedBy()` |
 | `updatedBy` | `String` | ReadOnly | Identifier of the user that last updated the payment | `String getUpdatedBy()` |
 | `state` | `PaymentStatus` | | State of the payment. | `PaymentStatus getState()` |
-| `cancelTime` | `Zoned DateTime` | ReadOnly | Time the payment was cancelled. | `ZonedDateTime getCancelTime()` |
-| `submitTime` | `Zoned DateTime` | ReadOnly | Time when the payment was submitted. | `ZonedDateTime getSubmitTime()` |
+| `cancelTime` | `ZonedDateTime` | ReadOnly | Time the payment was cancelled. | `ZonedDateTime getCancelTime()` |
+| `submitTime` | `ZonedDateTime` | ReadOnly | Time when the payment was submitted. | `ZonedDateTime getSubmitTime()` |
 | `secondPayment ReferenceId` | `String` | | The payout ID of the payment from the gateway side. | `String getSecondPaymentReferenceId()`
 | `payoutId` | `String` | | The payout ID of the payment from the gateway side. | `String getPayoutId()` |
-| `gatewayState` | `Payment Gateway State` | | The status of the payment in the gateway; use for reconciliation. [MarkedForSubmission, Submitted, Settled, NotSubmitted, FailedToSettle] | `PaymentGatewayState getGatewayState()` |
-| `markedFor SubmissionOn` | `Zoned DateTime` | | Time when the payment was marked and waiting for batch submission to the payment process. | `ZonedDateTime getMarkedForSubmissionOn()` |
+| `gatewayState` | `Payment Gateway State` | | The status of the payment in the gateway; use for reconciliation. | `PaymentGatewayState getGatewayState()` |
+| `markedFor SubmissionOn` | `ZonedDateTime` | | Time when the payment was marked and waiting for batch submission to the payment process. | `ZonedDateTime getMarkedForSubmissionOn()` |
 | `gatewayResponseCode` | `String` | | The code returned from the payment gateway for the payment. | `String getGatewayResponseCode()` |
 | `gatewayResponse` | `String` | | The message returned from the payment gateway for the payment. | `String getGatewayResponse()` |
 | `gateway Reconciliation Status` | `String` | | The status of gateway reconciliation. | `String getReconciliationStatus()` |
