@@ -21,7 +21,7 @@ For example, you might have a single "gold" product that has prices for $100/mon
 
 Creates a new plan.
 
-You must provide at least these values in your request to this endpoint:
+You must provide at least these values in your request:
 
 - `name`
 
