@@ -35,18 +35,18 @@ Account account = zuoraClient.accounts().create(accountCreateRequest);
 ## Example
 
 ```java
-ContactCreateRequest billTo = ContactCreateRequest.builder()
+ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder()
     .firstName("Jenny")
     .lastName("Smith")
     .address(Address.builder().country("USA").state("CA").build())
     .build();
 
-AccountCreateRequest createRequest = AccountCreateRequest.builder()
+AccountCreateRequest accountCreateRequest = AccountCreateRequest.builder()
     .name("Jenny Smith")
-    .billTo(billTo)
+    .billTo(contactCreateRequest)
     .build();
     
-Account account = zuoraClient.accounts().create(createRequest);
+Account account = zuoraClient.accounts().create(accountCreateRequest);
 ```
 
 # Get Account
