@@ -1,7 +1,7 @@
 # Payment
 
 Payments are returned by
-[CreatePayment](/doc/payment-api.md#create-payment),
+[CreatePayment](/doc/payment-api.md#create-payment)
 and [GetPayment](/doc/payment-api.md#get-payment).
 
 
