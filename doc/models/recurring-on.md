@@ -48,6 +48,6 @@
 | `FRIDAY` | Day of the week. |
 | `SATURDAY` | Day of the week. |
 | `SUNDAY` | Day of the week. |
-| `CUSTOMER.DAY_OF_MONTH` | Customer default day of the month. |
+| `CUSTOMER.DAY_OF_MONTH` | Customer day of the month. |
 | `SUBSCRIPTION.DAY_OF_MONTH` | Subscription day of the month. |
 | `SUBSCRIPTION_PLAN_ITEM.DAY_OF_MONTH` | Subscription plan item day of the month. |
