@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| invoice | . |
-| credit_memo | . |
-| debit_memo | . |
+| `INVOICE` | . |
+| `CREDIT_MEMO` | . |
+| `DEBIT_MEMO` | . |
