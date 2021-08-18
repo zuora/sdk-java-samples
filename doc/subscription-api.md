@@ -366,8 +366,7 @@ Subscription canceledSubscription = zuoraClient.subscriptions().cancel(subscript
 # Remove Subscription Plan
 
 ```java
-Subscription subcription =
-        zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
+Subscription subcription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
 ```
 
 ## Response Type
@@ -377,25 +376,10 @@ Subscription subcription =
 ## Example
 
 ```java
-Account accountResponse = zuoraClient.accounts().create(AccountCreateRequest.builder()
-                .name(AccountCreateRequestStub.getMinimumStub().getName())
-                .billTo(ContactCreateRequestStub.getMinimumStub())
-                .build());
-Product product = ProductStub.getSeedProduct("SDK-SEED-PRODUCT-1" + LocalDate.now().toString());
+final String SUBSCRIPTION_ID = "subscription_id8";
 
-Subscription subscription = zuoraClient.subscriptions().create(SubscriptionCreateRequest.builder()
-        .account(accountResponse)
-        .initialTerm(Term.builder().type(TermType.EVERGREEN).build())
-        .contractEffectiveDate(startDate)
-        .serviceActivationDate(startDate)
-        .customerAcceptanceDate(startDate)
-        .plans(product.getPlans())
-        .build());
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
+SubscriptionPlan subscriptionPlan = subscription.getPlans().get(0);
 
-List<SubscriptionPlan> originalSubscriptionPlans = null;
-
-originalSubscriptionPlans = zuoraClient.subscriptions().getSubscriptionPlans(sub.getId());
-
-subscription =
-        zuoraClient.subscriptions().removeSubscriptionPlan(subscription, originalSubsubscriptionPlans.get(0));
+subscription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
 ```
