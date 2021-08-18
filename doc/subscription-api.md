@@ -45,6 +45,10 @@ Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateR
 ## Example
 
 ```java
+final String ACCOUNT_ID = "account_id8";
+
+Account account = zuoraClient.accounts().get(ACCOUNT_ID);
+
 SubscriptionCreateRequest subscriptionCreateRequest = SubscriptionCreateRequest.builder()
         .account(account)
         .build();
