@@ -69,7 +69,7 @@ Plan plan = zuoraClient.products().getPlan(planId);
 ## Example 
 
 ```java
-String PLAN_ID = "plan_id8";
+final String PLAN_ID = "plan_id8";
 
 Plan plan = zuoraClient.products().getPlan(PLAN_ID);
 ```
@@ -97,7 +97,7 @@ Plan plan = zuoraClient.products().updatePlan(updatePlanRequest);
 ## Example 
 
 ```java
-String PLAN_ID = "plan_id8";
+final String PLAN_ID = "plan_id8";
 Plan plan = zuoraClient.products().get(PLAN_ID);
 
 plan.setName("Plan Y")
@@ -125,7 +125,7 @@ List<[`Plan`](/doc/models/plan.md)>
 ## Example 
 
 ```java
-String PRODUCT_ID = "product_id8";
+final String PRODUCT_ID = "product_id8";
 
 Product product = zuoraClient.products().getProduct(PRODUCT_ID);
 
@@ -153,7 +153,7 @@ Plan plan = zuoraClient.products().removePlan(planId);
 ## Example 
 
 ```java
-String PLAN_ID = "plan_id8";
+final String PLAN_ID = "plan_id8";
 
 Plan plan = zuoraClient.products().removePlan(PLAN_ID);
 ```
