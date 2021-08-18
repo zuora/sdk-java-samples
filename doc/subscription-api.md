@@ -152,75 +152,26 @@ Subscription updatedSubscription=
 ## Example
 
 ```java
-Account accountResponse=zuoraClient.accounts().create(AccountCreateRequest.builder()
-        .name(AccountCreateRequestStub.getMinimumStub().getName())
-        .billTo(ContactCreateRequestStub.getMinimumStub())
-        .build()
-);
+final String SUBSCRIPTION_ID = "subscription_id8";
 
-PlanCreateRequest plan=PlanCreateRequest.builder()
-        .name("TestRatePlan")
-        .activeCurrencies("USD")
-        .startDate("2021-01-01")
-        .endDate("2121-01-01")
-        .build();
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 
-ProductCreateRequest productCreateRequest=ProductCreateRequestStub.getMinimumStub();
-
-String accountingCodeName=zuoraClient.planItemHelper().getDefaultAccountingCodeName();
-
-//recurringPerUnit
-plan.addPlanItem(
-        PlanItemCreateRequest.recurringBuilder()
-        .chargeModel(PerUnit.builder()
-        .unitAmount(Currency.getInstance("USD"),30.0)
-        .unitAmount(Currency.getInstance("EUR"),45.0)
-        .quantity(50.0)
-        .unitOfMeasure("Each")
-        .build())
-        .name("Test Recurring Per Unit")
-        .plan(plan.getId())
-        .accountingCode(accountingCodeName)
-        .description("Test Description")
-        .timing(BillingTiming.IN_ADVANCE)
-        .interval(Interval.SPECIFIC_MONTH)
-        .intervalCount(6)
-        .duration(Interval.MONTH,6)
-        .startEvent(Event.CONTRACT_EFFECTIVE)
-        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
-        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
-        .build()
-);
-
-productCreateRequest.addPlan(plan);
-Product product=zuoraClient.products().create(productCreateRequest);
-
-Subscription subscription=zuoraClient.subscriptions().create(SubscriptionCreateRequest.builder()
-        .account(accountResponse)
-        .initialTerm(Term.builder().type(TermType.EVERGREEN).build())
-        .contractEffectiveDate(startDate.minusMonths(1))
-        .serviceActivationDate(startDate.minusMonths(1))
-        .customerAcceptanceDate(startDate.minusMonths(1))
-        .plans(product.getPlans())
-        .build()
-);
-
-SubscriptionPlanItem subscriptionPlanItem=
+SubscriptionPlanItem subscriptionPlanItem =
         subscription.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
-PerUnit perUnit=(PerUnit)subscriptionPlanItem.getChargeModel();
+PerUnit perUnit = (PerUnit)subscriptionPlanItem.getChargeModel();
 perUnit.setQuantity(60.0);
-SubscriptionPlanItem subPlanItem=
+SubscriptionPlanItem subscriptionPlanItem =
         subscriptionPlanItem.toBuilder().chargeModel(perUnit).build();
-Subscription newSubscription=
-        zuoraClient.subscriptions().updateSubscriptionPlanItem(sub, subPlanItem, LocalDate.now());
-SubscriptionPlanItem updatedSubscriptionPlanItem=
-        newSub.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
+Subscription subscription =
+        zuoraClient.subscriptions()
+                .updateSubscriptionPlanItem(subscription, subscriptionPlanItem, LocalDate.now());
 ```
 
 # Transfer Owner
 
 ```java
-Subscription subscription = zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
+Subscription subscription =
+        zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
 ```
 
 ## Response Type
@@ -230,9 +181,14 @@ Subscription subscription = zuoraClient.subscriptions().ownerTransfer(subscripti
 ## Example
 
 ```java
+final String SUBSCRIPTION_ID = "subscription_id8";
+
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
+
 final String NEW_ACCOUNT_KEY = "Account_X_Key";
 final String NEW_INVOICE_OWNER_KEY = "Account_Y_Key";
-Subscription subscription = zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
+Subscription subscription =
+        zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
 ```
 
 # Renew Subscription
