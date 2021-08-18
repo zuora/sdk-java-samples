@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| draft | . |
-| posted | . |
-| canceled | . |
+| `DRAFT` | . |
+| `POSTED` | . |
+| `CANCELED` | . |
