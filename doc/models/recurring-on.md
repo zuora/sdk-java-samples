@@ -10,44 +10,44 @@
 
 | Name | Description |
 |  --- | --- |
-| 1 | . |
-| 2 | . |
-| 3 | . |
-| 4 | . |
-| 5 | . |
-| 6 | . |
-| 7 | . |
-| 8 | . |
-| 9 | . |
-| 10 | . |
-| 11 | . |
-| 12 | . |
-| 13 | . |
-| 14 | . |
-| 15 | . |
-| 16 | . |
-| 17 | . |
-| 18 | . |
-| 19 | . |
-| 20 | . |
-| 21 | . |
-| 22 | . |
-| 23 | . |
-| 24 | . |
-| 25 | . |
-| 26 | . |
-| 27 | . |
-| 28 | . |
-| 29 | . |
-| 30 | . |
-| 31 | . |
-| monday | . |
-| tuesday | . |
-| wednesday | . |
-| thursday | . |
-| friday | . |
-| saturday | . |
-| sunday | . |
-| customer.day_of_month | . |
-| subscription.day_of_month | . |
-| subscription_plan_item.day_of_month | . |
+| `_1` | Day of the month. |
+| `_2` | Day of the month. |
+| `_3` | Day of the month. |
+| `_4` | Day of the month. |
+| `_5` | Day of the month. |
+| `_6` | Day of the month. |
+| `_7` | Day of the month. |
+| `_8` | Day of the month. |
+| `_9` | Day of the month. |
+| `_10` | Day of the month. |
+| `_11` | Day of the month. |
+| `_12` | Day of the month. |
+| `_13` | Day of the month. |
+| `_14` | Day of the month. |
+| `_15` | Day of the month. |
+| `_16` | Day of the month. |
+| `_17` | Day of the month. |
+| `_18` | Day of the month. |
+| `_19` | Day of the month. |
+| `_20` | Day of the month. |
+| `_21` | Day of the month. |
+| `_22` | Day of the month. |
+| `_23` | Day of the month. |
+| `_24` | Day of the month. |
+| `_25` | Day of the month. |
+| `_26` | Day of the month. |
+| `_27` | Day of the month. |
+| `_28` | Day of the month. |
+| `_29` | Day of the month. |
+| `_30` | Day of the month. |
+| `_31` | Day of the month. |
+| `MONDAY` | Day of the week. |
+| `TUESDAY` | Day of the week. |
+| `WEDNESDAY` | Day of the week. |
+| `THURSDAY` | Day of the week. |
+| `FRIDAY` | Day of the week. |
+| `SATURDAY` | Day of the week. |
+| `SUNDAY` | Day of the week. |
+| `CUSTOMER.DAY_OF_MONTH` | Customer default day of the month. |
+| `SUBSCRIPTION.DAY_OF_MONTH` | Subscription day of the month. |
+| `SUBSCRIPTION_PLAN_ITEM.DAY_OF_MONTH` | Subscription plan item day of the month. |
