@@ -103,7 +103,7 @@ Subscription subscription=zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 # Add Subscription Plan
 
 ```java
-Subscription updatedSubscription=
+Subscription subscription=
         zuoraClient.subscriptions().addPlan(subscription,
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
@@ -115,32 +115,15 @@ Subscription updatedSubscription=
 ## Example
 
 ```java
-Account accountResponse=zuora.accounts().create(AccountCreateRequest.builder()
-        .name(AccountCreateRequestStub.getMinimumStub().getName())
-        .billTo(ContactCreateRequestStub.getMinimumStub())
-        .build());
-
-SubscriptionCreateRequest sub=SubscriptionCreateRequest.builder()
-        .account(accountResponse)
-        .initialTerm(Term.builder().build())
-        .contractEffectiveDate(startDate)
-        .serviceActivationDate(startDate)
-        .customerAcceptanceDate(startDate)
-        .build();
-
-Subscription subscriptionV1=zuoraClient.subscriptions().create(sub);
-
-Product product=ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-"+LocalDate.now());
-Plan plan=product.getPlans().get(0);
-Subscription subscriptionV2=
-        zuoraClient.subscriptions().addPlan(subscriptionV1,
+Subscription subscription =
+        zuoraClient.subscriptions().addPlan(subscription,
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
 # Update Subscription Plan Item
 
 ```java
-Subscription updatedSubscription=
+Subscription subscription=
         zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription,
                 subscriptionPlanItem, LocalDate.now());
 ```
