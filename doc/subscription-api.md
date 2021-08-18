@@ -18,11 +18,11 @@ The Subscription object contains the information needed to create and maintain a
 
 * [Transfer Owner](/doc/subscription-api.md#transfer-owner)
 
-* [Renew Subscription](/doc/subscription-api.md#cancel-subscription)
+* [Renew Subscription](/doc/subscription-api.md#renew-subscription)
 
 * [Cancel Subscription](/doc/subscription-api.md#cancel-subscription)
 
-* [Remove Subscription Plan](/doc/subscription-api.md#cancel-subscription)
+* [Remove Subscription Plan](/doc/subscription-api.md#remove-subscription-plan)
 
 # Create Subscription
 
