@@ -10,7 +10,7 @@
 
 | Name | Description |
 |  --- | --- |
-| FlatFee | . |
-| PerUnit | . |
-| Volume | . |
-| Tiered | . |
+| `FLAT_FEE` | . |
+| `PER_UNIT` | . |
+| `VOLUME` | . |
+| `TIERED` | . |
