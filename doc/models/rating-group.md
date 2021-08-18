@@ -10,8 +10,8 @@
 
 | Name | Description |
 |  --- | --- |
-| billing_period |  |
-| usage_start_date |  |
-| usage_record |  |
-| usage_upload |  |
-| custom_group |  |
+| `BILLING_PERIOD` |  |
+| `USAGE_START_DATE` |  |
+| `USAGE_RECORD` |  |
+| `USAGE_UPLOAD` |  |
+| `CUSTOM_GROUP` |  |
