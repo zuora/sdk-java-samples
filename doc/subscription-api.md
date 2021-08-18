@@ -220,8 +220,7 @@ SubscriptionPlanItem updatedSubscriptionPlanItem=
 # Transfer Owner
 
 ```java
-Subscription updatedSubscription=
-        zuoraClient.subscriptions().ownerTransfer(subscription, currentAccountKey, newAccountKey);
+Subscription subscription = zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
 ```
 
 ## Response Type
@@ -231,58 +230,15 @@ Subscription updatedSubscription=
 ## Example
 
 ```java
-AccountCreateRequest account=AccountCreateRequest.builder()
-        .name(AccountCreateRequestStub.getMinimumStub().getName())
-        .billTo(ContactCreateRequestStub.getMinimumStub())
-        .build();
-Account accountResponse=zuora.accounts().create(account);
-Product product=
-        ProductStub.getSeedProduct("SDK-SEED-PRODUCT-2"+LocalDate.now().toString());
-
-Subscription subscriptionResponse=zuoraClient.subscriptions().create(
-        SubscriptionCreateRequest.builder()
-        .account(accountResponse)
-        .initialTerm(
-                Term.builder()
-                .intervalCount(12)
-                .type(TermType.TERMED)
-                .interval("Month")
-                .build()
-        )
-        .renewalTerm(
-                Term.builder()
-                .intervalCount(24)
-                .type(TermType.TERMED)
-                .interval("Month")
-                .build()
-        )
-        .plans(product.getPlans())
-        .contractEffectiveDate(startDate.minusYears(1))
-        .serviceActivationDate(startDate.minusYears(1))
-        .customerAcceptanceDate(startDate.minusYears(1))
-        .build()
-);
-
-AccountCreateRequest newAccount=AccountCreateRequest.builder()
-        .name("testAccount")
-        .billTo(ContactCreateRequestStub.getMinimumStub())
-        .build();
-Account newAccountResponse=zuora.accounts().create(newAccount);
-AccountCreateRequest newInvoiceAccount=AccountCreateRequest.builder()
-        .name("testInvoiceAccount")
-        .billTo(ContactCreateRequestStub.getMinimumStub())
-        .build();
-Account newInvoiceAccountResponse=zuora.accounts().create(newInvoiceAccount);
-Subscription baseSubscription=zuoraClient.subscriptions().get(subscriptionResponse.getId());
-Subscription ownertransferSub=
-        zuoraClient.subscriptions().ownerTransfer(baseSubscription,
-                newAccountResponse.getAccountKey(), newInvoiceAccountResponse.getAccountKey());
+final String NEW_ACCOUNT_KEY = "Account_X_Key";
+final String NEW_INVOICE_OWNER_KEY = "Account_Y_Key";
+Subscription subscription = zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
 ```
 
 # Renew Subscription
 
 ```java
-Subscription subscription = zuoraClient.subscriptions().renew(subscription.getId());
+zuoraClient.subscriptions().renew(SUBSCRIPTION_ID);
 ```
 
 ## Parameters
@@ -298,41 +254,15 @@ Subscription subscription = zuoraClient.subscriptions().renew(subscription.getId
 ## Example
 
 ```java
-AccountCreateRequest account = AccountCreateRequest.builder()
-                .name(AccountCreateRequestStub.getMinimumStub().getName())
-                .billTo(ContactCreateRequestStub.getMinimumStub())
-                .build();
-Account accountResponse = zuoraClient.accounts().create(account);
-Product product = ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-" + LocalDate.now().toString());
-Subscription subscription = zuoraClient.subscriptions().create(
-        SubscriptionCreateRequest.builder()
-                .account(accountResponse)
-                .initialTerm(Term.builder()
-                        .intervalCount(12)
-                        .type(TermType.TERMED)
-                        .interval("Month")
-                        .build())
-                .renewalTerm(
-                        Term.builder()
-                                .intervalCount(24)
-                                .type(TermType.TERMED)
-                                .interval("Month")
-                                .build()
-                )
-                .plans(product.getPlans())
-                .contractEffectiveDate(startDate.minusYears(1))
-                .serviceActivationDate(startDate.minusYears(1))
-                .customerAcceptanceDate(startDate.minusYears(1))
-                .build()
-);
+final String SUBSCRIPTION_ID = "subscription_id8";
 
-zuoraClient.subscriptions().renew(subscription.getId());
+zuoraClient.subscriptions().renew(SUBSCRIPTION_ID);
 ```
 
 # Cancel Subscription
 
 ```java
-Subscription canceledSubcription = zuoraClient.subscriptions().cancel(subscription);
+Subscription subscription = zuoraClient.subscriptions().cancel(subscription);
 ```
 
 ## Response Type
@@ -342,24 +272,11 @@ Subscription canceledSubcription = zuoraClient.subscriptions().cancel(subscripti
 ## Example
 
 ```java
-Account accountResponse = zuoraClient.accounts().create(AccountCreateRequest.builder()
-                .name(AccountCreateRequestStub.getMinimumStub().getName())
-                .billTo(ContactCreateRequestStub.getMinimumStub())
-                .build());
-Product product = ProductStub.getSeedProduct("SDK-SEED-PRODUCT-0-" + LocalDate.now().toString());
+final String SUBSCRIPTION_ID = "subscription_id8";
 
-Subscription subscription = zuoraClient.subscriptions().create(SubscriptionCreateRequest.builder()
-        .account(accountResponse)
-        .initialTerm(Term.builder().type(TermType.TERMED).interval("Month").intervalCount(12).build())
-        .renewalTerm(Term.builder().type(TermType.EVERGREEN).build())
-        .contractEffectiveDate(startDate)
-        .serviceActivationDate(startDate)
-        .customerAcceptanceDate(startDate)
-        .cancelAtPeriodEnd(true)
-        .plans(product.getPlans())
-        .build());
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 
-Subscription canceledSubscription = zuoraClient.subscriptions().cancel(subscription);
+Subscription subscription = zuoraClient.subscriptions().cancel(subscription);
 ```
 
 
