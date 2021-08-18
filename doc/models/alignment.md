@@ -10,6 +10,6 @@ How to align plan items that start on different days.
 
 | Name | Description |
 |  --- | --- |
-| SUBSCRIPTION_START | Align to subscription start date. |
-| TERM_START | Align to term start date. |
-| SUBSCRIPTION_PLAN_ITEM | Align to subscription plan item start date. |
+| `SUBSCRIPTION_START` | Align to subscription start date. |
+| `TERM_START` | Align to term start date. |
+| `SUBSCRIPTION_PLAN_ITEM` | Align to subscription plan item start date. |
