@@ -16,16 +16,3 @@ Represents the billing document configuration settings for a customer [Account](
 | `additionalEmail` | `List<String>` | Optional | Additional email addresses. | `List<String>` getAdditionalEmail() |
 | `email` | `Boolean` | Optional | If 'true' invoices with payment instructions will be sent by email. | Boolean getEmail() |
 | `print` | `Boolean` | Optional | If 'true' printed invoices will be sent by mail. | Boolean getPrint() |
-
-## Example (as JSON)
-
-```json
-{
-  "creditMemoTemplate": "01F9EFDX6R09R1HE80RRBTTF9V",
-  "invoiceTemplate": "01F9EFEC4TSQGZC8BA05PFTCS1",
-  "debitMemoTemplate": "01F9EFEXTMD51JT62Q0PKRNCEX",
-  "additionalEmail": ["tien@zuora.com"],
-  "email": true,
-  "print": false
-}
-```
