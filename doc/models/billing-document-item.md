@@ -24,9 +24,9 @@ A Billing Document Item can represent an invoice item, a credit memo item or a d
 | `taxInclusive` | `Boolean` | ReadOnly | Has the value `true` if the billing document item amounts are inclusive of tax or the value `false` if the billing document item amounts are not inclusive of tax. | Boolean getTaxInclusive() |
 | `balance` | `Double` | ReadOnly | The balance of the billing document item. | Double getBalance() |
 | `unitOfMeasure` | `String` | ReadOnly | . | String getUnitOfMeasure() |
-| `accountsReceivableAccountingCode` | `String` | ReadOnly | The accounting code for the accounts receivable. | String getAccountsReceivableAccountingCode() |
-| `recognizedRevenueAccountingCode` | `String` | ReadOnly | The accounting code for recognized revenue, such as monthly recurring charges or overage charges. | String getRecognizedRevenueAccountingCode() |
-| `deferredRevenueAccountingCode` | `String` | ReadOnly | The accounting code for the deferred revenue, such as monthly recurring liability. | String getDeferredRevenueAccountingCode() |
+| `accounts ReceivableAccountingCode` | `String` | ReadOnly | The accounting code for the accounts receivable. | String getAccountsReceivableAccountingCode() |
+| `recognized RevenueAccountingCode` | `String` | ReadOnly | The accounting code for recognized revenue, such as monthly recurring charges or overage charges. | String getRecognizedRevenueAccountingCode() |
+| `deferred RevenueAccountingCode` | `String` | ReadOnly | The accounting code for the deferred revenue, such as monthly recurring liability. | String getDeferredRevenueAccountingCode() |
 | `updateTime` | `LocalDateTime` | ReadOnly | Time at which the object was last updated. | LocalDateTime getUpdateTime() |
 | `subscription` | `String` | ReadOnly | Unique identifier of the subscription associated with the billing document item. | String getSubscription() |
 | `subscriptionPlan` | `String` | ReadOnly | Unique identifier of the subscription plan associated with the billing document item. | String getSubscriptionPlan() |
