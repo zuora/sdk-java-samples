@@ -107,7 +107,7 @@ Product product = zuoraClient.products().findBySku(SKU_ID);
 # Update Product
 
 ```java
-Product product = zuoraClient.products().update(product);
+product.update();
 ```
 
 
@@ -129,11 +129,8 @@ Product product = zuoraClient.products().update(product);
 String PRODUCT_ID = "product_id8";
 Product product = zuoraClient.products().get(PRODUCT_ID);
 
-Product updateRequest = product.builder()
-    .name("Product Y")
-    .build();
-    
-Product product = zuoraClient.products().update(updateRequest);
+product.setName("New Product Name");
+product.update();
 ```
 
 
