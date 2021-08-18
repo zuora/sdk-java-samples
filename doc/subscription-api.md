@@ -45,17 +45,17 @@ Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateR
 ## Example
 
 ```java
-SubscriptionCreateRequest subscriptionCreateRequest=SubscriptionCreateRequest.builder()
+SubscriptionCreateRequest subscriptionCreateRequest = SubscriptionCreateRequest.builder()
         .account(account)
         .build();
         
-Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateRequest);
+Subscription subscription = zuoraClient.subscriptions().create(subscriptionCreateRequest);
 ```
 
 # Get Subscription
 
 ```java
-Subscription subscription=zuoraClient.subscriptions().get(subscriptionId);
+Subscription subscription = zuoraClient.subscriptions().get(subscriptionId);
 ```
 
 ## Parameters
@@ -71,15 +71,15 @@ Subscription subscription=zuoraClient.subscriptions().get(subscriptionId);
 ## Example
 
 ```java
-String SUBSCRIPTION_ID="subscription_id8";
+String SUBSCRIPTION_ID = "subscription_id8";
 
-Subscription subscription=zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 ```
 
 # Get Subscription Plans
 
 ```java
-List<SubscriptionPlan> subscriptionPlans=zuoraClient.subscriptions().getSubscriptionPlans(subscriptionId);
+List<SubscriptionPlan> subscriptionPlans = zuoraClient.subscriptions().getSubscriptionPlans(subscriptionId);
 ```
 
 ## Parameters
@@ -95,15 +95,15 @@ List<SubscriptionPlan> subscriptionPlans=zuoraClient.subscriptions().getSubscrip
 ## Example
 
 ```java
-String SUBSCRIPTION_ID="subscription_id8";
+String SUBSCRIPTION_ID = "subscription_id8";
 
-Subscription subscription=zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 ```
 
 # Add Subscription Plan
 
 ```java
-Subscription subscription=
+Subscription subscription =
         zuoraClient.subscriptions().addPlan(subscription,
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
@@ -115,6 +115,12 @@ Subscription subscription=
 ## Example
 
 ```java
+final String SUBSCRIPTION_ID = "subscription_id8";
+final String PLAN_ID = "plan_id8";
+
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
+Plan plan = zuoraClient.products().get(PLAN_ID);
+
 Subscription subscription =
         zuoraClient.subscriptions().addPlan(subscription,
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
@@ -123,7 +129,7 @@ Subscription subscription =
 # Update Subscription Plan Item
 
 ```java
-Subscription subscription=
+Subscription subscription =
         zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription,
                 subscriptionPlanItem, LocalDate.now());
 ```
