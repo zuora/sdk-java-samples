@@ -7,7 +7,7 @@ You will also find comprehensive [SDK Technical Reference](/README.md#sdk-techni
 Go to the [Zuora Developer Community](https://community.zuora.com/communities/community-home?CommunityKey=e2a932b4-50c4-4019-a3e8-362e38714df3) to connect with other developers, report issues or discuss these samples.
 
 ## Installation
-#### Add the following to the dependencies your project pom.xml
+#### Add the following to the dependencies in your project's pom.xml
 
 ```
 <dependency>
