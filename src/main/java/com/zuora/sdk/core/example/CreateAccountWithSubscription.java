@@ -1,21 +1,23 @@
 package com.zuora.sdk.core.example;
 
+import static com.zuora.sdk.ProcessingOption.CollectionMethod.CREATE_INVOICE;
+
 import com.zuora.sdk.Account;
 import com.zuora.sdk.AccountCreateRequest;
 import com.zuora.sdk.Address;
 import com.zuora.sdk.BillingDocument;
 import com.zuora.sdk.ContactCreateRequest;
-import com.zuora.sdk.FlatFee;
 import com.zuora.sdk.PlanCreateRequest;
-import com.zuora.sdk.PlanItemCreateRequest;
-import com.zuora.sdk.PlanItemEnum;
 import com.zuora.sdk.ProcessingOption;
 import com.zuora.sdk.Product;
 import com.zuora.sdk.ProductCreateRequest;
 import com.zuora.sdk.Subscription;
 import com.zuora.sdk.SubscriptionCreateRequest;
 import com.zuora.sdk.ZuoraClient;
+import com.zuora.sdk.chargemodels.FlatFee;
 import com.zuora.sdk.enums.BillingDocumentType;
+import com.zuora.sdk.planitems.PlanItemCreateRequest;
+import com.zuora.sdk.planitems.PlanItemEnum;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -24,73 +26,77 @@ import java.util.List;
 
 
 public class CreateAccountWithSubscription {
-  public static final String CURRENCY_USD = "USD";
-  
-  public static void main(String[] args) {
+    public static final String CURRENCY_USD = "USD";
 
-    // 0. Create a client
+    public static void main(String[] args) {
 
-    String CLIENT_ID = System.getenv("CLIENT_ID");
-    String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
-    String ENDPOINT = System.getenv("ENDPOINT_BASE");
-    ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
+        // 0. Create a client
 
-    // 1. Create an account
+        String CLIENT_ID = System.getenv("CLIENT_ID");
+        String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
+        String ENDPOINT = System.getenv("ENDPOINT_BASE");
+        ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 
-    ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder().firstName("Jenny").lastName("Smith")
-        .address(Address.builder().country("USA").state("CA").build()).build();
+        // 1. Create an account
 
-    AccountCreateRequest accountCreateRequest = AccountCreateRequest.builder().name("Jenny Smith")
-        .billTo(contactCreateRequest).build();
+        ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder().firstName("Jenny").lastName("Smith")
+                .address(Address.builder().country("USA").state("CA").build()).build();
 
-    Account account = zuoraClient.accounts().create(accountCreateRequest);
+        AccountCreateRequest accountCreateRequest = AccountCreateRequest.builder().name("Jenny Smith")
+                .billTo(contactCreateRequest).build();
 
-    // 2. Create a product
-    // - Create a plan (immediate billing)
-    // - Create a plan item
+        Account account = zuoraClient.accounts().create(accountCreateRequest);
 
-    ProductCreateRequest productCreateRequest = ProductCreateRequest.builder().name("Gold").build();
+        // 2. Create a product
+        // - Create a plan (immediate billing)
+        // - Create a plan item
 
-    PlanCreateRequest planCreateRequest = PlanCreateRequest.builder().name("Monthly Plan").build();
+        ProductCreateRequest productCreateRequest = ProductCreateRequest.builder().name("Gold").build();
 
-    productCreateRequest.addPlan(planCreateRequest);
+        PlanCreateRequest planCreateRequest = PlanCreateRequest.builder().name("Monthly Plan").build();
 
-    String defaultAccountingCodeName = zuoraClient.planItemHelper().getDefaultAccountingCodeName();
+        productCreateRequest.addPlan(planCreateRequest);
 
-    PlanItemCreateRequest planItemCreateRequest = PlanItemCreateRequest.recurringBuilder().name("Monthly Membership")
-        .chargeModel(FlatFee.builder().amount(Currency.getInstance(CURRENCY_USD), 5.00).build())
-        .accountingCode(defaultAccountingCodeName).startEvent(PlanItemEnum.Event.CONTRACT_EFFECTIVE)
-        .alignment(PlanItemEnum.Alignment.SUBSCRIPTION_PLAN_ITEM).interval(PlanItemEnum.Interval.MONTH)
-        .on(PlanItemEnum.RecurringOn.ACCOUNT_CYCLE_DATE).build();
+        String defaultAccountingCodeName = zuoraClient.planItemHelper().getDefaultAccountingCodeName();
 
-    planCreateRequest.addPlanItem(planItemCreateRequest);
+        PlanItemCreateRequest planItemCreateRequest = PlanItemCreateRequest.recurringBuilder().name("Monthly Membership")
+                .chargeModel(FlatFee.builder().amount(Currency.getInstance(CURRENCY_USD), 5.00).build())
+                .accountingCode(defaultAccountingCodeName).startEvent(PlanItemEnum.Event.CONTRACT_EFFECTIVE)
+                .alignment(PlanItemEnum.Alignment.SUBSCRIPTION_PLAN_ITEM).interval(PlanItemEnum.Interval.MONTH)
+                .on(PlanItemEnum.RecurringOn.ACCOUNT_CYCLE_DATE).build();
 
-    Product product = zuoraClient.products().create(productCreateRequest);
+        planCreateRequest.addPlanItem(planItemCreateRequest);
 
-    // 3. Create a subscription
+        Product product = zuoraClient.products().create(productCreateRequest);
 
-    LocalDate todayDate = LocalDate.now();
-    String todayDateStr = todayDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
+        // 3. Create a subscription
 
-    SubscriptionCreateRequest subscriptionCreateRequest = SubscriptionCreateRequest.builder().account(account)
-        .plans(product.getPlans()).serviceActivationDate(todayDate).customerAcceptanceDate(todayDate)
-        .processingOption(ProcessingOption.builder().runBilling(true).documentDate(todayDateStr).build()).build();
+        LocalDate todayDate = LocalDate.now();
+        String todayDateStr = todayDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
 
-    Subscription subscription = zuoraClient.subscriptions().create(subscriptionCreateRequest);
+        SubscriptionCreateRequest subscriptionCreateRequest = SubscriptionCreateRequest.builder().account(account)
+                .plans(product.getPlans()).serviceActivationDate(todayDate).customerAcceptanceDate(todayDate)
+                .processingOption(ProcessingOption.builder()
+                        .collectionMethod(CREATE_INVOICE)
+                        .documentDate(todayDateStr)
+                        .build())
+                .build();
 
-    // 4. Retrieve a list of billing documents
+        Subscription subscription = zuoraClient.subscriptions().create(subscriptionCreateRequest);
 
-    List<BillingDocument> billingDocuments = zuoraClient.billingDocuments().findByAccount(account,
-        BillingDocumentType.INVOICE);
+        // 4. Retrieve a list of billing documents
 
-    for (BillingDocument billingDocument : billingDocuments) {
-      System.out.printf("%s %s %f\n", billingDocument.getId(), billingDocument.getCreateTime(),
-          billingDocument.getAmount());
+        List<BillingDocument> billingDocuments = zuoraClient.billingDocuments().findByAccount(account,
+                BillingDocumentType.INVOICE);
+
+        for (BillingDocument billingDocument : billingDocuments) {
+            System.out.printf("%s %s %f\n", billingDocument.getId(), billingDocument.getCreateTime(),
+                    billingDocument.getAmount());
+        }
+
+        // 5. Cancel subscription
+
+        zuoraClient.subscriptions().cancel(subscription);
+
     }
-
-    // 5. Cancel subscription
-
-    zuoraClient.subscriptions().cancel(subscription);
-
-  }    
 }
