@@ -10,16 +10,15 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 |  --- | --- | --- | --- | 
 | `name` | `String` | Required | The name of the price. | 
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | 
-| `plan` | `String` | Required | The identifier of the plan that this plan item will belong to. | 
+| `plan` | `String` | Required | The identifier of the plan that this price will belong to. | 
 | `accountingCode` | `String` | Optional | An accounting code that is active in your Zuora chart of accounts. | 
-| `chargeModel` | [`ChargeModelInterface`](/doc/models/charge-model-interface.md) | Required | The charge model for the plan item. |
-| `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a plan item such as `interval`. | 
-| `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring plan items. This field is not used with one-time or usage-based plan items. | 
+| `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | 
+| `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring prices. This field is not used with one-time or usage-based prices. | 
 | `type` | [`Enum`](/doc/models/type.md) | Optional | Describes how to compute the price per period. Either per_unit, one_time or based on usage. | 
-| `ends` | [`Ends`](/doc/models/ends.md) | Optional | Defines when the charge ends after the plan item start date. | 
+| `ends` | [`Ends`](/doc/models/ends.md) | Optional | Defines how long after the price start date to stop charging. | 
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
-| `taxCode` | `String` | Optional | The plan item tax code. | 
+| `taxCode` | `String` | Optional | The price tax code. | 
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | 
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
 
