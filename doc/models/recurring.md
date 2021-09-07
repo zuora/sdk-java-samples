@@ -11,8 +11,8 @@ The definition of a recurring price.
 |  --- | --- | --- | --- | --- |
 | `interval` | [`Interval`](/doc/models/interval.md) | Optional | Specifies billing frequency. Either `WEEK`, `MONTH` or `YEAR`. | String getInterval() |
 | `intervalCount` | `Integer` | Optional | The number of intervals between subscription billings. For example, interval=`MONTH` and intervalCount=`3` bills every 3 months. Maximum of one year interval allowed (1 year, 12 months, or 52 weeks). | String getIntervalCount() |
-| `alignment` | [`Alignment`](/doc/models/alignment.md) | Optional | . | String getAlignment() |
-| `on` | [`RecurringOn`](/doc/models/recurring-on.md) | Optional | . | String getRecurringOn() |
+| `alignment` | [`Enum`](/doc/models/alignment.md) | Optional | . | String getAlignment() |
+| `on` | [`Enum`](/doc/models/recurring-on.md) | Optional | . | String getRecurringOn() |
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill `IN_ADVANCE` or `IN_ARREARS` for recurring prices. This field is not used with one-time or usage-based prices. | String getTiming() |
 | `basePriceInterval` | [`Enum`](/doc/models/base-price-interval.md) | Optional | Specifies base price interval. One of `WEEK`, `MONTH` or `BILLING_PERIOD`. | String getBasePriceInterval() |
 | `durationInterval` | [`Enum`](/doc/models/duration-interval.md) | Optional | Specifies duration frequency. One of `DAY`, `WEEK`, `MONTH` or `YEAR`. | String getDurationInterval() |
