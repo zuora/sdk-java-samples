@@ -37,7 +37,7 @@ Price price = zuoraClient.prices().create(priceCreateRequest);
 ## Example
 
 ```java
-PriceCreateRequest priceCreateRequest = PriceCreateRequest.recurringBuilder()
+PriceCreateRequest priceCreateRequest = PriceCreateRequest.priceBuilder()
         .name("Monthly Membership")
         .accountingCode(defaultAccountingCodeName)
         .startEvent(PriceEnum.Event.CONTRACT_EFFECTIVE)
