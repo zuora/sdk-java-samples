@@ -14,8 +14,6 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `accountingCode` | `String` | Optional | An accounting code that is active in your Zuora chart of accounts. | 
 | `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | 
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring prices. This field is not used with one-time or usage-based prices. | 
-| `type` | [`Enum`](/doc/models/type.md) | Optional | Describes how to compute the price per period. Either per_unit, one_time or based on usage. | 
-| `ends` | [`Ends`](/doc/models/ends.md) | Optional | Defines how long after the price start date to stop charging. | 
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
 | `taxCode` | `String` | Optional | The price tax code. | 
@@ -24,17 +22,6 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 
 ## Methods
 
-### recurringBuilder()
+### priceBuilder()
 
-Create a new Recurring Plan Item builder which provides fields available only for recurring plan items.
-
-### oneTimeBuilder()
-
-Create a new One-Time Plan Item builder which provides fields available only for one-time plan items.
-
-### usageBuilder()
-
-Create a new Usage Plan Item builder which provides fields available only for usage plan items.
-
-
-
+Create a new price builder which provides fields available for prices.
