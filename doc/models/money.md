@@ -11,4 +11,4 @@
 | Name | Type | Tags | Description | Getter |
 |  --- | --- | --- | --- | --- |
 | `currency` | [`Enum`](/doc/models/currency.md) | Required | . | String getCurrency() |
-| `value` | `Long` | Required | . | Long getAmount() |
+| `value` | `Double` | Required | . | Double getAmount() |
