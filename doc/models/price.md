@@ -19,6 +19,10 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | String getStartEvent() |
 | `taxCode` | `String` | Optional | The price tax code. | String getTaxCode() |
 | `taxInclusive` | `Boolean` | Optional | If `true`, indicates that the amounts supplied are tax inclusive. | String getTaxInclusive() |
+| `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
+| `quantity` | `Double` | Optional | Quantity. | 
+| `minQuantity` | `Double` | Optional | Minimum quantity. | 
+| `maxQuantity` | `Double` | Optional | Maximum quantity. | 
 | `createdBy`| `String` | ReadOnly | Identifier of the user who created the price. |  String getCreatedBy() |
 | `createTime`| `ZonedDateTime` | ReadOnly | The time when the price was created. | ZonedDateTime getCreateTime() |
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the price. | String getUpdatedBy() |
