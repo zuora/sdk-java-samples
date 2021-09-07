@@ -39,14 +39,11 @@ Price price = zuoraClient.prices().create(priceCreateRequest);
 ```java
 PriceCreateRequest priceCreateRequest = PriceCreateRequest.recurringBuilder()
         .name("Monthly Membership")
-        .chargeModel(FlatFee.builder()
-                            .amount(Currency.getInstance(CURRENCY_USD), 5.00)
-                            .build())
         .accountingCode(defaultAccountingCodeName)
-        .startEvent(PlanItemEnum.Event.CONTRACT_EFFECTIVE)
-        .alignment(PlanItemEnum.Alignment.SUBSCRIPTION_PLAN_ITEM)
-        .interval(PlanItemEnum.Interval.MONTH)
-        .on(PlanItemEnum.RecurringOn.ACCOUNT_CYCLE_DATE)
+        .startEvent(PriceEnum.Event.CONTRACT_EFFECTIVE)
+        .alignment(PriceEnum.Alignment.SUBSCRIPTION_PLAN_ITEM)
+        .interval(PriceEnum.Interval.MONTH)
+        .on(PriceEnum.RecurringOn.ACCOUNT_CYCLE_DATE)
         .build();
 Price price = zuoraClient.prices().create(priceCreateRequest);
 ```
