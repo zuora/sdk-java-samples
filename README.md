@@ -75,7 +75,7 @@ This technical reference documents every recommended object and method available
 ### Product
 * [Product](doc/product-api.md)
 * [Plan](doc/plan-api.md)
-* [Plan Item](doc/plan-item-api.md)
+* [Price](doc/price-api.md)
 
 ### Account
 * [Account](doc/account-api.md)
