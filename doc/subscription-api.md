@@ -134,7 +134,7 @@ Subscription subscription =
 
 ```java
 Subscription subscription =
-        zuoraClient.subscriptions().updateSubscriptionItem(subscription,
+        zuoraClient.subscriptions().updateItem(subscription,
                 subscriptionItem, LocalDate.now());
 ```
 
@@ -150,14 +150,14 @@ final String SUBSCRIPTION_ID = "subscription_id8";
 Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 
 SubscriptionItem subscriptionItem =
-        subscription.getSubscriptionPlans().get(0).getSubscriptionItems().get(0);
+        subscription.getSubscriptionPlans().get(0).getItems().get(0);
 PerUnit perUnit = (PerUnit)subscriptionItem.getChargeModel();
 perUnit.setQuantity(60.0);
 SubscriptionItem subscriptionItem =
         subscriptionItem.toBuilder().chargeModel(perUnit).build();
 Subscription subscription =
         zuoraClient.subscriptions()
-                .updateSubscriptionItem(subscription, subscriptionItem, LocalDate.now());
+                .updateItem(subscription, subscriptionItem, LocalDate.now());
 ```
 
 # Transfer Owner
