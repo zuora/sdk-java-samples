@@ -13,3 +13,5 @@ The recurring components of a price such as interval.
 | `intervalCount` | `Integer` | Optional | The number of intervals between subscription billings. For example, interval=month and interval_count=3 bills every 3 months. Maximum of one year interval allowed (1 year, 12 months, or 52 weeks). | String getIntervalCount() |
 | `alignment` | [`Alignment`](/doc/models/alignment.md) | Optional | . | String getAlignment() |
 | `on` | [`RecurringOn`](/doc/models/recurring-on.md) | Optional | . | String getRecurringOn() |
+| `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill IN_ADVANCE or IN_ARREARS for recurring prices. This field is not used with one-time or usage-based prices. | String getTiming() |
+| `ends` | [`Ends`](/doc/models/ends.md) | Optional | Defines when to stop charging after the price start date. | Ends getEnds() |
