@@ -24,7 +24,7 @@ A Plan is a container for a collection of [Prices](/doc/models/price.md) and is 
 | `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | ZonedDateTime getUpdateTime() |
 | `createdBy` | `String` | ReadOnly | The Id of the user that created the product | String getCreatedBy() |
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
-| `items` | [`List<Price>`](/doc/models/price.md) | Optional | The individual prices that make up the plan. | List<Price> getPrices() |
+| `prices` | [`List<Price>`](/doc/models/price.md) | Optional | The individual prices that make up the plan. | List<Price> getPrices() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
 
 ## Methods
