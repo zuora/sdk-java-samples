@@ -1,6 +1,6 @@
 # Recurring
 
-The recurring components of a price such as interval.
+The definition of a recurring price.
 
 ## Class Name
 `Recurring`
