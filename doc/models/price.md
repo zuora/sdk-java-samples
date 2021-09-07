@@ -1,10 +1,10 @@
-# PlanItem
+# Price
 
-A PlanItem defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases and is the response returned by [CreatePlanItem](/doc/plan-item-api.md#create-plan-item), [UpdatePlanItem](/doc/plan-item-api.md#update-plan-item) and [GetPlanItem](/doc/plan-item-api.md#get-plan-item).
+A Price defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases and is the response returned by [CreatePrice](/doc/price-api.md#create-price), [UpdatePrice](/doc/price-api.md#update-price) and [GetPrice](/doc/price-api.md#get-price).
 
 ## Class Name
 
-`PlanItem`
+`Price`
 
 ## Fields
 
