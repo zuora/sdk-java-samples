@@ -17,4 +17,4 @@ The recurring components of a price such as interval.
 | `durationInterval` | [`Enum`](/doc/models/duration-interval.md) | Optional | Specifies duration frequency. One of `DAY`, `WEEK`, `MONTH` or `YEAR`. | String getDurationInterval() |
 | `durationIntervalCount` | `Integer` | Optional | Specifies the how long a customer shall be charged if this is less than the duration of the subscription. | String getDurationIntervalCount() |
 | `usage` | `Boolean` | Optional | If `true` indicates that this price shall be charged based on usage. | String getUsage() |
-| `ratingGroup` | [`Enum`](/doc/models/rating-group.md) | Optional | One of `DAY`, `WEEK`, `MONTH` or `YEAR`. | String getRatingGroup() |
+| `ratingGroup` | [`Enum`](/doc/models/rating-group.md) | Optional | One of `BILLING_PERIOD`, `USAGE_START_DATE`, `USAGE_RECORD`, `USAGE_UPLOAD` or `CUSTOM_GROUP`. | String getRatingGroup() |
