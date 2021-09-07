@@ -15,4 +15,4 @@ The recurring components of a price such as interval.
 | `on` | [`RecurringOn`](/doc/models/recurring-on.md) | Optional | . | String getRecurringOn() |
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill `IN_ADVANCE` or `IN_ARREARS` for recurring prices. This field is not used with one-time or usage-based prices. | String getTiming() |
 | `durationInterval` | [`Enum`](/doc/models/duration-interval.md) | Optional | Specifies duration frequency. One of `DAY`, `WEEK`, `MONTH` or `YEAR`. | String getDurationInterval() |
-| `durationIntervalCount` | `Integer` | Optional | Specifies the how long a customer shall be charged for a subscription item. | String getDurationIntervalCount() |
+| `durationIntervalCount` | `Integer` | Optional | Specifies the how long a customer shall be charged if this is less than the duration of the subscription. | String getDurationIntervalCount() |
