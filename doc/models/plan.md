@@ -1,7 +1,7 @@
 
 # Plan
 
-A Plan is a container for a collection of [PlanItems](/doc.models/plan-item.md) and is the response returned by [CreatePlan](/doc/plan-api.md#create-plan), [UpdatePlan](/doc/plan-api.md#update-plan) and [GetPlan](/doc/plan-api.md#get-plan).
+A Plan is a container for a collection of [Prices](/doc/models/price.md) and is the response returned by [CreatePlan](/doc/plan-api.md#create-plan), [UpdatePlan](/doc/plan-api.md#update-plan) and [GetPlan](/doc/plan-api.md#get-plan).
 
 ## Structure
 
@@ -24,7 +24,7 @@ A Plan is a container for a collection of [PlanItems](/doc.models/plan-item.md) 
 | `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | ZonedDateTime getUpdateTime() |
 | `createdBy` | `String` | ReadOnly | The Id of the user that created the product | String getCreatedBy() |
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | String getUpdatedBy() |
-| `items` | [`List<PlanItem>`](/doc/models/plan-item.md) | Optional | The individual plan items that make up the plan. | List<PlanItem> getItems() |
+| `items` | [`List<Price>`](/doc/models/price.md) | Optional | The individual prices that make up the plan. | List<Price> getPrices() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
 
 ## Methods
