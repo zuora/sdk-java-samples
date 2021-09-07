@@ -16,6 +16,7 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring prices. This field is not used with one-time or usage-based prices. | 
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. |
 | `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. |
+| `tiers` | [`Tier`](/doc/models/tier.md) | Optional | tiers | String getTiers() |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
 | `quantity` | `Double` | Optional | Quantity. | 
 | `minQuantity` | `Double` | Optional | Minimum quantity. | 
