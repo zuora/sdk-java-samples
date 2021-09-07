@@ -1,6 +1,6 @@
 # Recurring
 
-The recurring components of a plan item such as interval.
+The recurring components of a price such as interval.
 
 ## Class Name
 `Recurring`
