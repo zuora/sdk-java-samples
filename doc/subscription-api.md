@@ -14,7 +14,7 @@ The Subscription object contains the information needed to create and maintain a
 
 * [Add Subscription Plan](/doc/subscription-api.md#add-subscription-plan)
 
-* [Update Subscription Plan Item](/doc/subscription-api.md#update-subscription-plan-item)
+* [Update Subscription Item](/doc/subscription-api.md#update-subscription-item)
 
 * [Transfer Owner](/doc/subscription-api.md#transfer-owner)
 
