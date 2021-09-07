@@ -29,4 +29,4 @@ A Plan is a container for a collection of [Prices](/doc/models/price.md) and is 
 
 ## Methods
 
-### Add Plan Item
+### Add Price
