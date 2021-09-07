@@ -6,7 +6,7 @@ Describes a request to create a plan using [CreatePlan](/doc/plan-api.md#create-
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `name` | `String` | Required | The name of the product. |
+| `name` | `String` | Required | The name of the plan. |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | 
 | `product` | `String` | Required | The identifier of the product that this plan will belong to. | 
 | `startDate` | `LocalDate` | Optional | Date on which the plan becomes active. | 
