@@ -130,12 +130,12 @@ Subscription subscription =
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
-# Update Subscription Plan Item
+# Update Subscription Item
 
 ```java
 Subscription subscription =
-        zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription,
-                subscriptionPlanItem, LocalDate.now());
+        zuoraClient.subscriptions().updateSubscriptionItem(subscription,
+                subscriptionItem, LocalDate.now());
 ```
 
 ## Response Type
@@ -149,15 +149,15 @@ final String SUBSCRIPTION_ID = "subscription_id8";
 
 Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 
-SubscriptionPlanItem subscriptionPlanItem =
-        subscription.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
-PerUnit perUnit = (PerUnit)subscriptionPlanItem.getChargeModel();
+SubscriptionItem subscriptionItem =
+        subscription.getSubscriptionPlans().get(0).getSubscriptionItems().get(0);
+PerUnit perUnit = (PerUnit)subscriptionItem.getChargeModel();
 perUnit.setQuantity(60.0);
-SubscriptionPlanItem subscriptionPlanItem =
-        subscriptionPlanItem.toBuilder().chargeModel(perUnit).build();
+SubscriptionItem subscriptionItem =
+        subscriptionItem.toBuilder().chargeModel(perUnit).build();
 Subscription subscription =
         zuoraClient.subscriptions()
-                .updateSubscriptionPlanItem(subscription, subscriptionPlanItem, LocalDate.now());
+                .updateSubscriptionItem(subscription, subscriptionItem, LocalDate.now());
 ```
 
 # Transfer Owner
