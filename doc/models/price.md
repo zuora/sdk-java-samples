@@ -14,7 +14,7 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `name` | `String` | Required | The name of the price. | String getName() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
 | `plan` | `String` | Required | The identifier of the plan that this price will belong to. | String getPlan() |
-| `accountingCode` | `String` | Optional | An accounting code that is active in your Zuora chart of accounts. | String getAccountingCode() |
+| `accountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getAccountingCode() |
 | `on` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | Recurring getRecurring() |
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring prices. This field is not used with one-time or usage-based prices. | String getTiming() |
 | `type` | [`Enum`](/doc/models/type.md) | Optional | Describes how to compute the price per period. Either per unit, one time or based on usage. | String getType() |
