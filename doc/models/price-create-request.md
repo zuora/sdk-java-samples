@@ -16,6 +16,9 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill in advance or in arrears for recurring prices. This field is not used with one-time or usage-based prices. | 
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
+| `quantity` | `Double` | Optional | Quantity. | 
+| `minQuantity` | `Double` | Optional | Minimum quantity. | 
+| `maxQuantity` | `Double` | Optional | Maximum quantity. | 
 | `taxCode` | `String` | Optional | The price tax code. | 
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | 
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
