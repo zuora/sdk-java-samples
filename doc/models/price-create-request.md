@@ -1,14 +1,14 @@
 
-# Plan Item Create Request
+# Price Create Request
 
-Describes a request to create a plan item using [CreatePlanItem](/doc/plan-item-api.md#create-plan-item).
+Describes a request to create a price using [CreatePrice](/doc/price-api.md#create-price).
 
 
 ## Fields
 
 | Name | Type | Tags | Description | 
 |  --- | --- | --- | --- | 
-| `name` | `String` | Required | The name of the plan item. | 
+| `name` | `String` | Required | The name of the price. | 
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | 
 | `plan` | `String` | Required | The identifier of the plan that this plan item will belong to. | 
 | `accountingCode` | `String` | Optional | An accounting code that is active in your Zuora chart of accounts. | 
