@@ -17,6 +17,7 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `accountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getAccountingCode() |
 | `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | Recurring getRecurring() |
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | String getStartEvent() |
+| `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. |
 | `taxCode` | `String` | Optional | The price tax code. | String getTaxCode() |
 | `taxInclusive` | `Boolean` | Optional | If `true`, indicates that the amounts supplied are tax inclusive. | String getTaxInclusive() |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
