@@ -23,7 +23,7 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `minQuantity` | `Double` | Optional | Minimum quantity. | 
 | `maxQuantity` | `Double` | Optional | Maximum quantity. | 
 | `taxCode` | `String` | Optional | A tax code identifier. | 
-| `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | 
+| `taxInclusive` | `Boolean` | Optional | If `true`, indicates that the amounts supplied are tax inclusive. | 
 | `amounts` | `Map<Currency, Double>` | Optional | Flat billing amounts. | Map<Currency, Double> getAmounts() |
 | `unitAmounts` | `Map<Currency, Double>` | Optional | Unit billing amounts. | Map<Currency, Double> getAmounts() |
 | `percentAmount` | `Double` | Optional | Percent amount. | Double getPercentAmount() |
