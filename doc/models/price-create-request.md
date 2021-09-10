@@ -24,9 +24,9 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `maxQuantity` | `Double` | Optional | Maximum quantity. | 
 | `taxCode` | `String` | Optional | A tax code identifier. | 
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | 
-| `amounts` | [`List<Money>`](/doc/models/money.md) | Optional | Flat billing amounts. | Money getAmounts() |
-| `unitAmounts` | [`List<Money>`](/doc/models/money.md) | Optional | Unit billing amounts. | Money getAmounts() |
-| `percentAmount` | `Integer` | Optional | Percent amount. | Integer getPercentAmount() |
+| `amounts` | `Map<Currency, Double>` | Optional | Flat billing amounts. | Map<Currency, Double> getAmounts() |
+| `unitAmounts` | `Map<Currency, Double>` | Optional | Unit billing amounts. | Map<Currency, Double> getAmounts() |
+| `percentAmount` | `Double` | Optional | Percent amount. | Double getPercentAmount() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
 
 ## Methods
