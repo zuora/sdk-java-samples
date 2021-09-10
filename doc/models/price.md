@@ -23,10 +23,10 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `tiers` | [`List<Tier>`](/doc/models/tier.md) | Optional | tiers | String getTiers() |
 | `taxCode` | `String` | Optional | A tax code identifier. | String getTaxCode() |
 | `taxInclusive` | `Boolean` | Optional | If `true`, indicates that the amounts supplied are tax inclusive. | String getTaxInclusive() |
-| `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
-| `quantity` | `Double` | Optional | Quantity. | 
-| `minQuantity` | `Double` | Optional | Minimum quantity. | 
-| `maxQuantity` | `Double` | Optional | Maximum quantity. | 
+| `unitOfMeasure` | `String` | Optional | A configured unit of measure. | String getUnitOfMeasure() |
+| `quantity` | `Double` | Optional | Quantity. |  Double getQuantity() |
+| `minQuantity` | `Double` | Optional | Minimum quantity. |  Double getMinQuantity() |
+| `maxQuantity` | `Double` | Optional | Maximum quantity. | Double getMaxQuantity() |
 | `createdBy`| `String` | ReadOnly | Identifier of the user who created the price. |  String getCreatedBy() |
 | `createTime`| `ZonedDateTime` | ReadOnly | The time when the price was created. | ZonedDateTime getCreateTime() |
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the price. | String getUpdatedBy() |
