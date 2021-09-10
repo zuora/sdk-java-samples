@@ -27,4 +27,5 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `amounts` | `Map<Currency, Double>` | Optional | Flat billing amounts. | Map<Currency, Double> getAmounts() |
 | `unitAmounts` | `Map<Currency, Double>` | Optional | Unit billing amounts. | Map<Currency, Double> getAmounts() |
 | `percentAmount` | `Double` | Optional | Percent amount. | Double getPercentAmount() |
+| `priceBaseInterval` | [`Enum`](/doc/models/price-base-interval.md) | Optional | Specifies the base interval of a price. One of `WEEK`, `MONTH`, or `BILLING_PERIOD`. If not provided defaults to `BILLING_PERIOD`. | String getPriceBaseInterval() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
