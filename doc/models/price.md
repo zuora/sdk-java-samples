@@ -18,7 +18,7 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `deferredRevenue AccountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getDeferredRevenue AccountingCode() |
 | `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | Recurring getRecurring() |
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | String getStartEvent() |
-| `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. |
+| `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill `IN_ADVANCE` or `IN _ARREARS` for recurring prices. This field is not used with one-time or usage-based prices. || `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. |
 | `tiers` | [`List<Tier>`](/doc/models/tier.md) | Optional | tiers | String getTiers() |
 | `taxCode` | `String` | Optional | The price tax code. | String getTaxCode() |
 | `taxInclusive` | `Boolean` | Optional | If `true`, indicates that the amounts supplied are tax inclusive. | String getTaxInclusive() |
