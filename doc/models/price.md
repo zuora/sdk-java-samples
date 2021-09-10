@@ -35,5 +35,5 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `unitAmounts` | `Map<Currency, Double>` | Optional | Unit billing amounts. | Map<Currency, Double> getAmounts() |
 | `percentAmount` | `Double` | Optional | Percentage represented as a decimal. | Double getPercentAmount() |
 | `priceBaseInterval` | [`Enum`](/doc/models/price-base-interval.md) | Optional | Specifies the base interval of a price. One of `WEEK`, `MONTH`, or `BILLING_PERIOD`. If not provided defaults to `BILLING_PERIOD`. |
-| `applyDiscountTo` | [`EnumSet<ApplyDiscountTo>`](/doc/models/apply-discount-to.md) | Optional | You can choose any combination of `ONE_TIME` `RECURRING` and `USAGE` for discount prices. | String getApplyDiscountTo() |
+| `applyDiscountTo` | [`EnumSet<Apply DiscountTo>`](/doc/models/apply-discount-to.md) | Optional | You can choose any combination of `ONE_TIME` `RECURRING` and `USAGE` for discount prices. | String getApplyDiscountTo() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
