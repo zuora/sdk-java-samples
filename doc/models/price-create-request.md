@@ -22,7 +22,7 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `quantity` | `Double` | Optional | Quantity. | 
 | `minQuantity` | `Double` | Optional | Minimum quantity. | 
 | `maxQuantity` | `Double` | Optional | Maximum quantity. | 
-| `taxCode` | `String` | Optional | The price tax code. | 
+| `taxCode` | `String` | Optional | A tax code identifier. | 
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | 
 | `amounts` | [`List<Money>`](/doc/models/money.md) | Optional | Flat billing amounts. | Money getAmounts() |
 | `unitAmounts` | [`List<Money>`](/doc/models/money.md) | Optional | Unit billing amounts. | Money getAmounts() |
