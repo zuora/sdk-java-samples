@@ -38,3 +38,5 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `discountLevel` | [`Enum`](/doc/models/discount-level.md) | Optional | Specifies at what level the discount should be applied: one of `ACCOUNT`, `SUBSCRIPTION` or `PLAN`. | String getDiscountLevel() |
 | `overage` | [`Overage`](/doc/models/overage.md) | Optional | Specifies how to handle usage overages. | Overage getOverage() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
+| `chargeModel` | [`Enum`](/doc/models/charge-model.md) | ReadOnly | Price model. | String getChargeModel() |
+| `chargeType` | [`Enum`](/doc/models/charge-type.md) | ReadOnly | Price model. | String getChargeType() |
