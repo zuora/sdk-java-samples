@@ -2,7 +2,7 @@
 
 .
 
-## EnumSet
+## Enum
 
 `ApplyDiscountTo`
 
