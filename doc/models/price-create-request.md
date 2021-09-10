@@ -28,9 +28,3 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `unitAmounts` | `Map<Currency, Double>` | Optional | Unit billing amounts. | Map<Currency, Double> getAmounts() |
 | `percentAmount` | `Double` | Optional | Percent amount. | Double getPercentAmount() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
-
-## Methods
-
-### priceBuilder()
-
-Create a new price builder which provides fields available for prices.
