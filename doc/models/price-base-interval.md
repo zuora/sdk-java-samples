@@ -1,10 +1,10 @@
-# Base Price Interval
+# Price Base Interval
 
-Represents the base price interval.
+Represents the base interval for a price.
 
 ## Enumeration
 
-`BasePriceInterval`
+`PriceBaseInterval`
 
 ## Fields
 
