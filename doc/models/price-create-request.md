@@ -29,4 +29,5 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `priceBaseInterval` | [`Enum`](/doc/models/price-base-interval.md) | Optional | Specifies the base interval of a price. One of `WEEK`, `MONTH`, or `BILLING_PERIOD`. If not provided defaults to `BILLING_PERIOD`. | String getPriceBaseInterval() |
 | `applyDiscountTo` | [`EnumSet<ApplyDiscountTo>`](/doc/models/apply-discount-to.md) | Optional | You can choose any combination of `ONE_TIME` `RECURRING` and `USAGE` for discount prices. | 
 | `discountLevel` | [`Enum`](/doc/models/discount-level.md) | Optional | Specifies at what level the discount should be applied: one of `ACCOUNT`, `SUBSCRIPTION` or `PLAN`. |
+| `overage` | [`Overage`](/doc/models/overage.md) | Optional | Specifies how to handle usage overages. |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
