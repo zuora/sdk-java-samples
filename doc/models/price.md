@@ -14,8 +14,8 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `name` | `String` | Required | The name of the price. | String getName() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
 | `plan` | `String` | Required | The identifier of the plan that this price will belong to. | String getPlan() |
-| `recognizedRevenueAccountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getAccountingCode() |
-| `deferredRevenueAccountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getAccountingCode() |
+| `recognizedRevenue AccountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getAccountingCode() |
+| `deferredRevenue AccountingCode` | `String` | Optional | An active accounting code from your chart of accounts. | String getAccountingCode() |
 | `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | Recurring getRecurring() |
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | String getStartEvent() |
 | `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. |
