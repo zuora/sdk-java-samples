@@ -36,4 +36,5 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `priceBaseInterval` | [`Enum`](/doc/models/price-base-interval.md) | Optional | Specifies the base interval of a price. One of `WEEK`, `MONTH`, or `BILLING_PERIOD`. If not provided defaults to `BILLING_PERIOD`. |
 | `applyDiscountTo` | [`EnumSet<Apply DiscountTo>`](/doc/models/apply-discount-to.md) | Optional | You can choose any combination of `ONE_TIME` `RECURRING` and `USAGE` for discount prices. | String getApplyDiscountTo() |
 | `discountLevel` | [`Enum`](/doc/models/discount-level.md) | Optional | Specifies at what level the discount should be applied: one of `ACCOUNT`, `SUBSCRIPTION` or `PLAN`. | String getDiscountLevel() |
+| `overage` | [`Overage`](/doc/models/overage.md) | Optional | Specifies how to handle usage overages. | Overage getOverage() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
