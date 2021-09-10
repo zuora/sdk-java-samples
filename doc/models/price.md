@@ -31,7 +31,7 @@ A Price defines the unit cost, currency, and (optional) billing cycle for both r
 | `createTime`| `ZonedDateTime` | ReadOnly | The time when the price was created. | ZonedDateTime getCreateTime() |
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the price. | String getUpdatedBy() |
 | `updateTime`| `ZonedDateTime` | ReadOnly | The time when the price was last updated. | ZonedDateTime getUpdateTime() |
-| `amounts` | `Map<Currency, Double>` | Optional | Flat billing amounts. | Money getAmounts() |
+| `amounts` | `Map<Currency, Double>` | Optional | Flat billing amounts. | Map<Currency, Double> getAmounts() |
 | `unitAmounts` | [`List<Money>`](/doc/models/money.md) | Optional | Unit billing amounts. | Money getAmounts() |
-| `percentAmount` | `Integer` | Optional | Percent amount. | Integer getPercentAmount() |
+| `percentAmount` | `Double` | Optional | Percentage represented as a decimal. | Double getPercentAmount() |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
