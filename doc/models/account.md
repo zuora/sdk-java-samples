@@ -21,8 +21,8 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `paymentTerms` | `String` | Optional |  | `String getPaymentTerms()` |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | `String getDescription()` |
 | `batch` | `String` | Optional | The identifier of a bill run batch. | `String getBatch()` |
-| `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | `TaxIdentifier getTaxIdentifier()` |
-| `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional | `TaxCertificate getTaxCertificate()` |
+| `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional || `TaxIdentifier getTaxIdentifier()` |
+| `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional || `TaxCertificate getTaxCertificate()` |
 | `billingDocument Settings` | [`BillingDocument Settings`](/doc/models/billing-document-settings.md) | Optional | `BillingDocument Settings getBillingDocument Settings()` |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
 
