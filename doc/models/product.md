@@ -17,7 +17,7 @@ Product represents your products and is the response returned by [CreateProduct]
 | `startDate` | `LocalDate` |  | Date on which the product becomes active. | String getStartDate() |
 | `endDate` | `LocalDate` |  | Date on which the product is no longer active. | String getEndDate() |
 | `sku` | `String` |  | The sku identifier of the product. | String getSku() |
-| `active` | `Boolean` |  | A boolean to indicate if the current date is within the start and end date. | Boolean isActive() |
+| `active` | `Boolean` | Readonly | A boolean to indicate if the current date is within the start and end date. | Boolean isActive() |
 | `type` | `String` |  | The type of product, defaulting to `Base Product` | String getType() |
 | `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was created | ZonedDateTime getCreateTime() |
 | `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | ZonedDateTime getUpdateTime() |
