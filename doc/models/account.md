@@ -11,7 +11,7 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `id` | `String` | ReadOnly | Unique identifier for the object. | `String getId()` |
 | `accountKey` | `String` | Required | The unique customer account key.<br>**Constraints**: *Maximum Length*: `255` | `String getAccountKey()`
 | `name` | `String` | Required | The name of the customer account.<br>**Constraints**: *Maximum Length*: `255` | `String getName()`
-| `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month end specify 31. | `String getBillCycleDay()`
+| `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month-end specify `_31`. | `String getBillCycleDay()`
 | `currency` | [`Enum`](/doc/models/currency.md) | Optional | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | `String getCurrency()` |
 | `autoPay` | `Boolean` | Optional | | `String getAutoPay()` |
 | `billTo` | [`Contact`](/doc/models/contact.md) | Required | The contact details of the person who shall be charged for goods or services. | `Contact getBillTo()` |
