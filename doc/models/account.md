@@ -14,7 +14,7 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month end specify 31. | `String getBillCycleDay()`
 | `currency` | [`Enum`](/doc/models/currency.md) | Optional | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | `String getCurrency()` |
 | `autoPay` | `Boolean` | Optional | | `String getAutoPay()` |
-| `billTo` | [`Contact`](/doc/models/contact.md) | Required | The contact details of the person who shall charged for goods or services. | `Contact getBillTo()` |
+| `billTo` | [`Contact`](/doc/models/contact.md) | Required | The contact details of the person who shall be charged for goods or services. | `Contact getBillTo()` |
 | `soldTo` | [`Contact`](/doc/models/contact.md) | Optional | The the contact details of the person who is sold goods and services. If not supplied, the bill to details are applied.  | `Contact getSoldTo()` |
 | `parentAccount` | `String` | Optional | The identifier of the customer account that owns this account's invoices. | `String getParentAccount()` |
 | `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | `String getCrmId()` |
