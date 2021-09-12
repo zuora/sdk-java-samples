@@ -16,7 +16,7 @@ Product represents your products and are the response returned by [CreateProduct
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
 | `startDate` | `LocalDate` | Optional | Date on which the product becomes active. | String getStartDate() |
 | `endDate` | `LocalDate` | Optional | Date on which the product is no longer active. | String getEndDate() |
-| `sku` | `String` | Optional | The sku identifier of the product. | String getSku() |
+| `sku` | `String` | Required | The sku identifier of the product. | String getSku() |
 | `active` | `Boolean` | Optional | A boolean to indicate if the current date is within the start and end date. | Boolean isActive() |
 | `type` | `String` | Optional | The type of product, defaulting to `Base Product` | String getType() |
 | `customFields` | `Map<String, Object>` | Optional | A map of custom fields set on the product | Map<String, Object> getCustomFields() |
