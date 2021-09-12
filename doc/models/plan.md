@@ -19,8 +19,8 @@ A Plan is a container for a collection of [Prices](/doc/models/price.md) for a [
 | `endDate` | `LocalDate` |  | Date on which the plan can no longer be used for new purchases. | `String getEndDate()` |
 | `activeCurrencies` | `String` |  | A (comma-separated) string of the price currencies available with this plan | `String getActiveCurrencies()` |
 | `product` | `String` |  | The identifier of the plan's product. | `String getProduct()` |
-| `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was created | `ZonedDateTime getCreateTime()` |
-| `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | `ZonedDateTime getUpdateTime()` |
+| `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on your tenant timezone, that the product was created | `ZonedDateTime getCreateTime()` |
+| `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on your tenant timezone, that the product was last updated | `ZonedDateTime getUpdateTime()` |
 | `createdBy` | `String` | ReadOnly | The Id of the user that created the product | `String getCreatedBy()` |
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | `String getUpdatedBy()` |
 | `prices` | [`List<Price>`](/doc/models/price.md) |  | The prices for this plan. | `List<Price> getPrices()` |
