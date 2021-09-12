@@ -11,5 +11,5 @@ Describes a request to create a plan using [CreatePlan](/doc/plan-api.md#create-
 | `product` | `String` | Required | The identifier of the plan's product. | 
 | `startDate` | `LocalDate` | Optional | Date on which the plan can start being used. | 
 | `endDate` | `LocalDate` | Optional | Date on which the plan can no longer be used for new purchases. |
-| `items` | [`List<Price>`](/doc/models/price.md) | Optional | The prices in this plan. | 
+| `items` | [`List<Price>`](/doc/models/price.md) | Optional | The prices for this plan. | 
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. |
