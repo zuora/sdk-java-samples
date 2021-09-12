@@ -2,7 +2,7 @@
 
 Plans are collections of [Prices](/doc/price-api.md) which define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of [Products](/doc/product-api.md). While Products help you track inventory or provisioning, plans and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing and billing cycle options should be represented by prices grouped together in a plan. This approach lets you change prices without having to change your provisioning scheme.
 
-For example, you might have a single "gold" product that has prices for $100/month, $1000/year, and $50 once with the the alternative billing cycle and pricing options each represented by a different plan and the recurring and one-time prices represented by different prices
+For example, you might have a single "gold" product that has prices for $100/month, $1000/year, and $50 once with the alternative billing cycle and pricing options each represented by a different plan and the recurring and one-time prices represented by different prices
 
 ## Class Name
 
