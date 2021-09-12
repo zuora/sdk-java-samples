@@ -17,13 +17,13 @@ A Plan is a container for a collection of [Prices](/doc/models/price.md) for a [
 | `active` | `boolean` | ReadOnly | Whether the plan can be used for new purchases. | `boolean isActive()` |
 | `startDate` | `LocalDate` |  | Date on which the plan can start being used. | `String getStartDate()` |
 | `endDate` | `LocalDate` |  | Date on which the plan can no longer be used for new purchases. | `String getEndDate()` |
-| `activeCurrencies` | `String` |  | A comma separated string of currencies available for the plan items associated to this plan | `String getActiveCurrencies()` |
+| `activeCurrencies` | `String` |  | A comma separated string of price currencies available with this plan | `String getActiveCurrencies()` |
 | `product` | `String` |  | The identifier of the plan's product. | `String getProduct()` |
 | `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was created | `ZonedDateTime getCreateTime()` |
 | `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | `ZonedDateTime getUpdateTime()` |
 | `createdBy` | `String` | ReadOnly | The Id of the user that created the product | `String getCreatedBy()` |
 | `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the product | `String getUpdatedBy()` |
-| `prices` | [`List<Price>`](/doc/models/price.md) |  | The individual prices that make up the plan. | `List<Price> getPrices()` |
+| `prices` | [`List<Price>`](/doc/models/price.md) |  | The prices for this plan. | `List<Price> getPrices()` |
 | `customFields` | `Map<String, Object>` |  | Custom fields. | `Map<String, Object> getCustomFields()`|
 
 ## Methods
