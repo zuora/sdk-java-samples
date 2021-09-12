@@ -15,7 +15,7 @@ A Plan is a container for a collection of [Prices](/doc/models/price.md) for a [
 | `name` | `String` |  | The name of the product. | `String getName()` |
 | `description` | `String` |  | An arbitrary string attached to the object. Often useful for displaying to users. | `String getDescription()` |
 | `active` | `boolean` | ReadOnly | Whether the plan can be used for new purchases. | `boolean isActive()` |
-| `startDate` | `LocalDate` |  | Date on which the plan can be used. | `String getStartDate()` |
+| `startDate` | `LocalDate` |  | Date on which the plan can start being used. | `String getStartDate()` |
 | `endDate` | `LocalDate` |  | Date on which the plan can no longer be used for new purchases. | `String getEndDate()` |
 | `activeCurrencies` | `String` |  | A comma seperated string of currencies available for the plan items associated to this plan | `String getActiveCurrencies()` |
 | `product` | `String` |  | The identifier of the product that this plan will belong to. | `String getProduct()` |
