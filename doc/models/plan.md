@@ -17,7 +17,7 @@ A Plan is a container for a collection of [Prices](/doc/models/price.md) for a [
 | `active` | `boolean` | ReadOnly | Whether the plan can be used for new purchases. | `boolean isActive()` |
 | `startDate` | `LocalDate` |  | Date on which the plan can start being used. | `String getStartDate()` |
 | `endDate` | `LocalDate` |  | Date on which the plan can no longer be used for new purchases. | `String getEndDate()` |
-| `activeCurrencies` | `String` |  | A comma separated string of price currencies available with this plan | `String getActiveCurrencies()` |
+| `activeCurrencies` | `String` |  | A (comma-separated) string of tehprice currencies available with this plan | `String getActiveCurrencies()` |
 | `product` | `String` |  | The identifier of the plan's product. | `String getProduct()` |
 | `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was created | `ZonedDateTime getCreateTime()` |
 | `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the product was last updated | `ZonedDateTime getUpdateTime()` |
