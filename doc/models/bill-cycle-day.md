@@ -1,6 +1,6 @@
 # Bill Cycle Day
 
-The day of the month when a bill run generates invoices for an account. `AUTO_SET` sets the billing cycle day to the same day as the start date of the first recurring charge on the account. 
+The day of the month when a bill run generates invoices for an account. `AUTO_SET` sets the billing cycle day to the same day as the start date of the first recurring charge on the account.  For month-end specify `_31`.
 
 ## Enumeration
 
