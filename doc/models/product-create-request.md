@@ -12,5 +12,5 @@ Product represents your products and are the response returned by [CreateProduct
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | 
 | `startDate` | `LocalDate` | Optional | Date on which the product becomes active. | 
 | `endDate` | `LocalDate` | Optional | Date on which the product is no longer active. | 
-| `sku` | `String` | Optional | The sku identifier of the product. | 
+| `sku` | `String` | Required | The sku identifier of the product. | 
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | 

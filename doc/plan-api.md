@@ -1,8 +1,8 @@
 # Plan API
 
-Plans are collections of [Plan Items](/doc/plan-item-api.md) which define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of [Products](/doc/product-api.md). While Products help you track inventory or provisioning, plans and plan items help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing and billing cycle options should be represented by plan items grouped together under a plan. This approach lets you change prices without having to change your provisioning scheme.
+Plans are collections of [Prices](/doc/price-api.md) which define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of [Products](/doc/product-api.md). While Products help you track inventory or provisioning, plans and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing and billing cycle options should be represented by prices grouped together in a plan. This approach lets you change prices without having to change your provisioning scheme.
 
-For example, you might have a single "gold" product that has prices for $100/month, $1000/year, and $50 once with the the alternative billing cycle and pricing options each represented by a different plan and the recurring and one-time prices represented by different plan items
+For example, you might have a single "gold" product that has prices for $100/month, $1000/year, and $50 once with the alternative billing cycle and pricing options each represented by a different plan and the recurring and one-time prices represented by different prices
 
 ## Class Name
 
@@ -26,7 +26,7 @@ You must provide at least these values in your request:
 - `name`
 
 ```java
-Plan plan = zuoraClient.products().createPlan(planCreateRequest);
+Plan plan = zuoraClient.plans().create(planCreateRequest);
 ```
 
 ## Parameters
@@ -45,13 +45,13 @@ Plan plan = zuoraClient.products().createPlan(planCreateRequest);
 PlanCreateRequest planCreateRequest = PlanCreateRequest.builder()
         .name("Monthly Plan")
         .build();
-Plan plan = zuoraClient.products().createPlan(planCreateRequest);
+Plan plan = zuoraClient.plans().create(planCreateRequest);
 ```
 
 # Get Plan
 
 ```java
-Plan plan = zuoraClient.products().getPlan(planId);
+Plan plan = zuoraClient.plans().get(planId);
 ```
 
 ## Parameters
@@ -71,14 +71,14 @@ Plan plan = zuoraClient.products().getPlan(planId);
 ```java
 final String PLAN_ID = "plan_id8";
 
-Plan plan = zuoraClient.products().getPlan(PLAN_ID);
+Plan plan = zuoraClient.plans().get(PLAN_ID);
 ```
 
 
 # Update Plan
 
 ```java
-Plan plan = zuoraClient.products().updatePlan(updatePlanRequest);
+Plan plan = zuoraClient.plans().update(updatePlanRequest);
 ```
 
 
@@ -98,16 +98,16 @@ Plan plan = zuoraClient.products().updatePlan(updatePlanRequest);
 
 ```java
 final String PLAN_ID = "plan_id8";
-Plan plan = zuoraClient.products().get(PLAN_ID);
+Plan plan = zuoraClient.plans().get(PLAN_ID);
 
 plan.setName("Plan Y")
-Plan plan = zuoraClient.products().update(plan);
+Plan plan = zuoraClient.plans().update(plan);
 ```
 
-# List Plans
+# Stream Plans
 
 ```java
-Plan plan = zuoraClient.products().getPlans(product);
+Plan plan = zuoraClient.plans().stream(product);
 ```
 
 ## Parameters
@@ -119,7 +119,7 @@ Plan plan = zuoraClient.products().getPlans(product);
 
 ## Response Type
 
-List<[`Plan`](/doc/models/plan.md)>
+Stream<[`Plan`](/doc/models/plan.md)>
 
 
 ## Example 
@@ -129,13 +129,15 @@ final String PRODUCT_ID = "product_id8";
 
 Product product = zuoraClient.products().getProduct(PRODUCT_ID);
 
-List<Plan> plans = zuoraClient.products().getPlans(product);
+Stream<Plan> plans = zuoraClient.plans().stream(product);
 ```
 
 # Delete Plan
 
 ```java
-Plan plan = zuoraClient.products().removePlan(planId);
+final String PLAN_ID = "plan_id8";
+
+Plan plan = zuoraClient.plans().delete(PLAN_ID);
 ```
 
 ## Parameters
@@ -155,7 +157,7 @@ Plan plan = zuoraClient.products().removePlan(planId);
 ```java
 final String PLAN_ID = "plan_id8";
 
-Plan plan = zuoraClient.products().removePlan(PLAN_ID);
+Plan plan = zuoraClient.plans().delete(PLAN_ID);
 ```
 
 

@@ -14,7 +14,7 @@ The Subscription object contains the information needed to create and maintain a
 
 * [Add Subscription Plan](/doc/subscription-api.md#add-subscription-plan)
 
-* [Update Subscription Plan Item](/doc/subscription-api.md#update-subscription-plan-item)
+* [Update Subscription Item](/doc/subscription-api.md#update-subscription-item)
 
 * [Transfer Owner](/doc/subscription-api.md#transfer-owner)
 
@@ -130,12 +130,12 @@ Subscription subscription =
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
-# Update Subscription Plan Item
+# Update Subscription Item
 
 ```java
 Subscription subscription =
-        zuoraClient.subscriptions().updateSubscriptionPlanItem(subscription,
-                subscriptionPlanItem, LocalDate.now());
+        zuoraClient.subscriptions().updateItem(subscription,
+                subscriptionItem, LocalDate.now());
 ```
 
 ## Response Type
@@ -149,15 +149,15 @@ final String SUBSCRIPTION_ID = "subscription_id8";
 
 Subscription subscription = zuoraClient.subscriptions().get(SUBSCRIPTION_ID);
 
-SubscriptionPlanItem subscriptionPlanItem =
-        subscription.getSubscriptionPlans().get(0).getSubscriptionPlanItems().get(0);
-PerUnit perUnit = (PerUnit)subscriptionPlanItem.getChargeModel();
+SubscriptionItem subscriptionItem =
+        subscription.getSubscriptionPlans().get(0).getItems().get(0);
+PerUnit perUnit = (PerUnit)subscriptionItem.getChargeModel();
 perUnit.setQuantity(60.0);
-SubscriptionPlanItem subscriptionPlanItem =
-        subscriptionPlanItem.toBuilder().chargeModel(perUnit).build();
+SubscriptionItem subscriptionItem =
+        subscriptionItem.toBuilder().chargeModel(perUnit).build();
 Subscription subscription =
         zuoraClient.subscriptions()
-                .updateSubscriptionPlanItem(subscription, subscriptionPlanItem, LocalDate.now());
+                .updateItem(subscription, subscriptionItem, LocalDate.now());
 ```
 
 # Transfer Owner

@@ -8,22 +8,22 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 
 | Name | Type | Tags | Description | Getter |
 |  --- | --- | --- | --- | --- |
-| `id` | `String` | ReadOnly | Unique identifier for the object. | String getId() |
-| `accountKey` | `String` | Required | The unique customer account key.<br>**Constraints**: *Maximum Length*: `255` | String getAccountKey()
-| `name` | `String` | Required | The name of the customer account.<br>**Constraints**: *Maximum Length*: `255` | String getName()
-| `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month end specify 31. | String getBillCycleDay()
-| `currency` | [`Enum`](/doc/models/currency.md) | Optional | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | String getCurrency() |
-| `autoPay` | `Boolean` | Optional | | String getAutoPay() |
-| `billTo` | [`Contact`](/doc/models/contact.md) | Required | A customer's billing address. | Contact getBillTo() |
-| `soldTo` | [`Contact`](/doc/models/contact.md) | Optional | A customer's soldTo address.  | Contact getSoldTo() |
-| `parentAccount` | `String` | Optional | The identifier of the customer account that owns this account's invoices. | String getParentAccount() |
-| `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | String getCrmId() |
-| `paymentTerms` | `String` | Optional |  | String getPaymentTerms() |
-| `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
-| `batch` | `String` | Optional | The identifier of a bill run batch. |
-| `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional | |
-| `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional | |
-| `billingDocumentSettings` | [`BillingDocumentSettings`](/doc/models/billing-document-settings.md) | Optional | |
+| `id` | `String` | ReadOnly | Unique identifier for the object. | `String getId()` |
+| `accountKey` | `String` | Required | A unique customer account key. | `String getAccountKey()`
+| `name` | `String` | Required | The name of the customer account. | `String getName()`
+| `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month-end specify `_31`. | `String getBillCycleDay()`
+| `currency` | [`Enum`](/doc/models/currency.md) | Optional | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. | `String getCurrency()` |
+| `autoPay` | `Boolean` | Optional | | `String getAutoPay()` |
+| `billTo` | [`Contact`](/doc/models/contact.md) | Required | The contact details of the person who shall be charged for goods or services. | `Contact getBillTo()` |
+| `soldTo` | [`Contact`](/doc/models/contact.md) | Optional | The the contact details of the person who is sold goods and services. If not supplied, the bill to details are applied.  | `Contact getSoldTo()` |
+| `parentAccount` | `String` | Optional | The identifier of the customer account that owns this account's invoices. | `String getParentAccount()` |
+| `crmId` | `String` | Optional | The identifier for this customer account in your CRM. | `String getCrmId()` |
+| `paymentTerms` | `String` | Optional |  | `String getPaymentTerms()` |
+| `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | `String getDescription()` |
+| `batch` | `String` | Optional | The identifier of a bill run batch. | `String getBatch()` |
+| `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) | Optional || `TaxIdentifier getTaxIdentifier()` |
+| `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) | Optional || `TaxCertificate getTaxCertificate()` |
+| `billingDocument Settings` | [`BillingDocument Settings`](/doc/models/billing-document-settings.md) | Optional | `BillingDocument Settings getBillingDocument Settings()` |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
 
 ## Methods

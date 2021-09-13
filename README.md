@@ -17,7 +17,7 @@ Go to the [Zuora Developer Community](https://community.zuora.com/communities/co
 </dependency>
 ```
 
-Latest SDK Version: 1.0.1
+Latest SDK Version: 1.0.3
 
 [View on Maven Central](https://search.maven.org/artifact/com.zuora.sdk/zuora-sdk-java)
 
@@ -75,7 +75,7 @@ This technical reference documents every recommended object and method available
 ### Product
 * [Product](doc/product-api.md)
 * [Plan](doc/plan-api.md)
-* [Plan Item](doc/plan-item-api.md)
+* [Price](doc/price-api.md)
 
 ### Account
 * [Account](doc/account-api.md)

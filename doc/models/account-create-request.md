@@ -8,13 +8,13 @@ Describes a request to create an account using
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- | 
-| `accountKey` | `String` | Required | The unique customer account key.<br>**Constraints**: *Maximum Length*: `255` |
+| `accountKey` | `String` | Required | A unique customer account key.<br>**Constraints**: *Maximum Length*: `255` |
 | `name` | `String` | Required | The name of the customer account.<br>**Constraints**: *Maximum Length*: `255` | 
-| `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month end specify 31. |
+| `billCycleDay` | [`Enum`](/doc/models/bill-cycle-day.md) | Optional | The day of the month on which your customer will be invoiced. For month-end, specify `_31`. |
 | `currency` | [`String`](/doc/models/currency.md) | Optional | Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html). Must be a currency you have enabled. |
 | `autoPay` | `Boolean` | Optional | |
-| `billTo` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Required | A customer's billing address. | 
-| `soldTo` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Optional | A customer's soldTo address. (defaults to billTo if none is set) |
+| `billTo` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Required | The contact details of the person who shall be charged for goods or services. | 
+| `soldTo` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Optional | The the contact details of the person who is sold goods and services. If not supplied, the bill to details are applied. |
 | `parentAccount` | `String` | Optional | The identifier of the customer account that owns this account's invoices. |
 | `crmId` | `String` | Optional | The identifier for this customer account in your CRM. |
 | `paymentTerms` | `String` | Optional |  |
