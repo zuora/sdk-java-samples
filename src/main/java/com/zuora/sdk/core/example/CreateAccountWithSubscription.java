@@ -8,16 +8,21 @@ import com.zuora.sdk.Address;
 import com.zuora.sdk.BillingDocument;
 import com.zuora.sdk.ContactCreateRequest;
 import com.zuora.sdk.PlanCreateRequest;
+import com.zuora.sdk.PriceCreateRequest;
+import com.zuora.sdk.PriceEnum.Alignment;
+import com.zuora.sdk.PriceEnum.DurationInterval;
+import com.zuora.sdk.PriceEnum.Event;
+import com.zuora.sdk.PriceEnum.Interval;
+import com.zuora.sdk.PriceEnum.RecurringOn;
 import com.zuora.sdk.ProcessingOption;
 import com.zuora.sdk.Product;
 import com.zuora.sdk.ProductCreateRequest;
+import com.zuora.sdk.Recurring;
 import com.zuora.sdk.Subscription;
 import com.zuora.sdk.SubscriptionCreateRequest;
 import com.zuora.sdk.ZuoraClient;
-import com.zuora.sdk.chargemodels.FlatFee;
 import com.zuora.sdk.enums.BillingDocumentType;
-import com.zuora.sdk.planitems.PlanItemCreateRequest;
-import com.zuora.sdk.planitems.PlanItemEnum;
+import com.zuora.sdk.internal.models.enums.BillingTiming;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -26,6 +31,7 @@ import java.util.List;
 
 
 public class CreateAccountWithSubscription {
+
     public static final String CURRENCY_USD = "USD";
 
     public static void main(String[] args) {
@@ -57,15 +63,29 @@ public class CreateAccountWithSubscription {
 
         productCreateRequest.addPlan(planCreateRequest);
 
-        String defaultAccountingCodeName = zuoraClient.planItemHelper().getDefaultAccountingCodeName();
+        String defaultAccountingCodeName = zuoraClient.priceHelper().getDefaultAccountingCodeName();
 
-        PlanItemCreateRequest planItemCreateRequest = PlanItemCreateRequest.recurringBuilder().name("Monthly Membership")
-                .chargeModel(FlatFee.builder().amount(Currency.getInstance(CURRENCY_USD), 5.00).build())
-                .accountingCode(defaultAccountingCodeName).startEvent(PlanItemEnum.Event.CONTRACT_EFFECTIVE)
-                .alignment(PlanItemEnum.Alignment.SUBSCRIPTION_PLAN_ITEM).interval(PlanItemEnum.Interval.MONTH)
-                .on(PlanItemEnum.RecurringOn.ACCOUNT_CYCLE_DATE).build();
+        PriceCreateRequest planItemCreateRequest = PriceCreateRequest.builder()
+                .unitAmount(Currency.getInstance("USD"), 30.0)
+                .unitOfMeasure("Each")
+                .name("Recurring Per Unit Price")
+                .recognizedRevenueAccountingCode(defaultAccountingCodeName)
+                .deferredRevenueAccountingCode(defaultAccountingCodeName)
+                .description("Test Description")
+                .recurring(Recurring.builder()
+                        .timing(BillingTiming.IN_ADVANCE)
+                        .interval(Interval.SPECIFIC_MONTH)
+                        .intervalCount(6)
+                        .durationInterval(DurationInterval.MONTH)
+                        .durationIntervalCount(6)
+                        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
+                        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
+                        .build()
+                )
+                .startEvent(Event.CONTRACT_EFFECTIVE)
+                .build();
 
-        planCreateRequest.addPlanItem(planItemCreateRequest);
+        planCreateRequest.addPrice(planItemCreateRequest);
 
         Product product = zuoraClient.products().create(productCreateRequest);
 

@@ -5,25 +5,21 @@ import com.zuora.sdk.AccountCreateRequest;
 import com.zuora.sdk.Address;
 import com.zuora.sdk.ContactCreateRequest;
 import com.zuora.sdk.PlanCreateRequest;
+import com.zuora.sdk.PriceCreateRequest;
+import com.zuora.sdk.PriceEnum.Alignment;
+import com.zuora.sdk.PriceEnum.DiscountLevel;
+import com.zuora.sdk.PriceEnum.DurationInterval;
+import com.zuora.sdk.PriceEnum.Event;
+import com.zuora.sdk.PriceEnum.Interval;
+import com.zuora.sdk.PriceEnum.RecurringOn;
+import com.zuora.sdk.PriceEnum.TiersMode;
 import com.zuora.sdk.Product;
 import com.zuora.sdk.ProductCreateRequest;
+import com.zuora.sdk.Recurring;
+import com.zuora.sdk.Tier;
 import com.zuora.sdk.ZuoraClient;
-import com.zuora.sdk.chargemodels.PerUnit;
-import com.zuora.sdk.chargemodels.ChargeModelInterface.ApplyDiscountTo;
-import com.zuora.sdk.chargemodels.ChargeModelInterface.Type;
-import com.zuora.sdk.planitems.PlanItemCreateRequest;
-import com.zuora.sdk.planitems.PlanItemEnum.Alignment;
-import com.zuora.sdk.planitems.PlanItemEnum.Event;
-import com.zuora.sdk.planitems.PlanItemEnum.Interval;
-import com.zuora.sdk.planitems.PlanItemEnum.RecurringOn;
-import com.zuora.sdk.chargemodels.Tiered;
-import com.zuora.sdk.chargemodels.Tiered.Tier;
-import com.zuora.sdk.chargemodels.DiscountAmount;
-import com.zuora.sdk.chargemodels.DiscountPercentage;
-import com.zuora.sdk.chargemodels.FlatFee;
-import com.zuora.sdk.chargemodels.Volume;
-import com.zuora.sdk.core.models.enums.BillingTiming;
-import com.zuora.sdk.core.models.enums.DiscountLevel;
+import com.zuora.sdk.enums.ApplyDiscountTo;
+import com.zuora.sdk.internal.models.enums.BillingTiming;
 
 import java.util.Currency;
 import java.util.EnumSet;
@@ -50,97 +46,147 @@ public class PlanItemExamples {
 
         ProductCreateRequest productReq = ProductCreateRequest.builder().name("Product Name").build();
 
-        String accountingCodeName = zuoraClient.planItemHelper().getDefaultAccountingCodeName();
+        String accountingCodeName = zuoraClient.priceHelper().getDefaultAccountingCodeName();
 
-        // recurringPerUnit
-        plan.addPlanItem(PlanItemCreateRequest.recurringBuilder()
-                .chargeModel(PerUnit.builder().unitAmount(Currency.getInstance("USD"), 30.0)
-                        .unitAmount(Currency.getInstance("EUR"), 45.0).unitOfMeasure("Each").build())
-                .name("Test Recurring Per Unit").plan(plan.getId()).accountingCode(accountingCodeName)
-                .description("Test Description").timing(BillingTiming.IN_ADVANCE).interval(Interval.SPECIFIC_MONTH)
-                .intervalCount(6).duration(Interval.MONTH, 6).startEvent(Event.CONTRACT_EFFECTIVE)
-                .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM).on(RecurringOn.ACCOUNT_CYCLE_DATE).build());
-        // reccuring-tiered
-        plan.addPlanItem(PlanItemCreateRequest.recurringBuilder().name("Test Recurring Tiered").plan(plan.getId())
-                .chargeModel(Tiered.builder()
-                        .tier(Tier.tierBuilder().tier(1).upTo(1000.0).unitAmount(Currency.getInstance("USD"), 30.0)
-                                .unitAmount(Currency.getInstance("EUR"), 45.0).build())
-                        .tier(Tier.tierBuilder().tier(2).upTo(2000.0).unitAmount(Currency.getInstance("USD"), 50.0)
-                                .unitAmount(Currency.getInstance("EUR"), 75.0).build())
-                        .unitOfMeasure("Each").build())
-                .accountingCode(accountingCodeName).startEvent(Event.CONTRACT_EFFECTIVE)
-                .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM).interval(Interval.MONTH).on(RecurringOn.ACCOUNT_CYCLE_DATE)
-                .startEvent(Event.CONTRACT_EFFECTIVE).build());
-
-        // oneTimeTiered
-        plan.addPlanItem(PlanItemCreateRequest.oneTimePlanItemBuilder().name("Test OneTime Tiered").plan(plan.getId())
-                .chargeModel(Tiered.builder()
-                        .tier(Tier.tierBuilder().tier(1).upTo(1000.0).unitAmount(Currency.getInstance("USD"), 30.0)
-                                .unitAmount(Currency.getInstance("EUR"), 45.0).build())
-                        .tier(Tier.tierBuilder().tier(2).upTo(2000.0).unitAmount(Currency.getInstance("USD"), 50.0)
-                                .unitAmount(Currency.getInstance("EUR"), 75.0).build())
-                        .unitOfMeasure("Each").quantity(100.0).build())
-                .accountingCode(accountingCodeName).startEvent(Event.CONTRACT_EFFECTIVE).build());
-
-        // oneTime-perUnit
-        plan.addPlanItem(PlanItemCreateRequest.oneTimePlanItemBuilder()
-                .chargeModel(PerUnit.builder().unitAmount(Currency.getInstance("USD"), 30.0).unitOfMeasure("Each").build())
-                .name("Test Recurring Per Unit").plan(plan.getId()).accountingCode(accountingCodeName)
-                .startEvent(Event.CONTRACT_EFFECTIVE).build());
-
-        // Recurring Flat Fee
-        plan.addPlanItem(PlanItemCreateRequest.recurringBuilder().name("Test Recurring Flat Fee").plan(plan.getId())
-                .chargeModel(FlatFee.builder().amount(Currency.getInstance("USD"), 30.0)
-                        .amount(Currency.getInstance("EUR"), 45.0).build())
-                .accountingCode(accountingCodeName).startEvent(Event.CONTRACT_EFFECTIVE)
-                .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM).interval(Interval.MONTH).on(RecurringOn.ACCOUNT_CYCLE_DATE)
+        // Per Unit Pricing includes Unit Amounts and Recurring charges included a Recurring object
+        plan.addPrice(PriceCreateRequest.builder()
+                .unitAmount(Currency.getInstance("USD"), 30.0)
+                .unitOfMeasure("Each")
+                .name("Recurring Per Unit Price")
+                .plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                .recurring(Recurring.builder()
+                        .timing(BillingTiming.IN_ADVANCE)
+                        .interval(Interval.SPECIFIC_MONTH)
+                        .intervalCount(6)
+                        .durationInterval(DurationInterval.MONTH)
+                        .durationIntervalCount(6)
+                        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
+                        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
+                        .build()
+                )
+                .startEvent(Event.CONTRACT_EFFECTIVE)
                 .build());
 
-        // onetime flat fee
-        plan.addPlanItem(PlanItemCreateRequest.oneTimePlanItemBuilder().name("Test Recurring Flat Fee").plan(plan.getId())
-                .chargeModel(FlatFee.builder().amount(Currency.getInstance("USD"), 30.0)
-                        .amount(Currency.getInstance("EUR"), 45.0).build())
-                .accountingCode(accountingCodeName).startEvent(Event.CONTRACT_EFFECTIVE).build());
-
-        // recurring-volume
-        plan.addPlanItem(PlanItemCreateRequest.recurringBuilder().name("Test Recurring Volume").plan(plan.getId())
-                .chargeModel(Volume.builder()
-                        .tier(Tier.tierBuilder().tier(1).amount(Currency.getInstance("USD"), 30.0)
-                                .amount(Currency.getInstance("EUR"), 45.0).upTo(1000.0).build())
-                        .tier(Tier.tierBuilder().tier(2).upTo(2000.0).amount(Currency.getInstance("USD"), 50.0)
-                                .amount(Currency.getInstance("EUR"), 75.0).build())
-                        .unitOfMeasure("Each").type(Type.FLAT_FEE).build())
-                .accountingCode(accountingCodeName).startEvent(Event.CONTRACT_EFFECTIVE)
-                .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM).interval(Interval.MONTH).on(RecurringOn.ACCOUNT_CYCLE_DATE)
+        //Tiered, Volume, Tiered with Overage, HighWaterMark pricing includes Tiers.
+        plan.addPrice(PriceCreateRequest.builder()
+                .unitOfMeasure("Each")
+                .name("Graduated(Tiered) Recurring Price")
+                .plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                .tiersMode(TiersMode.GRADUATED)
+                .tier(Tier.builder().tier(1).upTo(1000.0).unitAmount(Currency.getInstance("USD"), 30.0).build())
+                .tier(Tier.builder().tier(2).upTo(2000.0).unitAmount(Currency.getInstance("USD"), 50.0).build())
+                .recurring(Recurring.builder()
+                        .timing(BillingTiming.IN_ADVANCE)
+                        .interval(Interval.SPECIFIC_MONTH)
+                        .intervalCount(6)
+                        .durationInterval(DurationInterval.MONTH)
+                        .durationIntervalCount(6)
+                        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
+                        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
+                        .build()
+                )
+                .startEvent(Event.CONTRACT_EFFECTIVE)
                 .build());
 
-        // oneTime Volume
-        plan.addPlanItem(PlanItemCreateRequest.oneTimePlanItemBuilder().name("Test Recurring Volume").plan(plan.getId())
-                .chargeModel(Volume.builder()
-                        .tier(Tier.tierBuilder().tier(1).upTo(1000.0).amount(Currency.getInstance("USD"), 30.0)
-                                .amount(Currency.getInstance("EUR"), 45.0).build())
-                        .tier(Tier.tierBuilder().tier(2).upTo(2000.0).amount(Currency.getInstance("USD"), 50.0)
-                                .amount(Currency.getInstance("EUR"), 75.0).build())
-                        .unitOfMeasure("Each").build())
-                .accountingCode(accountingCodeName).startEvent(Event.CONTRACT_EFFECTIVE).build());
+        //Volume Pricing includes tiers with tier Mode set to Volume. No recurring block indicates oneTime
+        plan.addPrice(PriceCreateRequest.builder()
+                .unitOfMeasure("Each")
+                .name("OneTime Volume Price")
+                .plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                //Set tier mode to volume
+                .tiersMode(TiersMode.VOLUME)
+                .tier(Tier.builder().tier(1).upTo(1000.0).unitAmount(Currency.getInstance("USD"), 30.0).build())
+                .tier(Tier.builder().tier(2).upTo(2000.0).unitAmount(Currency.getInstance("USD"), 50.0).build())
+                .startEvent(Event.CONTRACT_EFFECTIVE)
+                .build());
 
-        // discount flat fee
-        plan.addPlanItem(PlanItemCreateRequest.recurringBuilder()
-                .chargeModel(DiscountAmount.builder().applyDiscountTo(EnumSet.of(ApplyDiscountTo.ONETIME))
-                        .discountLevel(DiscountLevel.SUBSCRIPTION).amount(Currency.getInstance("USD"), 50.0).build())
-                .name("Test Recurring Per Unit").plan(plan.getId()).accountingCode(accountingCodeName)
-                .description("Test Description").interval(Interval.SPECIFIC_MONTH).intervalCount(6)
-                .duration(Interval.MONTH, 6).startEvent(Event.CONTRACT_EFFECTIVE)
-                .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM).on(RecurringOn.ACCOUNT_CYCLE_DATE).build());
+        //Flat Fee includes Amount and One time includes no recurring object
+        plan.addPrice(PriceCreateRequest.builder()
+                .amount(Currency.getInstance("USD"), 30.0)
+                .name("OneTime Flat Fee Price")
+                .plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                .startEvent(Event.CONTRACT_EFFECTIVE)
+                .build());
 
-        // discount percentage
-        plan.addPlanItem(PlanItemCreateRequest.recurringBuilder()
-                .chargeModel(DiscountPercentage.builder().applyDiscountTo(EnumSet.of(ApplyDiscountTo.ONETIME))
-                        .discountLevel(DiscountLevel.SUBSCRIPTION).percentage(Currency.getInstance("USD"), .2).build())
-                .name("Test Recurring Per Unit").plan(plan.getId()).accountingCode(accountingCodeName)
-                .description("Test Description").interval(Interval.SPECIFIC_MONTH).intervalCount(6)
-                .duration(Interval.MONTH, 6).startEvent(Event.CONTRACT_EFFECTIVE)
-                .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM).on(RecurringOn.ACCOUNT_CYCLE_DATE).build());
+        //Usage pricing includes a recurring object with usage boolean set to true
+        plan.addPrice(PriceCreateRequest.builder()
+                .unitOfMeasure("Each")
+                .name("Volume Usage Price")
+                .plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                //Set tier mode to volume
+                .tiersMode(TiersMode.VOLUME)
+                .tier(Tier.builder().tier(1).upTo(1000.0).unitAmount(Currency.getInstance("USD"), 30.0).build())
+                .tier(Tier.builder().tier(2).upTo(2000.0).unitAmount(Currency.getInstance("USD"), 50.0).build())
+                .recurring(Recurring.builder()
+                        .interval(Interval.SPECIFIC_MONTH)
+                        .intervalCount(6)
+                        .durationInterval(DurationInterval.MONTH)
+                        .durationIntervalCount(6)
+                        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
+                        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
+                        .usage(true)
+                        .build()
+                )
+                .startEvent(Event.CONTRACT_EFFECTIVE)
+                .build());
+
+        //Discount Flat amount includes amounts with apply discount to and discount level populated
+        plan.addPrice(PriceCreateRequest.builder()
+                .amount(Currency.getInstance("USD"), 30.0)
+                .discountLevel(DiscountLevel.SUBSCRIPTION)
+                .applyDiscountTo(EnumSet.of(ApplyDiscountTo.RECURRING))
+                .name("Discount Flat Fee OneTime Price").plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                .recurring(Recurring.builder()
+                        .interval(Interval.SPECIFIC_MONTH)
+                        .intervalCount(6)
+                        .durationInterval(DurationInterval.MONTH)
+                        .durationIntervalCount(6)
+                        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
+                        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
+                        .build()
+                )
+                .startEvent(Event.CONTRACT_EFFECTIVE)
+                .build());
+
+        //Discount Percentage includes percent amount, as a decimal, with apply discount to and discount level populated
+        plan.addPrice(PriceCreateRequest.builder()
+                .percentAmount(.30)
+                .discountLevel(DiscountLevel.SUBSCRIPTION)
+                .applyDiscountTo(EnumSet.of(ApplyDiscountTo.USAGE))
+                .name("Discount Percentage Price")
+                .plan(plan.getId())
+                .recognizedRevenueAccountingCode(accountingCodeName)
+                .deferredRevenueAccountingCode(accountingCodeName)
+                .description("Test Description")
+                .startEvent(Event.CONTRACT_EFFECTIVE)
+                .recurring(Recurring.builder()
+                        .interval(Interval.SPECIFIC_MONTH)
+                        .intervalCount(6)
+                        .durationInterval(DurationInterval.MONTH)
+                        .durationIntervalCount(6)
+                        .alignment(Alignment.SUBSCRIPTION_PLAN_ITEM)
+                        .on(RecurringOn.ACCOUNT_CYCLE_DATE)
+                        .build()
+                )
+                .build());
 
         productReq.addPlan(plan);
         Product product = zuoraClient.products().create(productReq);
