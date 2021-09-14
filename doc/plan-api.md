@@ -13,7 +13,6 @@ For example, you might have a single "gold" product that has prices for $100/mon
 * [Create plan](/doc/plan-api.md#create-plan)
 * [Get plan](/doc/plan-api.md#get-plan)
 * [Update plan](/doc/plan-api.md#update-plan)
-* [Stream plans](/doc/plan-api.md#stream-plans)
 * [Delete plan](/doc/plan-api.md#delete-plan)
 
 
@@ -102,34 +101,6 @@ Plan plan = zuoraClient.plans().get(PLAN_ID);
 
 plan.setName("Plan Y")
 Plan plan = zuoraClient.plans().update(plan);
-```
-
-# Stream Plans
-
-```java
-Plan plan = zuoraClient.plans().stream(product);
-```
-
-## Parameters
-
-| Parameter | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `product` | `Product` | Required | A product object. |
-
-
-## Response Type
-
-Stream<[`Plan`](/doc/models/plan.md)>
-
-
-## Example 
-
-```java
-final String PRODUCT_ID = "product_id8";
-
-Product product = zuoraClient.products().getProduct(PRODUCT_ID);
-
-Stream<Plan> plans = zuoraClient.plans().stream(product);
 ```
 
 # Delete Plan
