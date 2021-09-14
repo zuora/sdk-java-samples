@@ -15,7 +15,7 @@ Describes a request to create a price using [CreatePrice](/doc/price-api.md#crea
 | `deferredRevenueAccountingCode` | `String` | Optional | An accounting code that is active in your Zuora chart of accounts. | 
 | `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | 
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. |
-| `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. |
+| `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) | Optional | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`, `GRADUATED_WITH_OVERAGE`. |
 | `tiers` | [`List<Tier>`](/doc/models/tier.md) | Optional | tiers | String getTiers() |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | 
 | `quantity` | `Double` | Optional | Quantity. | 
