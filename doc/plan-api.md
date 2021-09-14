@@ -13,7 +13,7 @@ For example, you might have a single "gold" product that has prices for $100/mon
 * [Create plan](/doc/plan-api.md#create-plan)
 * [Get plan](/doc/plan-api.md#get-plan)
 * [Update plan](/doc/plan-api.md#update-plan)
-* [List plans](/doc/plan-api.md#list-plans)
+* [Stream plans](/doc/plan-api.md#stream-plans)
 * [Delete plan](/doc/plan-api.md#delete-plan)
 
 
