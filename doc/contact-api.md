@@ -1,0 +1,98 @@
+# Contact API
+
+The ContactAPI gives you access to your [Contact](/doc/models/contact.md) objects, which store contact details for your customers.
+
+The API allows you to create, retrieve, and update customer contacts. 
+
+## Class Name
+
+`ContactAPI`
+
+## Methods
+
+* [Create contact](/doc/contact-api.md#create-contact)
+* [Get contact](/doc/contact-api.md#get-contact)
+* [Update contact](/doc/contact-api.md#update-contact)
+
+
+# Create Contact
+
+```java
+Contact contact = zuoraClient.contacts().create(contactCreateRequest);
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+| `contactCreateRequest` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Contact request object. |
+
+## Response Type
+
+[`Contact`](/doc/models/contact.md)
+
+## Example
+
+```java
+ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder()
+    .firstName("Jenny")
+    .lastName("Smith")
+    .address(Address.builder().country("USA").state("CA").build())
+    .build();
+  
+Contact contact = zuoraClient.contacts().create(contactCreateRequest);
+```
+
+# Get Contact
+
+```java
+Contact contact = zuoraClient.contacts().get(contactId);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier for the contact. |
+
+
+## Response Type
+
+[`Contact`](/doc/models/contact.md)
+
+
+## Example 
+
+```java
+String CONTACT_ID = "contact_id8";
+
+Contact contact = zuoraClient.contacts().get(CONTACT_ID);
+```
+
+
+# Update Contact
+
+```java
+Contact contact = contact.update();
+```
+
+[comment]: <> (## Parameters)
+
+[comment]: <> (| Parameter | Type | Tags | Description |)
+
+[comment]: <> (|  --- | --- | --- | --- |)
+
+[comment]: <> (| `contact` | `Contact` | Required | The hydrated `Contact` object you wish to update. |)
+
+
+## Example 
+
+```java
+String CONTACT_ID = "contact_id8";
+Contact contact = zuoraClient.contacts().get(CONTACT_ID);
+
+contact.setLastName("Jones");
+contact.update();
+```
+
+
