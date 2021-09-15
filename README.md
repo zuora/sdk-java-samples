@@ -54,6 +54,8 @@ ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 <hr />
 
+To protect your tenant from unauthorized access be sure not to share these credentials (your secret API keys) in publicly accessible areas such as GitHub or client-side code.
+
 ## Samples
 If you're not sure where to start [this basic sample](src/main/java/com/zuora/sdk/core/example/CreateAccountWithSubscription.java) demonstrates how to create an `Account`, a `Product` and a `Subscription` to subscribe a customer to your product or service.
 
