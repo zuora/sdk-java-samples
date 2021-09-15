@@ -52,7 +52,7 @@ String CLIENT_SECRET = "{CLIENT_SECRET}";
 String ENDPOINT = "{ENDPOINT_BASE}";
 ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
-To protect your tenant from unauthorized access be sure not to share these credentials (your secret API keys) in publicly accessible areas such as GitHub or client-side code.
+To protect your tenant from unauthorized access be sure not to share these credentials in publicly accessible areas such as GitHub or client-side code.
 
 <hr />
 
