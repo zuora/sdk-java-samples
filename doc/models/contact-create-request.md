@@ -1,6 +1,6 @@
 # Contact Create Request
 
-Contacts represent [Account](/doc/models/account.md) contacts and billing and shipping addresses.
+Contacts represent [Account](/doc/models/account.md) contacts and [Account](/doc/models/account.md) billing and shipping addresses.
 
 ## Fields
 
