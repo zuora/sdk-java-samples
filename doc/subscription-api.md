@@ -38,9 +38,6 @@ Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateR
 |  --- | --- | --- | --- |
 | `subscriptionCreateRequest` | [`SubscriptionCreateRequest`](/doc/models/subscription-create-request.md) | Required | Subscription request object. |
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -68,9 +65,6 @@ Subscription subscription = zuoraClient.subscriptions().get(subscriptionId);
 |  --- | --- | --- | --- |
 | `id` | `String` | Required | The unique identifier for the subscription. |
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -92,9 +86,6 @@ List<SubscriptionPlan> subscriptionPlans = zuoraClient.subscriptions().getSubscr
 |  --- | --- | --- | --- |
 | `id` | `String` | Required | The unique identifier for the subscription. |
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -112,9 +103,6 @@ Subscription subscription =
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
 ```
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -138,9 +126,6 @@ Subscription subscription =
                 subscriptionItem, LocalDate.now());
 ```
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -167,9 +152,6 @@ Subscription subscription =
         zuoraClient.subscriptions().ownerTransfer(subscription, NEW_ACCOUNT_KEY, NEW_INVOICE_OWNER_KEY);
 ```
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -196,9 +178,6 @@ zuoraClient.subscriptions().renew(SUBSCRIPTION_ID);
 |  --- | --- | --- | --- |
 | `id` | `String` | Required | The unique identifier for the subscription. |
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -214,9 +193,6 @@ zuoraClient.subscriptions().renew(SUBSCRIPTION_ID);
 Subscription subscription = zuoraClient.subscriptions().cancel(subscription);
 ```
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
@@ -235,9 +211,6 @@ Subscription subscription = zuoraClient.subscriptions().cancel(subscription);
 Subscription subcription = zuoraClient.subscriptions().removeSubscriptionPlan(subscription, subscriptionPlan);
 ```
 
-## Response Type
-
-[`Subscription`](/doc/models/subscription.md)
 
 ## Example
 
