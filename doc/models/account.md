@@ -37,9 +37,11 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 # Get Invoices
 
 ```java
-[`List<BillingDocument>`](/doc/models/billing-document.md) invoices = account.getInvoices();
+List<BillingDocument> invoices = account.getInvoices();
 ```
+## Returns
 
+[`List<BillingDocument>`](/doc/models/billing-document.md)
 
 # Get Subscriptions
 
