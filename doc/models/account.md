@@ -36,6 +36,7 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 
 # Get Invoices
 
+
 ```java
 List<BillingDocument> invoices = account.getInvoices();
 ```
@@ -43,13 +44,15 @@ List<BillingDocument> invoices = account.getInvoices();
 
 [`List<BillingDocument>`](/doc/models/billing-document.md)
 
+
+
 # Get Subscriptions
 
 ```java
 List<Subscription> subscriptions = account.getSubscriptions();
 ```
 
-## Response Type
+## Returns
 
 [`List<Subscription>`](/doc/models/subscription.md)
 
@@ -60,7 +63,7 @@ List<Subscription> subscriptions = account.getSubscriptions();
 List<Payment> payments = account.getPayments();
 ```
 
-## Response Type
+## Returns
 
 [`List<Payment>`](/doc/models/payment.md)
 
@@ -71,6 +74,6 @@ List<Payment> payments = account.getPayments();
 List<PaymentMethod> paymentMethods = account.getPaymentMethods();
 ```
 
-## Response Type
+## Returns
 
 [`List<PaymentMethod>`](/doc/models/payment-method.md)
