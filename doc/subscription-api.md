@@ -29,14 +29,14 @@ The Subscription object contains the information needed to create and maintain a
 Creates a new subscription.
 
 ```java
-Subscription subscription=zuoraClient.subscriptions().create(subscriptionCreateRequest);
+Subscription subscription=zuoraClient.subscriptions().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `subscriptionCreateRequest` | [`SubscriptionCreateRequest`](/doc/models/subscription-create-request.md) | Required | Subscription request object. |
+| `params` | [`SubscriptionCreateRequest`](/doc/models/subscription-create-request.md) | Required | Subscription request object. |
 
 
 ## Example
@@ -46,11 +46,11 @@ final String ACCOUNT_ID = "account_id8";
 
 Account account = zuoraClient.accounts().get(ACCOUNT_ID);
 
-SubscriptionCreateRequest subscriptionCreateRequest = SubscriptionCreateRequest.builder()
+SubscriptionCreateRequest params = SubscriptionCreateRequest.builder()
         .account(account)
         .build();
         
-Subscription subscription = zuoraClient.subscriptions().create(subscriptionCreateRequest);
+Subscription subscription = zuoraClient.subscriptions().create(params);
 ```
 
 # Get Subscription
@@ -63,7 +63,7 @@ Subscription subscription = zuoraClient.subscriptions().get(subscriptionId);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the subscription. |
+| `id` | `String` | Required | The unique identifier of a subscription. |
 
 
 ## Example
@@ -84,7 +84,7 @@ List<SubscriptionPlan> subscriptionPlans = zuoraClient.subscriptions().getSubscr
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the subscription. |
+| `id` | `String` | Required | The unique identifier of a subscription. |
 
 
 ## Example
@@ -176,7 +176,7 @@ zuoraClient.subscriptions().renew(SUBSCRIPTION_ID);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the subscription. |
+| `id` | `String` | Required | The unique identifier of a subscription. |
 
 
 ## Example
