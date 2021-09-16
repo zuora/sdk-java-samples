@@ -81,6 +81,7 @@ This technical reference documents every recommended object and method available
 
 ### Account
 * [Account](doc/account-api.md)
+* [Contact](doc/contact-api.md)
 
 ### Subscription
 * [Subscription](doc/subscription-api.md)
