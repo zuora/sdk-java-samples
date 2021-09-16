@@ -24,7 +24,7 @@ PaymentMethod paymentMethod = zuoraClient.paymentMethods().create(params);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `params` | [`PaymentMethodCreateRequest`](/doc/models/payment-method-create-request) | Required | A payment method create request. |
+| `params` | [`PaymentMethodCreateRequest`](/doc/models/payment-method-create-request.md) | Required | A payment method create request. |
 
 ## Response Type
 
