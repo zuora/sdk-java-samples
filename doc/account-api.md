@@ -59,7 +59,7 @@ Account account = zuoraClient.accounts().get(accountId);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the account. |
+| `id` | `String` | Required | The unique identifier of an account. |
 
 
 ## Response Type
