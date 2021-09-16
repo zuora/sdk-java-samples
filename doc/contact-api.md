@@ -18,7 +18,7 @@ The API allows you to create, retrieve, and update customer contacts.
 # Create Contact
 
 ```java
-Contact contact = zuoraClient.contacts().create(contactCreateRequest);
+Contact contact = zuoraClient.contacts().create(params);
 ```
 
 ## Parameters
@@ -34,13 +34,13 @@ Contact contact = zuoraClient.contacts().create(contactCreateRequest);
 ## Example
 
 ```java
-ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder()
+ContactCreateRequest params = ContactCreateRequest.builder()
     .firstName("Jenny")
     .lastName("Smith")
     .address(Address.builder().country("USA").state("CA").build())
     .build();
   
-Contact contact = zuoraClient.contacts().create(contactCreateRequest);
+Contact contact = zuoraClient.contacts().create(params);
 ```
 
 # Get Contact
