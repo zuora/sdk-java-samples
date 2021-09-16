@@ -1,8 +1,8 @@
 # Account API
 
-The AccountAPI gives you access to your [Account](/doc/models/account.md) objects, which store information about your customers, including their contact details, payment methods, billing documents, payment history and on what day of the month they will be billed.
+The Account API gives you access to your [Account](/doc/models/account.md) objects, which store information about your customers, including their contact details, payment methods, billing documents, payment history and on what day of the month they will be billed.
 
-The API allows you to create, retrieve, update, and delete your customer accounts. 
+The Account API allows you to create, retrieve, update, and delete your customer accounts. 
 
 ## Class Name
 
@@ -19,7 +19,7 @@ The API allows you to create, retrieve, update, and delete your customer account
 # Create Account
 
 ```java
-Account account = zuoraClient.accounts().create(accountCreateRequest);
+Account account = zuoraClient.accounts().create(params);
 ```
 
 ## Parameters
@@ -35,18 +35,18 @@ Account account = zuoraClient.accounts().create(accountCreateRequest);
 ## Example
 
 ```java
-ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder()
+ContactCreateRequest contactParams = ContactCreateRequest.builder()
     .firstName("Jenny")
     .lastName("Smith")
     .address(Address.builder().country("USA").state("CA").build())
     .build();
 
-AccountCreateRequest accountCreateRequest = AccountCreateRequest.builder()
+AccountCreateRequest params = AccountCreateRequest.builder()
     .name("Jenny Smith")
-    .billTo(contactCreateRequest)
+    .billTo(contactParams)
     .build();
     
-Account account = zuoraClient.accounts().create(accountCreateRequest);
+Account account = zuoraClient.accounts().create(params);
 ```
 
 # Get Account
