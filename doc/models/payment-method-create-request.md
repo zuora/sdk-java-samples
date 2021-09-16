@@ -1,7 +1,7 @@
 
-# PaymentMethodCreateRequest
+# Create Payment Method Request
 
-Payment methods represent your customers' payment instruments and are the response returned by [GetPaymentMethod](/doc/payment-method-api.md#get-payment-method).
+Describes a request to create a payment method using [CreatePaymentMethod](/doc/payment-method-api.md#create-payment-method).
 
 ## Fields
 
