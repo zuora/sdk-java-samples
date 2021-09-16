@@ -25,14 +25,14 @@ You must provide at least these values in your request:
 - `name`
 
 ```java
-Plan plan = zuoraClient.plans().create(planCreateRequest);
+Plan plan = zuoraClient.plans().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `planCreateRequest` | [`PlanCreateRequest`](/doc/models/plan-create-request.md) | Required | Plan request object. |
+| `params` | [`PlanCreateRequest`](/doc/models/plan-create-request.md) | Required | Plan request object. |
 
 ## Response Type
 
@@ -41,10 +41,10 @@ Plan plan = zuoraClient.plans().create(planCreateRequest);
 ## Example
 
 ```java
-PlanCreateRequest planCreateRequest = PlanCreateRequest.builder()
+PlanCreateRequest params = PlanCreateRequest.builder()
         .name("Monthly Plan")
         .build();
-Plan plan = zuoraClient.plans().create(planCreateRequest);
+Plan plan = zuoraClient.plans().create(params);
 ```
 
 # Get Plan
