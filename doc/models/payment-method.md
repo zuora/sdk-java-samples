@@ -10,7 +10,7 @@ Payment methods represent your customers' payment instruments and are the respon
 | `id` | `String` | ReadOnly | Unique identifier for the object. | String getId() |
 | `type` | [`Enum`](/doc/models/payment-method-type.md) |  | The type of the PaymentMethod. | String getType() |
 | `accountKey` | `String` |  | A customer account key. | String getAccountKey() |
-| `billingDetails` | [`BillingDetails`](/doc/models/billing-details.md) | Optional | . | String getBillingDetails() |
+| `billingDetails` | [`BillingDetails`](/doc/models/billing-details.md) |  | . | String getBillingDetails() |
 | `card` | [`CreditCard`](/doc/models/credit-card.md) |  |  | CreditCard getCard() |
 | `isDefault` | `Boolean` |  | Indicates whether this is the default payment method for a customer account. | Boolean getIsDefault() |
 | `mitConsentAgreementRef` | `String` |  | Your reference for the stored credential consent agreement that you have established with your customer. | String getMitConsentAgreementRef() |
@@ -24,7 +24,7 @@ Payment methods represent your customers' payment instruments and are the respon
 | `bankCode` | `String` |  | The sort code or number that identifies the bank. | String getbankCode() |
 | `bankName` | `String` |  | The name of the bank where the ACH payment account is held. | String getbankName() |
 | `branchCode` | `String` |  | The branch code of the bank. Used with Direct Debit payment methods. | String getbranchCode() |
-| `businessIdentificationCode` | `String` |  | The BIC code. Used with SEPA_DEBIT payment methods. | String getbusinessIdentificationCode() |
+| `businessIdentificationCode` | `String` |  | The BIC code. Used with SEPA_DEBIT payment methods. | String getBusiness IdentificationCode() |
 | `identityNumber` | `String` |  | The identity number used for bank transfer. | String getIdentityNumber() |
 | `accountName` | `String` |  | The name on the Direct Debit bank account or ACH. Use this field for Direct Debit or ACH payment methods. | String getAccountName() |
 | `accountType` | [`BankAccountType`](/doc/models/bank-account-type.md) |  | The type of bank account associated with an ACH payment. | String getAccountType() |
