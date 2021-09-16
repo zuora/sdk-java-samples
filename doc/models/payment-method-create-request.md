@@ -36,5 +36,4 @@ Describes a request to create a payment method using [CreatePaymentMethod](/doc/
 | `mandateCreationDate` | `String` | Optional | The date on which the mandate was updated. | 
 | `mandateStatus` | `String` | Optional | The gateway status of the mandate. | 
 | `mandateReason` | `String` | Optional | The gateway mandate reason. | 
-| `state` | [`Enum`](/doc/models/payment-method-state.md)  | Optional | . | 
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | 
