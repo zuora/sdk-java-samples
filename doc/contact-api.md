@@ -1,6 +1,6 @@
 # Contact API
 
-The ContactAPI gives you access to your [Contact](/doc/models/contact.md) objects, which store contact details for your customers.
+The Contact API gives you access to your [Contact](/doc/models/contact.md) objects, which store contact details for your customers.
 
 The API allows you to create, retrieve, and update customer contacts. 
 
