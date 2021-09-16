@@ -26,7 +26,7 @@ Account account = zuoraClient.accounts().create(params);
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `accountCreateRequest` | [`AccountCreateRequest`](/doc/models/account-create-request.md) | Account request object. |
+| `params` | [`AccountCreateRequest`](/doc/models/account-create-request.md) | Account request object. |
 
 ## Response Type
 
