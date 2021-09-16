@@ -39,7 +39,7 @@ PaymentMethod paymentMethod = zuoraClient.paymentMethods().create(params);
 # Get Payment Method
 
 ```java
-PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_ID});
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().get(id);
 ```
 
 ## Parameters
