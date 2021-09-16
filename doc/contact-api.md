@@ -53,7 +53,7 @@ Contact contact = zuoraClient.contacts().get(contactId);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the contact. |
+| `id` | `String` | Required | The unique identifier for a contact. |
 
 
 ## Response Type
