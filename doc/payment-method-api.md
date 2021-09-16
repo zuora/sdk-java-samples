@@ -17,14 +17,14 @@ PaymentMethod objects represent your customer's payment instruments and must be 
 # Create Payment Method
 
 ```java
-PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_ID});
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier of a payment method. |
+| `params` | `[PaymentMethodCreateRequest](/doc/models/payment-method-create-request)` | Required | A payment method create request. |
 
 ## Response Type
 
@@ -33,9 +33,7 @@ PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_I
 ## Example 
 
 ```java
-String PAYMENT_METHOD_ID = "2c92c0f872c68b450172dad9c61e436b";
-
-PaymentMethod paymentMethod = zuoraClient.paymentMethods().get(PAYMENT_METHOD_ID);
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().create(params);
 ```
 
 # Get Payment Method
@@ -64,7 +62,7 @@ PaymentMethod paymentMethod = zuoraClient.paymentMethods().get(PAYMENT_METHOD_ID
 # Delete Payment Method
 
 ```java
-PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_ID});
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().delete(id);
 ```
 
 ## Parameters
@@ -82,5 +80,5 @@ PaymentMethod paymentMethod = zuoraClient.paymentMethods().get({PAYMENT_METHOD_I
 ```java
 String PAYMENT_METHOD_ID = "2c92c0f872c68b450172dad9c61e436b";
 
-PaymentMethod paymentMethod = zuoraClient.paymentMethods().get(PAYMENT_METHOD_ID);
+PaymentMethod paymentMethod = zuoraClient.paymentMethods().delete(PAYMENT_METHOD_ID);
 ```
