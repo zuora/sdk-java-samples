@@ -36,12 +36,10 @@ Payment payment = zuoraClient.payments().create(params);
 ## Example
 
 ```java
-String ACCOUNT_ID = "account_id9";
-String authCode = "7368";
 PaymentCreateRequest params = PaymentCreateRequest.builder()
         .amount(10.0d)
-        .account(ACCOUNT_ID)
-        .authorisationCode(authCode)
+        .account("account_id8")
+        .authorisationCode("7368")
         .currency("USD")
         .external(true)
         .build();
