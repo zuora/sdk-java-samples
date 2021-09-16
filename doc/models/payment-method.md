@@ -37,5 +37,5 @@ Payment methods represent your customers' payment instruments and are the respon
 | `mandateCreationDate` | `String` |  | The date on which the mandate was updated. | String getMandateCreationDate() |
 | `mandateStatus` | `String` |  | The gateway status of the mandate. | String getMandateStatus() |
 | `mandateReason` | `String` |  | The gateway mandate reason. | String getMandateReason() |
-| `state` | [`Enum`](/doc/models/payment-method-state.md)  |  | . | PaymentMethodState getState() |
+| `state` | [`Enum`](/doc/models/payment-method-state.md)  | ReadOnly | . | PaymentMethodState getState() |
 | `customFields` | `Map<String, Object>` |  | Custom fields. | `Map<String, Object> getCustomFields()`|
