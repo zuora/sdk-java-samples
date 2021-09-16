@@ -7,7 +7,6 @@ Describes a request to create a payment method using [CreatePaymentMethod](/doc/
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- | 
-| `id` | `String` | ReadOnly | Unique identifier for the object. | 
 | `type` | [`Enum`](/doc/models/payment-method-type.md) | Required | The type of the PaymentMethod. | 
 | `accountKey` | `String` | Optional | A customer account key. | 
 | `billingDetails` | [`BillingDetails`](/doc/models/billing-details.md) | Optional | . | 
