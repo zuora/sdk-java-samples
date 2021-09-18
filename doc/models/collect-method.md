@@ -10,5 +10,5 @@ Represents the collection method for a subscription.
 
 | Name | Description |
 |  --- | --- |
-| `COLLECT_PAYMENT` |  |
-| `CREATE_INVOICE` |  |
+| `COLLECT_PAYMENT` | Collect payment automatically. |
+| `CREATE_INVOICE` | Create an invoice with payment instructions. |
