@@ -9,8 +9,8 @@ Describes a request to create a payment method using [CreatePaymentMethod](/doc/
 |  --- | --- | --- | --- | 
 | `type` | [`Enum`](/doc/models/payment-method-type.md) | Required | The type of the PaymentMethod. | 
 | `accountKey` | `String` | Optional | A customer account key. | 
-| `billingDetails` | [`BillingDetails`](/doc/models/billing-details.md) | Optional | . | 
-| `card` | [`CreditCard`](/doc/models/credit-card.md) | Optional | . | 
+| `billingDetails` | [`BillingDetails`](/doc/models/billing-details.md) | Optional | The customer's billing details. | 
+| `card` | [`CreditCard`](/doc/models/credit-card.md) | Optional | The customer's card details. | 
 | `isDefault` | `Boolean` | Optional | Indicates whether this is the default payment method for a customer account. | 
 | `mitConsentAgreementRef` | `String` | Optional | Your reference for the stored credential consent agreement that you have established with your customer. | 
 | `mitConsentAgreementSrc` | `String` | Optional | . | 
