@@ -1,6 +1,6 @@
 # Discount Level
 
-.
+Specifies whether a discount applies to a plan, an entire subscriptioin or to any activity on an account.
 
 ## Enum
 
@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| `PLAN` | . |
-| `SUBSCRIPTION` | . |
-| `ACCOUNT` | . |
+| `PLAN` | Apply to a plan. |
+| `SUBSCRIPTION` | Apply to an entire subscription. |
+| `ACCOUNT` | Apply to any activity on an account. |
