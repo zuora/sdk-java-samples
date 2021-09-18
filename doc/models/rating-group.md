@@ -1,6 +1,6 @@
 # RatingGroup
 
-Specifies a rating group based on which usage records are rated.
+Specifies how usage records shall be grouped for rating purposes.
 
 ## Enumeration
 
