@@ -1,6 +1,6 @@
 # Duration Interval
 
-Specifies the interval of the period during which a customer will be charged.
+Specifies the interval for the period during which a customer will be charged.
 
 ## Enumeration
 
