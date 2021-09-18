@@ -11,6 +11,6 @@ Contacts represent [Account](/doc/models/account.md) contacts and [Account](/doc
 | `phone` | `String` | Optional | The contact's phone number. | 
 | `email` | `String` | Optional | The contact's email address. | 
 | `workEmail` | `String` | Optional | The contact's work email address. | 
-| `account` | `String` | Optional |  | 
-| `address` | [`Address`](/doc/models/address.md) | Optional |  
+| `account` | `String` | Optional | The customer this contact is associated with. | 
+| `address` | [`Address`](/doc/models/address.md) | Optional | The contact's address. |  
 | `customFields` | `Map<String, Object>` | Optional | Custom fields used to create a contact. | 
