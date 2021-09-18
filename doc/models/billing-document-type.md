@@ -1,6 +1,6 @@
 # Billing Document Type
 
-Represents the type of billing document this is: either an `invoice`, a `credit memo` or a `debit memo`.
+Represents the type of billing document this is: an invoice, a credit memo or a debit memo.
 
 ## Enumeration
 
