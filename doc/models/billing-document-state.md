@@ -1,6 +1,6 @@
 # Billing Document State
 
-.
+Represents the state of a billing document.
 
 ## Enumeration
 
@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| `DRAFT` | . |
-| `POSTED` | . |
-| `CANCELED` | . |
+| `DRAFT` | The billing document is a draft. |
+| `POSTED` | The billing document has been posted. |
+| `CANCELED` | The billing document has been cancelled. |
