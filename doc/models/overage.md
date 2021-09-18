@@ -1,6 +1,6 @@
 # Overage
 
-.
+Specifies how to charge for units consumed after a customer exceeds a defined number of included units.
 
 ## Class Name
 
