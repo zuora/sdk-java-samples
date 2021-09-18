@@ -15,9 +15,9 @@ Describes a request to create a payment method using [CreatePaymentMethod](/doc/
 | `mitConsentAgreementRef` | `String` | Optional | Your reference for the stored credential consent agreement that you have established with your customer. | 
 | `mitConsentAgreementSrc` | `String` | Optional | . | 
 | `mitNetworkTransactionId` | `String` | Optional | . | 
-| `mitProfileAction` | [`Enum`](/doc/models/mit-profile-action.md) | Optional | . | 
-| `mitProfileAgreementOn` | `String` | Optional | . | 
-| `mitProfileType` | [`Enum`](/doc/models/mit-profile-type.md) | Optional | . | 
+| `mitProfileAction` | [`Enum`](/doc/models/mit-profile-action.md) | Optional | The merchant-initiated profile action. | 
+| `mitProfileAgreementOn` | `String` | Optional | The date on which the stored credential profile is agreed. | 
+| `mitProfileType` | [`Enum`](/doc/models/mit-profile-type.md) | Optional | The type of stored credential profile. | 
 | `IBAN` | `String` | Optional | International Bank Account Number used to create SEPA_DEBIT payment methods. | 
 | `accountNumber` | `String` | Optional | The number of the customer's bank account. Used with Direct Debit payment methods. | 
 | `bankCode` | `String` | Optional | The sort code or number that identifies the bank. | 
