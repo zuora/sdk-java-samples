@@ -17,7 +17,7 @@ A Billing Document can represent an invoice, a credit memo or a debit memo and i
 | `postedBy` | `String` | ReadOnly | Unique identifier of the user who posted the billing document. | String getPostedBy() |
 | `postedTime` | `LocalDateTime` | ReadOnly | Time at which the object was posted. | LocalDateTime getPostedTime() |
 | `state` | [`Enum`](/doc/models/billing-document-state.md) | ReadOnly | State of this billing document, one of `DRAFT`, `POSTED` or `CANCELED`. | String getState() |
-| `type` | [`Enum`](/doc/models/billing-document-type.md) | ReadOnly | The type of the billing document. One of `CREDIT_MEMO`, `DEBIT_MEMO` or `INVOICE`.  | String getType() |
+| `type` | [`Enum`](/doc/models/billing-document-type.md) | ReadOnly | The type of billing document. One of `CREDIT_MEMO`, `DEBIT_MEMO` or `INVOICE`.  | String getType() |
 | `autoPay` | `Boolean` | ReadOnly | Has the value `true` if payment will be collected automatically in the corresponding payment run or the value `false` if the payment will not automatically be collected. | Boolean getAutoPay() |
 | `documentDate` | `LocalDate` | ReadOnly | The date when the  billing document takes effect. | LocalDate getDocumentDate() |
 | `dueDate` | `LocalDate` | ReadOnly | The date by which the payment for this invoice is due. | LocalDate getDueDate() |
