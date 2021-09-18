@@ -1,6 +1,6 @@
 # Apply Discount To
 
-.
+An enumeration of the types of prices to which discounts may be applied.
 
 ## Enum
 
@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| `ONE_TIME` | . |
-| `RECURRING` | . |
-| `USAGE` | . |
+| `ONE_TIME` | One-time purchase. |
+| `RECURRING` | Recurring (subscription) purchase. |
+| `USAGE` | Usage-based. |
