@@ -1,6 +1,6 @@
 # Apply Discount To
 
-An enumeration of the types of prices to which discounts may be applied.
+The types of prices to which discounts may be applied.
 
 ## Enum
 
