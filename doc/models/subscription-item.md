@@ -20,6 +20,8 @@ A Subscription Item defines the unit cost, currency, and (optional) billing cycl
 | `minQuantity` | `Integer` | Optional | Specifies the minimum number of units for this item. | `Integer getMinQuantity()` |
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | `String getStartEvent()` |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | `String getUnitOfMeasure()` |
+| `tiersMode` | [`Enum`](/doc/models/tiers-mode.md) |  | Specifies the kind of tiering. One of `GRADUATED`, `HIGHWATERMARK_GRADUATED`, `VOLUME`, or `HIGHWATERMARK_VOLUME`. | `String getTiersMode()` |
+| `tiers` | [`List<Tier>`](/doc/models/tier.md) |  | tiers | `String getTiers()` |
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | `String getTaxInclusive()` |
 | `createdBy`| `String` | ReadOnly | Identifier of the user who created the price. |  `String getCreatedBy()` |
 | `createTime`| `ZonedDateTime` | ReadOnly | The time when the price was created. | `ZonedDateTime getCreateTime()` |
