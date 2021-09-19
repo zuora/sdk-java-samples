@@ -1,6 +1,6 @@
 # Create Refund Request
 
-Describes a request to create a refund by [CreateRefund](/doc/refund-api.md#create-refund)
+Describes a request to create a refund by using [CreateRefund](/doc/refund-api.md#create-refund).
 
 
 ## Fields
