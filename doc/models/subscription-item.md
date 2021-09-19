@@ -21,6 +21,17 @@ A Subscription Item defines the unit cost, currency, and (optional) billing cycl
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | `String getStartEvent()` |
 | `unitOfMeasure` | `String` | Optional | A configured unit of measure. | `String getUnitOfMeasure()` |
 | `taxInclusive` | `Boolean` | Optional | If true, indicates that the amounts supplied are tax inclusive. | `String getTaxInclusive()` |
-| `amounts` | `Map<Currency, Double>` | Optional | The billing amounts for this item. | `Map<Currency, Double> getAmounts()` |
-| `unitAmounts` | `Map<Currency, Double>` | Optional | The unit billing amounts for this item. | `Map<Currency, Double> getUnitAmounts()` |
-| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
+| `createdBy`| `String` | ReadOnly | Identifier of the user who created the price. |  `String getCreatedBy()` |
+| `createTime`| `ZonedDateTime` | ReadOnly | The time when the price was created. | `ZonedDateTime getCreateTime()` |
+| `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the price. | `String getUpdatedBy()` |
+| `updateTime`| `ZonedDateTime` | ReadOnly | The time when the price was last updated. | `ZonedDateTime getUpdateTime()` |
+| `amounts` | `Map<Currency, Double>` |  | Flat billing amounts. | `Map<Currency, Double> getAmounts()` |
+| `unitAmounts` | `Map<Currency, Double>` |  | Unit billing amounts. | `Map<Currency, Double> getAmounts()` |
+| `percentAmount` | `Double` |  | Percentage represented as a decimal. | `Double getPercentAmount()` |
+| `priceBaseInterval` | [`Enum`](/doc/models/price-base-interval.md) |  | Specifies the base interval of a price. One of `WEEK`, `MONTH`, or `BILLING_PERIOD`. If not provided defaults to `BILLING_PERIOD`. | `String getPriceBaseInterval()`
+| `applyDiscountTo` | [`EnumSet<Apply DiscountTo>`](/doc/models/apply-discount-to.md) |  | You can choose any combination of `ONE_TIME` `RECURRING` and `USAGE` for discount prices. | `String getApplyDiscountTo()` |
+| `discountLevel` | [`Enum`](/doc/models/discount-level.md) |  | Specifies at what level the discount should be applied: one of `ACCOUNT`, `SUBSCRIPTION` or `PLAN`. | `String getDiscountLevel()` |
+| `overage` | [`Overage`](/doc/models/overage.md) |  | Specifies how to handle usage overages. | `Overage getOverage()` |
+| `customFields` | `Map<String, Object>` |  | Custom fields. | `Map<String, Object> getCustomFields()`|
+| `chargeModel` | [`Enum`](/doc/models/charge-model.md) | ReadOnly | Price model. | `String getChargeModel()` |
+| `chargeType` | [`Enum`](/doc/models/charge-type.md) | ReadOnly | Price model. | `String getChargeType()` |
