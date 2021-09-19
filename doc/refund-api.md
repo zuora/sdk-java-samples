@@ -33,7 +33,7 @@ Refund refund = zuoraClient.refunds().create(params);
 ## Example
 
 ```java
-RefundCreateRequest params = REfundCreateRequest.builder()
+RefundCreateRequest params = RefundCreateRequest.builder()
         .amount(10.0d)
         .account("account_id8")
         .authorisationCode("7368")
