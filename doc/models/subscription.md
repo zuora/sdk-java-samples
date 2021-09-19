@@ -14,7 +14,10 @@ Subscription allow you to charge a customer on a recurring basis and are the res
 |  --- | --- | --- | --- | --- |
 | `id` | `String` | ReadOnly | Unique identifier for the object. | String getId() |
 | `key` | `String` | ReadOnly | Unique identifier for the object. | String getKey() |
-| `account` | [`Account`](/doc/models/account.md) | Required | The subscriber account. | String getAccount() |
+| `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the object was created. | `ZonedDateTime getCreateTime()` |
+| `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the object was last updated. | `ZonedDateTime getUpdateTime()` |
+| `createdBy` | `String` | ReadOnly | Identifier of the user that created the object. | `String getCreatedBy()` |
+| `updatedBy` | `String` | ReadOnly | Identifier of the user that last updated the object. | `String getUpdatedBy()` || `account` | [`Account`](/doc/models/account.md) | Required | The subscriber account. | String getAccount() |
 | `description` | `String` | Optional | An arbitrary string attached to the object. Often useful for displaying to users. | String getDescription() |
 | `startDate` | `LocalDate` | Optional | Date on which the subscription becomes active. | LocalDate getStartDate() |
 | `endDate` | `LocalDate` | Optional | Date on which the subscription is no longer active. | LocalDate getEndDate() |
