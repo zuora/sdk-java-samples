@@ -34,4 +34,4 @@ and [GetRefund](/doc/refund-api.md#get-refund).
 | `cancelTime` | `ZonedDateTime` | ReadOnly | Time the payment was cancelled. | `ZonedDateTime getCancelTime()` |
 | `reason` | `String` | | The refund reason. | `String getReason()` |
 | `payoutId` | `String` | | The payout ID of the refund from the gateway side. | `String getPayoutId()` |
-| `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
+| `customFields` | `Map<String, Object>` |  | Custom fields. | `Map<String, Object> getCustomFields()`|
