@@ -30,7 +30,7 @@ and [GetRefund](/doc/refund-api.md#get-refund).
 | `createdBy` | `String` | ReadOnly | Identifier of the user that created the payment. | `String getCreatedBy()` |
 | `updatedBy` | `String` | ReadOnly | Identifier of the user that last updated the payment. | `String getUpdatedBy()` |
 | `reference` | `String` | ReadOnly | The transaction ID returned by the payment gateway for an electronic refund. Use this field to reconcile refunds between your gateway and Zuora Payments. | `String getReference()` |
-| `state` | [`Enum`](/doc/models/refund-state.md) | | State of the refund. | `String getState()` |
+| `state` | [`Enum`](/doc/models/refund-state.md) | | State of the refund. One of `PENDING`, `SUCCEEDED`, `FAILED` or `CANCELED`. | `String getState()` |
 | `cancelTime` | `ZonedDateTime` | ReadOnly | Time the payment was cancelled. | `ZonedDateTime getCancelTime()` |
 | `reason` | `String` | | The refund reason. | `String getReason()` |
 | `payoutId` | `String` | | The payout ID of the refund from the gateway side. | `String getPayoutId()` |
