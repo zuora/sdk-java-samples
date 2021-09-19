@@ -18,7 +18,7 @@ and [GetRefund](/doc/refund-api.md#get-refund).
 | `date` | `LocalDate` | | The date of the refund. | `String getDate()`
 | `name` | `String` | | A refund name. | `String getName()`
 | `gateway` | `String` |  | Identifier of the gateway used to process the payment. | `String getGateway()`
-| `type` | [`Enum`](/doc/models/method-type.md) |  | The type of refund. | `String getType()`
+| `type` | [`Enum`](/doc/models/refund-method-type.md) |  | The type of refund. | `String getType()`
 | `creditMemo` | `String` |  | The credit memo associated with this refund. | `String getCreditMemo()`
 | `transferredToAccounting` | [`Enum`](/doc/models/transferred-to-accounting.md) |  | Transferred to accounting. | `String getTransferredToAccounting()`
 | `paymentMethod` | `String` | | Unique identifier of the payment method used to make the refund. | `String getPaymentMethod()`
