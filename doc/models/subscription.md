@@ -35,8 +35,8 @@ Subscription allow you to charge a customer on a recurring basis and are the res
 | `termEndDate` | `LocalDate` |  | Date on which the subscription term ends. | `LocalDate getTermEndDate()` |
 | `autoRenew` | `Boolean` |  | If true, this subscription automatically renews at the end of the subscription term. This field is only required if the <code>TermType</code> field is <code>TERMED</code>. | `Boolean getAutoRenew()` |
 | `mrr` | `Double` |  | Monthly recurring revenue of the subscription. | `Double getMrr()` |
-| `tcv` | `Double` |  |  | `Double getTcv()` |
-| `version` | `Integer` |  | The version number of the subscription. It is a read-only field. | `Integer getVersion()` |
+| `tcv` | `Double` |  | Total contract value of the subscription. | `Double getTcv()` |
+| `version` | `Integer` | ReadOnly | The version number of the subscription. | `Integer getVersion()` |
 | `cancelAtPeriodEnd` | `Boolean` |  |  | `Boolean getCancelAtPeriodEnd()` |
 | `canceledDate` | `LocalDate` |  | The date on which the subscription was canceled. | `LocalDate getCanceledDate()` |
 | `suspendedDate` | `LocalDate` |  | The date on which the subscription was suspended. | `LocalDate getSuspendedDate()` |
