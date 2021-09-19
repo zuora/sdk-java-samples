@@ -60,7 +60,7 @@ Refund refund = zuoraClient.refunds().get(id);
 
 ## Response Type
 
-[Refund](doc/model/refund.md)
+[`Refund`](doc/model/refund.md)
 
 ## Example
 
