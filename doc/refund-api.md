@@ -5,7 +5,7 @@ Refund objects allow you to unapply a payment applied to an invoice or debit mem
 
 ## Class Name
 
-RefundAPI
+`RefundAPI`
 
 ## Methods
 
