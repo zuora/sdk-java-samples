@@ -21,7 +21,7 @@ Subscription allow you to charge a customer on a recurring basis and are the res
 | `description` | `String` |  | An arbitrary string attached to the object. Often useful for displaying to users. | `String getDescription()` |
 | `startDate` | `LocalDate` |  | Date on which the subscription becomes active. | `LocalDate getStartDate()` |
 | `endDate` | `LocalDate` |  | Date on which the subscription is no longer active. | `LocalDate getEndDate()` |
-| `state` | [`Enum`](/doc/models/subscription-status.md) | ReadOnly | Possible values are `draft`, `pending_activation`, `pending_acceptance`, `active`, `inactive`, `ended`, `canceled`, `suspended`. | `String getState()` |
+| `state` | [`Enum`](/doc/models/subscription-status.md) | ReadOnly | Possible values are `DRAFT`, `PENDING_ACTIVATION`, `PENDING_ACCEPTANCE`, `ACTIVE`, `INACTIVE`, `EXPIRED`, `CANCELED`, `SUSPENDED`. | `String getState()` |
 | `initialTerm` | [`Term`](/doc/models/term.md) |  | The duration of the subscription's initial term. | `Term getInitialTerm()` |
 | `renewalTerm` | [`Term`](/doc/models/term.md) |  | The duration of the subscription's renewal term. | `Term getRenewalTerm()` |
 | `currentTerm` | [`Term`](/doc/models/term.md) |  |  | `Term getCurrentTerm()` |
