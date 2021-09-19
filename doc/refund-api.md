@@ -36,7 +36,6 @@ Refund refund = zuoraClient.refunds().create(params);
 RefundCreateRequest params = RefundCreateRequest.builder()
         .amount(10.0d)
         .account("account_id8")
-        .authorisationCode("7368")
         .currency("USD")
         .external(true)
         .build();
