@@ -24,7 +24,7 @@ Subscription allow you to charge a customer on a recurring basis and are the res
 | `state` | [`Enum`](/doc/models/subscription-status.md) | ReadOnly | Possible values are `DRAFT`, `PENDING_ACTIVATION`, `PENDING_ACCEPTANCE`, `ACTIVE`, `INACTIVE`, `EXPIRED`, `CANCELED`, `SUSPENDED`. | `String getState()` |
 | `initialTerm` | [`Term`](/doc/models/term.md) |  | The duration of the subscription's initial term. | `Term getInitialTerm()` |
 | `renewalTerm` | [`Term`](/doc/models/term.md) |  | The duration of the subscription's renewal term. | `Term getRenewalTerm()` |
-| `currentTerm` | [`Term`](/doc/models/term.md) |  |  | `Term getCurrentTerm()` |
+| `currentTerm` | [`Term`](/doc/models/term.md) |  | The duration of the subscription's current term. | `Term getCurrentTerm()` |
 | `plans` | [`List<SubscriptionPlan>`](/doc/models/subscription-plan.md) |  | The array of plans associated with this subscription. | `List<SubscriptionPlan> getPlans()` |
 | `contractEffective` | `LocalDate` |  | Date on which the subscriber contract is effective. | `LocalDate getContractEffective()` |
 | `serviceActivation` | `LocalDate` |  | Date on which the subscribed-to service is activated. | `LocalDate getServiceActivation()` |
