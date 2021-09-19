@@ -18,9 +18,9 @@ and [GetRefund](/doc/refund-api.md#get-refund).
 | `date` | `LocalDate` | | The date of the refund. | `String getDate()`
 | `name` | `String` | | A refund name. | `String getName()`
 | `gateway` | `String` | Optional | Identifier of the gateway used to process the payment. | `String getGateway()`
-| `type` | `[Enum]`(/doc/models/method-type.md) | Optional | The type of refund. | `String getType()`
+| `type` | [`Enum`](/doc/models/method-type.md) | Optional | The type of refund. | `String getType()`
 | `creditMemo` | `String` | Optional | The credit memo associated with this refund. | `String getCreditMemo()`
-| `transferredToAccounting` | `[TransferredToAccounting]`(/doc/models/transferred-to-accounting.md) | Optional | Identifier of the gateway used to process the payment. | `String getGateway()`
+| `transferredToAccounting` | [`TransferredToAccounting`](/doc/models/transferred-to-accounting.md) | Optional | Identifier of the gateway used to process the payment. | `String getGateway()`
 | `paymentMethod` | `String` | | Unique identifier of the payment method used to make the refund. | `String getPaymentMethod()`
 | `paymentMethodSnapshot` | `String` | | Unique identifier of the payment method used to make the refund. | `String getPaymentMethodSnapshot()`
 | `statementDescriptor` | `String` | | A payment gateway-specific field that maps to Zuora for the gateways Orbital, Vantiv and Verifi. | `String getStatementDescriptor()`
