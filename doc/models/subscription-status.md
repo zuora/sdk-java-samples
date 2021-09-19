@@ -14,7 +14,6 @@ Represents the state of a subscription.
 | `PENDING_ACTIVATION` |  |
 | `PENDING_ACCEPTANCE` |  |
 | `ACTIVE` |  |
-| `INACTIVE` |  |
-| `ENDED` |  |
+| `EXPIRED` |  |
 | `CANCELED` |  |
 | `SUSPENDED` |  |
