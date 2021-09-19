@@ -22,6 +22,8 @@ A Subscription Item defines the unit cost, currency, and (optional) billing cycl
 | `invoicedThroughDate`| `LocalDate` | ReadOnly | the date through which the customer has been billed for this item. | `LocalDate invoicedThroughDate()` |
 | `processedThroughDate`| `LocalDate` | ReadOnly | the date up to which charges for this item have been processed. | `LocalDate processedThroughDate()` |
 | `recurring` | [`Recurring`](/doc/models/recurring.md) | Optional | The recurring components of a price such as `interval`. | `Recurring getRecurring()` |
+| `segment` | `Integer` | ReadOnly | The segment. | `Integer getSegment()` |
+| `version` | `Integer` | ReadOnly | The version. | `Integer getVersion()` |
 | `maxQuantity` | `Integer` | Optional | Specifies the maximum number of units for this item. | `Integer getMaxQuantity()` |
 | `minQuantity` | `Integer` | Optional | Specifies the minimum number of units for this item. | `Integer getMinQuantity()` |
 | `startEvent` | [`Enum`](/doc/models/start-event.md) | Optional | Specifies when to start billing the customer. | `String getStartEvent()` |
