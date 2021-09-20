@@ -21,14 +21,14 @@ For example, you might have a single "Gold" product that has prices for $100/mon
 Creates a new price.
 
 ```java
-Price price = zuoraClient.prices().create(priceCreateRequest);
+Price price = zuoraClient.prices().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `priceCreateRequest` | [`PriceCreateRequest`](/doc/models/price-create-request.md) | Required | Price request object. |
+| `params` | [`PriceCreateRequest`](/doc/models/price-create-request.md) | Required | Price request object. |
 
 ## Response Type
 
@@ -37,7 +37,7 @@ Price price = zuoraClient.prices().create(priceCreateRequest);
 ## Example
 
 ```java
-PriceCreateRequest priceCreateRequest = PriceCreateRequest.priceBuilder()
+PriceCreateRequest params = PriceCreateRequest.priceBuilder()
         .name("Monthly Membership")
         .accountingCode(defaultAccountingCodeName)
         .startEvent(PriceEnum.Event.CONTRACT_EFFECTIVE)
@@ -45,7 +45,7 @@ PriceCreateRequest priceCreateRequest = PriceCreateRequest.priceBuilder()
         .interval(PriceEnum.Interval.MONTH)
         .on(PriceEnum.RecurringOn.ACCOUNT_CYCLE_DATE)
         .build();
-Price price = zuoraClient.prices().create(priceCreateRequest);
+Price price = zuoraClient.prices().create(params);
 ```
 
 

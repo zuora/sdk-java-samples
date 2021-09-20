@@ -1,6 +1,6 @@
 # Alignment
 
-How to align plan items that start on different days.
+How to align billing for recurring (subscription) products that start on different days.
 
 ## Enumeration
 

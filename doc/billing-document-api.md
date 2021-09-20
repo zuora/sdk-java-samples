@@ -16,6 +16,7 @@ Any customer credit on the account may be applied before determining the amount 
 ## Methods
 
 * [Get a billing document](/doc/billing-document-api.md#get-billing-document)
+* [Pay a billing document](/doc/billing-document-api.md#pay-billing-document)
 
 
 
@@ -45,7 +46,35 @@ String BILLING_DOCUMENT_ID = "billing_document_id8";
 BillingDocument billingDocument = billingDocumentAPI.get(BILLING_DOCUMENT_ID);
 ```
 
+# Pay Billing Document
+
+```java
+Payment payment = BillingDocumentAPI.pay(key, paymentCreateRequest);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `key` | `String` | Required | The document number of a billing document. |
+| `paymentCreateRequest` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | Payment for invoice or debit memo. |
 
 
+## Response Type
+
+[`Payment`](/doc/models/payment.md)
 
 
+## Example 
+
+```java
+PaymentCreateRequest paymentCreateRequest = PaymentCreateRequest.builder()
+        .amount(10.0d)
+        .account("account_id8")
+        .authorisationCode("7368")
+        .currency("USD")
+        .external(true)
+        .build();
+
+Payment payment = billingDocumentAPI.pay(number, paymentCreateRequest);
+```

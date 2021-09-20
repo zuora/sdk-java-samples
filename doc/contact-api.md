@@ -1,8 +1,8 @@
 # Contact API
 
-The ContactAPI gives you access to your [Contact](/doc/models/contact.md) objects, which store contact details for your customers.
+The Contact API gives you access to your [Contact](/doc/models/contact.md) objects, which store contact details for your customers.
 
-The API allows you to create, retrieve, and update customer contacts. 
+The Contact API allows you to create, retrieve, and update customer contacts. 
 
 ## Class Name
 
@@ -18,14 +18,14 @@ The API allows you to create, retrieve, and update customer contacts.
 # Create Contact
 
 ```java
-Contact contact = zuoraClient.contacts().create(contactCreateRequest);
+Contact contact = zuoraClient.contacts().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `contactCreateRequest` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Contact request object. |
+| `params` | [`ContactCreateRequest`](/doc/models/contact-create-request.md) | Contact request object. |
 
 ## Response Type
 
@@ -34,13 +34,13 @@ Contact contact = zuoraClient.contacts().create(contactCreateRequest);
 ## Example
 
 ```java
-ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder()
+ContactCreateRequest params = ContactCreateRequest.builder()
     .firstName("Jenny")
     .lastName("Smith")
     .address(Address.builder().country("USA").state("CA").build())
     .build();
   
-Contact contact = zuoraClient.contacts().create(contactCreateRequest);
+Contact contact = zuoraClient.contacts().create(params);
 ```
 
 # Get Contact
@@ -53,7 +53,7 @@ Contact contact = zuoraClient.contacts().get(contactId);
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `String` | Required | The unique identifier for the contact. |
+| `id` | `String` | Required | The unique identifier of a contact. |
 
 
 ## Response Type

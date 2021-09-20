@@ -20,14 +20,14 @@ PaymentAPI
 Creates a new payment.
 
 ```java
-Payment payment = zuoraClient.payments().create(paymentCreateRequest);
+Payment payment = zuoraClient.payments().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | Payment create request. |
+| `params` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | Payment create request. |
 
 ## Response Type
 
@@ -36,16 +36,15 @@ Payment payment = zuoraClient.payments().create(paymentCreateRequest);
 ## Example
 
 ```java
-String ACCOUNT_ID = "account_id9";
-String authCode = "7368";
-PaymentCreateRequest paymentCreateRequest = PaymentCreateRequest.builder()
+PaymentCreateRequest params = PaymentCreateRequest.builder()
         .amount(10.0d)
-        .account(ACCOUNT_ID)
-        .authorisationCode(authCode)
+        .account("account_id8")
+        .authorisationCode("7368")
         .currency("USD")
-        .external(true).build();
+        .external(true)
+        .build();
 
-Payment payment = zuoraClient.payments().create(paymentCreateRequest);
+Payment payment = zuoraClient.payments().create(params);
 ```
 
 # Get Payment
@@ -53,14 +52,14 @@ Payment payment = zuoraClient.payments().create(paymentCreateRequest);
 Retrieves a payment by ID.
 
 ```java
-Payment payment = zuoraClient.payments().get(paymentId);
+Payment payment = zuoraClient.payments().get(id);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `paymentId` | `String` | Required | The unique identifier of a payment. |
+| `id` | `String` | Required | The unique identifier of a payment. |
 
 ## Response Type
 
@@ -69,5 +68,5 @@ Payment payment = zuoraClient.payments().get(paymentId);
 ## Example
 
 ```java
-Payment payment = zuoraClient.payments().get(paymentId);
+Payment payment = zuoraClient.payments().get(id);
 ```

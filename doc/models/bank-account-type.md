@@ -10,6 +10,6 @@ Represents the type of bank account.
 
 | Name | Description |
 |  --- | --- |
-| `BUSINESS` |  |
-| `CHECKING` |  |
-| `SAVING` |  |
+| `BUSINESS` | Business account. |
+| `CHECKING` | Checking account. |
+| `SAVING` | Savings account. |

@@ -1,6 +1,6 @@
 # Billing Document Type
 
-.
+Represents the type of billing document this is: an invoice, a credit memo, or a debit memo.
 
 ## Enumeration
 
@@ -10,6 +10,6 @@
 
 | Name | Description |
 |  --- | --- |
-| `INVOICE` | . |
-| `CREDIT_MEMO` | . |
-| `DEBIT_MEMO` | . |
+| `INVOICE` | An invoice. |
+| `CREDIT_MEMO` | A credit memo. |
+| `DEBIT_MEMO` | A debit memo. |

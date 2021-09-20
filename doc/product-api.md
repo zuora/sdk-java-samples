@@ -27,14 +27,14 @@ You must provide at least this value in your request to this endpoint:
 
 
 ```java
-Product product = zuoraClient.products().create(productCreateRequest);
+Product product = zuoraClient.products().create(params);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `productCreateRequest` | [`ProductCreateRequest`](/doc/models/product-create-request.md) | Required | Product create request. |
+| `params` | [`ProductCreateRequest`](/doc/models/product-create-request.md) | Required | Product create request. |
 
 ## Response Type
 
@@ -46,7 +46,7 @@ Product product = zuoraClient.products().create(productCreateRequest);
 ProductCreateRequest productCreateRequest = ProductCreateRequest.builder()
         .name("Gold")
         .build();
-Product product = zuoraClient.products().create(createRequest);
+Product product = zuoraClient.products().create(params);
 ```
 
 # Get Product

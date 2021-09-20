@@ -1,6 +1,6 @@
 # RecurringOn
 
-.
+Specifies on which day of the month or day of the week a customer shall be billed.
 
 ## Enumeration
 

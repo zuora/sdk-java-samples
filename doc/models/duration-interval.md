@@ -1,6 +1,6 @@
 # Duration Interval
 
-.
+Specifies the interval for the period during which a customer will be charged.
 
 ## Enumeration
 
@@ -10,7 +10,7 @@
 
 | Name | Description |
 |  --- | --- |
-| `WEEK` | . |
-| `MONTH` | . |
-| `YEAR` | . |
-| `SUBSCRIPTION_TERM` | . |
+| `WEEK` | Weeks. |
+| `MONTH` | Months. |
+| `YEAR` | Years. |
+| `SUBSCRIPTION_TERM` | Subscription terms. |
