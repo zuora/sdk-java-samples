@@ -16,6 +16,7 @@ Any customer credit on the account may be applied before determining the amount 
 ## Methods
 
 * [Get a billing document](/doc/billing-document-api.md#get-billing-document)
+* [Pay a billing document](/doc/billing-document-api.md#pay-billing-document)
 
 
 
@@ -45,7 +46,28 @@ String BILLING_DOCUMENT_ID = "billing_document_id8";
 BillingDocument billingDocument = billingDocumentAPI.get(BILLING_DOCUMENT_ID);
 ```
 
+# Pay Billing Document
+
+```java
+BillingDocument billingDocument = BillingDocumentAPI.pay(params);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `params` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | A payment used to pay an invoice or debit memo. |
 
 
+## Response Type
+
+[`BillingDocument`](/doc/models/billing-document.md)
 
 
+## Example 
+
+```java
+PaymentCreateRequest params = zuoraClient.payments().
+
+BillingDocument billingDocument = billingDocumentAPI.pay(params);
+```
