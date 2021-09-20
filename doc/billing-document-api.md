@@ -49,19 +49,20 @@ BillingDocument billingDocument = billingDocumentAPI.get(BILLING_DOCUMENT_ID);
 # Pay Billing Document
 
 ```java
-BillingDocument billingDocument = BillingDocumentAPI.pay(params);
+Payment payment = BillingDocumentAPI.pay(key, paymentCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `params` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | A payment used to pay an invoice or debit memo. |
+| `key` | `String` | Required | The document number of a billing document. |
+| `paymentCreateRequest` | [`PaymentCreateRequest`](/doc/models/payment-create-request.md) | Required | Payment for invoice or debit memo. |
 
 
 ## Response Type
 
-[`BillingDocument`](/doc/models/billing-document.md)
+[`Payment`](/doc/models/payment.md)
 
 
 ## Example 
