@@ -1,6 +1,6 @@
 # Product API
 
-Products describe the specific goods or services you offer to your customers. They can be used in conjunction with Plans and Prices to configure pricing.
+Products describe the specific goods or services you offer to your customers. They should be used in conjunction with Plans and Prices to configure pricing.
 
 
 
