@@ -67,7 +67,13 @@ BillingDocument billingDocument = BillingDocumentAPI.pay(params);
 ## Example 
 
 ```java
-PaymentCreateRequest params = zuoraClient.payments().
+PaymentCreateRequest paymentCreateRequest = PaymentCreateRequest.builder()
+        .amount(10.0d)
+        .account("account_id8")
+        .authorisationCode("7368")
+        .currency("USD")
+        .external(true)
+        .build();
 
-BillingDocument billingDocument = billingDocumentAPI.pay(params);
+Payment payment = billingDocumentAPI.pay(number, paymentCreateRequest);
 ```
