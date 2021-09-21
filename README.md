@@ -39,7 +39,7 @@ When using the SDK you should select the endpoint base URL you wish to use.
 | EU Central Sandbox | https://rest.test.eu.zuora.com |
 
 ## Authentication
-1. Create an API User. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details. Note: this, and the following step, must be performed by a Zuora administrator from your organization with a company email address.
+1. Create an API User. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details. Note: this and the following step, must be performed by a Zuora administrator from your organization with a company email address.
 
 2. Create an OAuth Client for that API User. See [Create an OAuth Client](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users#Create_an_OAuth_Client_for_a_User).
 
