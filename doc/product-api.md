@@ -43,7 +43,7 @@ Product product = zuoraClient.products().create(params);
 ## Example
 
 ```java
-ProductCreateRequest productCreateRequest = ProductCreateRequest.builder()
+ProductCreateRequest params = ProductCreateRequest.builder()
         .name("Gold")
         .build();
 Product product = zuoraClient.products().create(params);
