@@ -49,9 +49,9 @@ Note: API-only users do not have access to Zuora Central so will not be able to 
 
 ###
 ```
-String CLIENT_ID = "{CLIENT_ID}";
-String CLIENT_SECRET = "{CLIENT_SECRET}";
-String ENDPOINT = "{ENDPOINT_BASE}";
+String CLIENT_ID = System.getenv("CLIENT_ID");
+String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
+String ENDPOINT = System.getenv("ENDPOINT_BASE");
 ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 To protect your tenant from unauthorized access be sure not to share these credentials in publicly accessible areas such as GitHub or client-side code.
