@@ -39,17 +39,19 @@ When using the SDK you should select the endpoint base URL you wish to use.
 | EU Central Sandbox | https://rest.test.eu.zuora.com |
 
 ## Authentication
-1. Create an API User. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details. Note, this step must be performed by a Zuora administrator from your organization with a company email address.
+1. Create an API User. See [Create an API User](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users/Create_an_API_User) for details.
+Note: this and the following step, must be performed by a Zuora administrator from your organization with a company email address.
 
 2. Create an OAuth Client for that API User. See [Create an OAuth Client](https://knowledgecenter.zuora.com/Billing/Tenant_Management/A_Administrator_Settings/Manage_Users#Create_an_OAuth_Client_for_a_User).
+Note: API-only users do not have access to Zuora Central so will not be able to create OAuth clients from themselves.
 
 3. Make a note of the Client ID and Client Secret and add them to the following snippet in your code to authenticate. 
 
 ###
 ```
-String CLIENT_ID = "{CLIENT_ID}";
-String CLIENT_SECRET = "{CLIENT_SECRET}";
-String ENDPOINT = "{ENDPOINT_BASE}";
+String CLIENT_ID = System.getenv("CLIENT_ID");
+String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
+String ENDPOINT = System.getenv("ENDPOINT_BASE");
 ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 ```
 To protect your tenant from unauthorized access be sure not to share these credentials in publicly accessible areas such as GitHub or client-side code.
