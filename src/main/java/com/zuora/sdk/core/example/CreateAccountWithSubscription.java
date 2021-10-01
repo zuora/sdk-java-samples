@@ -18,6 +18,7 @@ import com.zuora.sdk.ProcessingOption;
 import com.zuora.sdk.Product;
 import com.zuora.sdk.ProductCreateRequest;
 import com.zuora.sdk.Recurring;
+import com.zuora.sdk.StartOn;
 import com.zuora.sdk.Subscription;
 import com.zuora.sdk.SubscriptionCreateRequest;
 import com.zuora.sdk.ZuoraClient;
@@ -95,7 +96,10 @@ public class CreateAccountWithSubscription {
         String todayDateStr = todayDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
 
         SubscriptionCreateRequest subscriptionCreateRequest = SubscriptionCreateRequest.builder().account(account)
-                .plans(product.getPlans()).serviceActivationDate(todayDate).customerAcceptanceDate(todayDate)
+                .plans(product.getPlans()).startOn(StartOn.builder()
+                        .serviceActivation(todayDate)
+                        .customerAcceptance(todayDate)
+                        .build())
                 .processingOption(ProcessingOption.builder()
                         .collectionMethod(CREATE_INVOICE)
                         .documentDate(todayDateStr)
@@ -116,7 +120,11 @@ public class CreateAccountWithSubscription {
 
         // 5. Cancel subscription
 
-        zuoraClient.subscriptions().cancel(subscription);
+        zuoraClient.subscriptions().cancel(subscription, StartOn.builder()
+                .contractEffective(todayDate)
+                .serviceActivation(todayDate)
+                .customerAcceptance(todayDate)
+                .build());
 
     }
 }
