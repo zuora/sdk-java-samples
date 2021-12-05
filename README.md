@@ -96,4 +96,4 @@ This technical reference documents every recommended object and method available
 * [Payment](doc/payment-api.md)
 * [Refund](doc/refund-api.md)
 
-[License Agreement](licence-agreement.md)
+[License Agreement](license-agreement.md)
