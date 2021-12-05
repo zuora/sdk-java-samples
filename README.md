@@ -95,3 +95,6 @@ This technical reference documents every recommended object and method available
 * [Payment Method](doc/payment-method-api.md)
 * [Payment](doc/payment-api.md)
 * [Refund](doc/refund-api.md)
+
+<hr />
+[License Agreement](/licence-agreement.md)
