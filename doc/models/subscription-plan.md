@@ -13,3 +13,7 @@ A SubscriptionPlan is a container for a collection of [SubscriptionItems](/doc/m
 | `plan` | `String` | Required | The identifier of a plan object. | `String getPlan()` |
 | `subscriptionItems` | [`List<SubscriptionItem>`](/doc/models/subscription-item.md) | Optional | The individual subscription items that make up the subscription plan. | `List<SubscriptionItem> getItems()` |
 | `customFields` | `Map<String, Object>` | Optional | Custom fields. | `Map<String, Object> getCustomFields()`|
+| `createTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the subscription plan was created | ZonedDateTime getCreateTime() |
+| `updateTime` | `ZonedDateTime` | ReadOnly | The date and time, based on the tenant timezone, the subscription plan was last updated | ZonedDateTime getUpdateTime() |
+| `createdBy` | `String` | ReadOnly | The Id of the user that created the subscription plan | String getCreatedBy() |
+| `updatedBy` | `String` | ReadOnly | The Id of the user that last updated the subscription plan | String getUpdatedBy() |
