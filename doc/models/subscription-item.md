@@ -35,8 +35,8 @@ A Subscription Item defines the unit cost, currency, and (optional) billing cycl
 | `createTime`| `ZonedDateTime` | ReadOnly | The time when the price was created. | `ZonedDateTime getCreateTime()` |
 | `updatedBy`| `String` | ReadOnly | Identifier of the user who last updated the price. | `String getUpdatedBy()` |
 | `updateTime`| `ZonedDateTime` | ReadOnly | The time when the price was last updated. | `ZonedDateTime getUpdateTime()` |
-| `amounts` | `Map<Currency, Double>` |  | Flat billing amounts. | `Map<Currency, Double> getAmounts()` |
-| `unitAmounts` | `Map<Currency, Double>` |  | Unit billing amounts. | `Map<Currency, Double> getAmounts()` |
+| `amount` | `Double` | ReadOnly | The flat billing amount. | `Double getAmount()` |
+| `unitAmount` | `Double` | ReadOnly | The unit billing amount. | `Double getUnitAmount()` |
 | `percentAmount` | `Double` |  | Percentage represented as a decimal. | `Double getPercentAmount()` |
 | `priceBaseInterval` | [`Enum`](/doc/models/price-base-interval.md) |  | Specifies the base interval of a price. One of `WEEK`, `MONTH`, or `BILLING_PERIOD`. If not provided defaults to `BILLING_PERIOD`. | `String getPriceBaseInterval()`
 | `applyDiscountTo` | [`EnumSet<Apply DiscountTo>`](/doc/models/apply-discount-to.md) |  | You can choose any combination of `ONE_TIME` `RECURRING` and `USAGE` for discount prices. | `String getApplyDiscountTo()` |
