@@ -13,8 +13,6 @@ A Billing Document Item can represent an invoice item, a credit memo item or a d
 |  --- | --- | --- | --- | --- |
 | `id` | `String` | ReadOnly | Unique identifier for the object. | `String getId()` |
 | `createTime` | `LocalDateTime` | ReadOnly | Time at which the object was created. | `LocalDateTime getCreateTime()` |
-| `owner` | `String` | ReadOnly | The owner of the billing document. | `String getOwner()` |
-| `discountAppliedTo` | `String` | ReadOnly | The discount applied to the billing document item. | `String getDiscountAppliedTo()` |
 | `quantity` | `Double` | ReadOnly | The number of units for the billing document item. | `Double getQuantity()` |
 | `serviceStartTime` | `LocalDateTime` | ReadOnly | The service start time of the billing document item. If not specified, the  start time of the corresponding plan. | `LocalDate getServiceStartTime()` |
 | `serviceEndTime` | `LocalDateTime` | ReadOnly | The service end time of the billing document item. If not specified, the end time of the corresponding plan. | `LocalDate getServiceEndTime()` |
