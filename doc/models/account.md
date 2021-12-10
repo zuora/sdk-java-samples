@@ -30,6 +30,7 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 
 * [Get invoices](/doc/models/account.md#get-invoices)
 * [Get subscriptions](/doc/models/account.md#get-subscriptions)
+* [Get subscription plans](/doc/models/account.md#get-subscription-plans)
 * [Get payments](/doc/models/account.md#get-payments)
 * [Get payment methods](/doc/models/account.md#get-payment-methods)
 
@@ -55,6 +56,18 @@ List<Subscription> subscriptions = account.getSubscriptions();
 ## Returns
 
 [`List<Subscription>`](/doc/models/subscription.md)
+
+
+# Get Subscription Plans
+
+```java
+List<SubscriptionPlan> subscriptionPlans = account.getSubscriptionPlans();
+```
+
+## Returns
+
+[`List<Subscription>`](/doc/models/subscription.md)
+
 
 
 # Get Payments
