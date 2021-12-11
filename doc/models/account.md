@@ -23,6 +23,11 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `batch` | `String` |  | The identifier of a bill run batch. | `String getBatch()` |
 | `balance` | `String` |  | The customer's total invoice balance minus credit balance. | `String getBalance()` |
 | `contractedMrr` | `String` |  | Future expected MRR that accounts for future upgrades, downgrades, upsells and cancellations. | `String getContractedMrr()` |
+| `creditBalance` | `String` |  | Current credit balance. | `String getCreditBalance()` |
+| `totalDebitMemoBalance` | `String` |  | Total balance of all posted debit memos. | `String getDebitMemoBalance()` |
+| `totalInvoiceBalance` | `String` |  | Total balance of all posted invoices. | `String getInvoiceBalance()` |
+| `unappliedCreditMemoAmount` | `String` |  | Total unapplied amount of all posted credit memos. | `String getUnappliedCreditAmount()` |
+| `unappliedPaymentAmount` | `String` |  | Total unapplied amount of all payments. | `String getUnappliedPaymentAmount()` |
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) |  || `TaxIdentifier getTaxIdentifier()` |
 | `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) |  || `TaxCertificate getTaxCertificate()` |
 | `billingDocument Settings` | [`BillingDocument Settings`](/doc/models/billing-document-settings.md) |  | `BillingDocument Settings getBillingDocument Settings()` |
