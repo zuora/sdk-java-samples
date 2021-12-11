@@ -21,6 +21,8 @@ Accounts represent your customers and are the response returned by [CreateAccoun
 | `paymentTerms` | `String` |  |  | `String getPaymentTerms()` |
 | `description` | `String` |  | An arbitrary string attached to the object. Often useful for displaying to users. | `String getDescription()` |
 | `batch` | `String` |  | The identifier of a bill run batch. | `String getBatch()` |
+| `balance` | `String` |  | The customer's total invoice balance minus credit balance. | `String getBalance()` |
+| `contractedMrr` | `String` |  | Future expected MRR that accounts for future upgrades, downgrades, upsells and cancellations. | `String getContractedMrr()` |
 | `taxIdentifier` | [`TaxIdentifier`](/doc/models/tax-identifier.md) |  || `TaxIdentifier getTaxIdentifier()` |
 | `taxCertificate` | [`TaxCertificate`](/doc/models/tax-certificate.md) |  || `TaxCertificate getTaxCertificate()` |
 | `billingDocument Settings` | [`BillingDocument Settings`](/doc/models/billing-document-settings.md) |  | `BillingDocument Settings getBillingDocument Settings()` |
