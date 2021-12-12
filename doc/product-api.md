@@ -15,6 +15,7 @@ Products describe the specific goods or services you offer to your customers and
 * [Update product](/doc/product-api.md#update-product)
 * [Stream products](/doc/product-api.md#stream-products)
 * [Find product by sku](/doc/product-api.md#find-product-by-sku)
+* [Add plan](/doc/product-api.md#add-plan)
 * [Delete product](/doc/product-api.md#delete-product)
 
 
@@ -149,6 +150,32 @@ String SKU_ID = "sku_id8";
 Product product = zuoraClient.products().findBySku(SKU_ID);
 ```
 
+# Add Plan
+
+Adds a plan to the product.
+
+```java
+Product product = zuoraClient.products().addPlan(planCreateRequest);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `params` | [`PlanCreateRequest`](/doc/models/plan-create-request.md) | Required | Plan create request. |
+
+## Response Type
+
+[`Product`](/doc/models/product.md)
+
+## Example
+
+```java
+PlanCreateRequest params = PlanCreateRequest.builder()
+        .name("Gold")
+        .build();
+Product product = zuoraClient.products().addPlan(params);
+```
 
 
 # Delete Product
