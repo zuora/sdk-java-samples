@@ -16,6 +16,7 @@ Any customer credit on the account may be applied before determining the amount 
 ## Methods
 
 * [Get a billing document](/doc/billing-document-api.md#get-billing-document)
+* [Stream billing documents](/doc/billing-document-api.md#stream-billing-documents)
 * [Pay a billing document](/doc/billing-document-api.md#pay-billing-document)
 
 
@@ -44,6 +45,27 @@ BillingDocument billingDocument = BillingDocumentAPI.get(BILLING_DOCUMENT_ID);
 String BILLING_DOCUMENT_ID = "billing_document_id8";
 
 BillingDocument billingDocument = billingDocumentAPI.get(BILLING_DOCUMENT_ID);
+```
+
+# Stream Billing Documents
+
+```java
+Stream<BillingDocument> billingDocuments = zuoraClient.billingDocuments().stream();
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+
+## Response Type
+
+Stream[`<BillingDocument>`](/doc/models/billing-document.md)
+
+## Example
+
+```java
+Stream<BillingDocument> billingDocuments = zuoraClient.billingDocuments().stream();
 ```
 
 # Pay Billing Document
