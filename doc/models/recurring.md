@@ -14,6 +14,7 @@ Recurring price attributes.
 | `intervalCount` | `Integer` | Optional | The number of intervals between subscription billings. For example, interval=`MONTH` and intervalCount=`3` bills every 3 months. Maximum of one year interval allowed (1 year, 12 months, or 52 weeks). | String getIntervalCount() |
 | `alignment` | [`Enum`](/doc/models/alignment.md) | Optional | How to align billing for recurring (subscription) products that start on different days. | String getAlignment() |
 | `usage` | `boolean` | Optional | Indicates that this is a usage price. | boolean getUsage() |
+| `formula` | `String` | Optional | The pricing formula used to calculate the charge amount. | boolean getFormula() |
 | `on` | [`Enum`](/doc/models/recurring-on.md) | Optional | Specifies on which day of the month or day of the week a customer shall be billed. | String getRecurringOn() |
 | `timing` | [`Enum`](/doc/models/timing.md) | Optional | You can choose to bill `IN_ADVANCE` or `IN_ARREARS` for recurring prices. This field is not used with one-time or usage-based prices. | String getTiming() |
 | `durationInterval` | [`Enum`](/doc/models/duration-interval.md) | Optional | Specifies duration frequency. One of `DAY`, `WEEK`, `MONTH` or `YEAR`. | String getDurationInterval() |
