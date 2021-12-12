@@ -12,6 +12,7 @@ Products describe the specific goods or services you offer to your customers and
 
 * [Create product](/doc/product-api.md#create-product)
 * [Get product](/doc/product-api.md#get-product)
+* [Stream products](/doc/product-api.md#stream-products)
 * [Find product by sku](/doc/product-api.md#find-product-by-sku)
 * [Delete product](/doc/product-api.md#delete-product)
 
