@@ -12,6 +12,7 @@ The Account API allows you to create, retrieve, update, and delete your customer
 
 * [Create account](/doc/account-api.md#create-account)
 * [Get account](/doc/account-api.md#get-account)
+* [Stream accounts](/doc/account-api.md#stream-accounts)
 * [Update account](/doc/account-api.md#update-account)
 * [Delete account](/doc/account-api.md#delete-account)
 
@@ -75,6 +76,27 @@ String ACCOUNT_ID = "account_id8";
 Account account = zuoraClient.accounts().get(ACCOUNT_ID);
 ```
 
+
+# Stream Accounts
+
+```java
+Stream<Account> accounts = zuoraClient.accounts().stream();
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+
+## Response Type
+
+Stream<[`Account`]>(/doc/models/account.md)
+
+## Example
+
+```java
+Stream<Account> accounts = zuoraClient.accounts().stream();
+```
 
 # Update Account
 
