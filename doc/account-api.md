@@ -90,7 +90,7 @@ Stream<Account> accounts = zuoraClient.accounts().stream();
 
 ## Response Type
 
-Stream<[`Account`]>(/doc/models/account.md)
+Stream[`<Account>`](/doc/models/account.md)
 
 ## Example
 
