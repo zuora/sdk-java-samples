@@ -12,6 +12,7 @@ Products describe the specific goods or services you offer to your customers and
 
 * [Create product](/doc/product-api.md#create-product)
 * [Get product](/doc/product-api.md#get-product)
+* [Update product](/doc/product-api.md#update-product)
 * [Stream products](/doc/product-api.md#stream-products)
 * [Find product by sku](/doc/product-api.md#find-product-by-sku)
 * [Delete product](/doc/product-api.md#delete-product)
@@ -74,6 +75,31 @@ Product product = zuoraClient.products().get(productId);
 String PRODUCT_ID = "product_id8";
 
 Product product = zuoraClient.products().get(PRODUCT_ID);
+```
+
+# Update Product
+
+```java
+Product product = product.update();
+```
+
+[comment]: <> (## Parameters)
+
+[comment]: <> (| Parameter | Type | Tags | Description |)
+
+[comment]: <> (|  --- | --- | --- | --- |)
+
+[comment]: <> (| `product` | `Product` | Required | The hydrated `Product` object you wish to update. |)
+
+
+## Example 
+
+```java
+String PRODUCT_ID = "product_id8";
+Product product = zuoraClient.products().get(PRODUCT_ID);
+
+product.setName("New Name");
+product.update();
 ```
 
 # Stream Products
