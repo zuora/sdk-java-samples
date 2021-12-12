@@ -76,6 +76,27 @@ String PRODUCT_ID = "product_id8";
 Product product = zuoraClient.products().get(PRODUCT_ID);
 ```
 
+# Stream Products
+
+```java
+Stream<Product> products = zuoraClient.products().stream();
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+
+## Response Type
+
+Stream[`<Product>`](/doc/models/product.md)
+
+## Example
+
+```java
+Stream<Account> accounts = zuoraClient.accounts().stream();
+```
+
 # Find Product by Sku
 
 ```java
