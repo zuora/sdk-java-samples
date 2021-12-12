@@ -13,6 +13,7 @@ For example, you might have a single "Gold" product that has prices for $100/mon
 * [Create plan](/doc/plan-api.md#create-plan)
 * [Get plan](/doc/plan-api.md#get-plan)
 * [Update plan](/doc/plan-api.md#update-plan)
+* [Add price](/doc/plan-api.md#add-price)
 * [Delete plan](/doc/plan-api.md#delete-plan)
 
 
@@ -102,6 +103,34 @@ Plan plan = zuoraClient.plans().get(PLAN_ID);
 plan.setName("Plan Y")
 Plan plan = zuoraClient.plans().update(plan);
 ```
+
+# Add Price
+
+Adds a price to the plan.
+
+```java
+Plan plan = zuoraClient.plans().addPrice(priceCreateRequest);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `params` | [`PriceCreateRequest`](/doc/models/price-create-request.md) | Required | Price create request. |
+
+## Response Type
+
+[`Plan`](/doc/models/plan.md)
+
+## Example
+
+```java
+PriceCreateRequest params = PriceCreateRequest.builder()
+        .name("Gold")
+        .build();
+Plan plan = zuoraClient.plans().addPrice(params);
+```
+
 
 # Delete Plan
 
