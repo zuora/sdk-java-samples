@@ -13,7 +13,7 @@ Describes a request to create a subscription using [CreateSubscription](/doc/sub
 | `startDate` | `LocalDate` | Optional | Date on which the subscription becomes active. | 
 | `initialTerm` | [`Term`](/doc/models/term.md) | Optional | The duration of the subscription's initial term. | 
 | `renewalTerm` | [`Term`](/doc/models/term.md) | Optional | The duration of the subscription's renewal term. | 
-| `plans` | [`List<SubscriptionPlan>`](/doc/models/subscription-plan.md) | Optional | The array of plans associated with this subscription. | 
+| `plans` | [`List<SubscriptionPlan>`](/doc/models/subscription-plan-create-request.md) | Optional | The array of plans associated with this subscription. | 
 | `processingOption` | [`ProcessingOption`](/doc/models/processing-option.md) | Optional | The processing options for this subscription. | 
 | `contractEffective` | `LocalDate` | Optional | Date on which the subscriber contract is effective. | 
 | `serviceActivation` | `LocalDate` | Optional | Date on which the subscribed-to service is activated. | 
