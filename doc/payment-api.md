@@ -14,6 +14,7 @@ PaymentAPI
 
 * [Create payment](/doc/payment-api.md#create-payment)
 * [Get payment](/doc/payment-api.md#get-payment)
+* [Update payment](/doc/payment-api.md#update-payment)
 
 # Create Payment
 
@@ -70,3 +71,29 @@ Payment payment = zuoraClient.payments().get(id);
 ```java
 Payment payment = zuoraClient.payments().get(id);
 ```
+
+# Update Payment
+
+```java
+Payment payment = payment.update();
+```
+
+[comment]: <> (## Parameters)
+
+[comment]: <> (| Parameter | Type | Tags | Description |)
+
+[comment]: <> (|  --- | --- | --- | --- |)
+
+[comment]: <> (| `payment` | `Payment` | Required | The hydrated `Payment` object you wish to update. |)
+
+
+## Example 
+
+```java
+String Payment_ID = "payment_id8";
+Payment payment = zuoraClient.payments().get(PAYMENT_ID);
+
+payment.setName("New Name");
+payment.update();
+```
+
