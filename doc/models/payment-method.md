@@ -14,7 +14,6 @@ Payment methods represent your customers' payment instruments and are the respon
 | `card` | [`CreditCard`](/doc/models/credit-card.md) |  |  | CreditCard getCard() |
 | `isDefault` | `Boolean` |  | Indicates whether this is the default payment method for a customer account. | Boolean getIsDefault() |
 | `mitConsentAgreementRef` | `String` |  | Your reference for the stored credential consent agreement that you have established with your customer. | String getMitConsentAgreementRef() |
-| `mitConsentAgreementSrc` | `String` |  |  | String getMitConsentAgreementSrc() |
 | `mitNetworkTransactionId` | `String` |  |  | String getMitNetworkTransactionId() |
 | `mitProfileAction` | [`Enum`](/doc/models/mit-profile-action.md) |  |  | String getMitProfileAction() |
 | `mitProfileAgreementOn` | `String` |  |  | String getMitProfileAgreementOn() |
