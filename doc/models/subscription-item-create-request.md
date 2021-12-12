@@ -1,4 +1,4 @@
-# Subscription Item
+# Subscription Item Create Request
 
 A Subscription Item defines the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases - in other words, it represents the price - and is included in the response returned by [CreateSubscription](/doc/subscription-api.md#create-subscription), [UpdateSubscription](/doc/subscription-api.md#update-subscription) and [GetSubscription](/doc/subscription-api.md#get-subscription).
 
