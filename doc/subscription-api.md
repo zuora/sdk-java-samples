@@ -150,7 +150,7 @@ Subscription subscription = subscription.update();
 String SUBSCRIPTION_ID = "subscription_id8";
 Subscription subscription = zuoraClient.subscriptions().get(SUBSCIRPTION_ID);
 
-subscription.setName("New Name");
+subscription.setDescription("New Description");
 subscription.update();
 ```
 
