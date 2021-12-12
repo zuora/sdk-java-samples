@@ -14,6 +14,8 @@ The Subscription object contains the information needed to create and maintain a
 
 * [Add Subscription Plan](/doc/subscription-api.md#add-subscription-plan)
 
+* [Update Subscription](/doc/subscription-api.md#update-subscription)
+
 * [Update Subscription Item](/doc/subscription-api.md#update-subscription-item)
 
 * [Transfer Owner](/doc/subscription-api.md#transfer-owner)
@@ -125,6 +127,31 @@ Plan plan = zuoraClient.products().get(PLAN_ID);
 Subscription subscription =
         zuoraClient.subscriptions().addPlan(subscription,
                 plan, LocalDate.now(), LocalDate.now(), LocalDate.now());
+```
+
+# Update Subscription
+
+```java
+Subscription subscription = subscription.update();
+```
+
+[comment]: <> (## Parameters)
+
+[comment]: <> (| Parameter | Type | Tags | Description |)
+
+[comment]: <> (|  --- | --- | --- | --- |)
+
+[comment]: <> (| `subscription` | `Subscription` | Required | The hydrated `Subscription` object you wish to update. |)
+
+
+## Example 
+
+```java
+String SUBSCRIPTION_ID = "subscription_id8";
+Subscription subscription = zuoraClient.subscriptions().get(SUBSCIRPTION_ID);
+
+subscription.setName("New Name");
+subscription.update();
 ```
 
 # Update Subscription Item
