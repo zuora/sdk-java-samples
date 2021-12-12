@@ -1,7 +1,7 @@
 
-# Subscription Plan
+# Subscription Plan Create Request
 
-A SubscriptionPlan is a container for a collection of [SubscriptionItems](/doc/models/subscription-item.md) and is the response returned by [CreateSubscriptionPlan](/doc/subscription-plan-api.md#create-subscription-plan), [UpdateSubscriptionPlan](/doc/subscription-plan-api.md#update-subscription-plan) and [GetSubscriptionPlan](/doc/subscription-plan-api.md#get-subscription-plan).
+Describes a request to create a subscription using CreateSubscription.
 
 ## Fields
 
