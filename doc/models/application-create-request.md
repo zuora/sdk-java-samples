@@ -6,6 +6,6 @@ Describes a request to apply a credit memo to an invoice or debit memo using [Ap
 
 | Name | Type | Tags | Description 
 |  --- | --- | --- | --- | 
-| `billingDocuments` | `String` | Optional | . | 
-| `effectiveDate` | `LocalDate` | Required | The application effective date in <code>yyyy-mm-dd</code> format. | 
-| `billingDocumentApplicationRequests` | `String` | Required | . | 
+| `billingDocuments` | [`List<BillingDocument>`] | Optional | . | 
+| `effectiveDate` | `ZonedDate` | Required | The application effective date in <code>yyyy-mm-dd</code> format. | 
+| `billingDocumentApplicationRequests` | [`List<BillingDocumentApplicationRequest>`] | Required | . | 
