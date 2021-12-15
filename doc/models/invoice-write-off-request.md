@@ -1,6 +1,6 @@
 # Invoice Write Off Request
 
-Describes a request to write off an invoice using [WriteOffBillingDocument](/doc/billing-document-api.md#write-off).
+Describes a request to write off an invoice using [Write Off Invoice](/doc/billing-document-api.md#write-off-invoice).
 
 ## Fields
 
