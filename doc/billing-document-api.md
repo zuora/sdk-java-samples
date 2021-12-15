@@ -228,7 +228,7 @@ String creditMemoId = zuoraClient.billingDocuments().writeOff({id}, {writeOffReq
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `id` | `String` | Required | The unique identifier of an invoice billing document. |
-| `writeOffRequest` | [`WriteOffRequest`](/doc/models/write-off-request.md) | Required | Invoice write off request. |
+| `writeOffRequest` | [`WriteOffRequest`](/doc/models/invoice-write-off-request.md) | Required | Invoice write off request. |
 
 
 ## Response Type
