@@ -127,20 +127,133 @@ Stream<BillingDocument> billingDocuments = zuoraClient.billingDocuments().stream
 
 # Get Billing Documents By Account
 
+```java
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+
+
+## Example 
+
+```java
+```
+
 # Post Invoice
+
+```java
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+
+
+## Example 
+
+```java
+```
+
 
 # Post Credit Memo
 
+```java
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+
+
+## Example 
+
+```java
+```
+
+
 # Post Debit Memo
+
+```java
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+
+
+## Example 
+
+```java
+```
+
 
 # Write Off Invoice
 
+```java
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+
+
+## Example 
+
+```java
+```
+
+
 # Apply Credit Memo
+
+```java
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+
+
+## Example 
+
+```java
+```
+
 
 # Pay Billing Document
 
 ```java
-Payment payment = BillingDocumentAPI.pay(key, paymentCreateRequest);
+Payment payment = zuoraClient.billingDocuments().pay(key, paymentCreateRequest);
 ```
 
 ## Parameters
