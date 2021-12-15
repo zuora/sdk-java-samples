@@ -74,9 +74,7 @@ BillingDocument billingDocument = zuoraClient.billingDocuments().get({id});
 ## Example 
 
 ```java
-String BILLING_DOCUMENT_ID = "billing_document_id8";
-
-BillingDocument billingDocument = zuoraClient.billingDocuments().get(BILLING_DOCUMENT_ID);
+BillingDocument billingDocument = zuoraClient.billingDocuments().get({id});
 ```
 
 # Update Billing Document
@@ -152,65 +150,72 @@ List<BillingDocument> billingDocuments = zuoraClient.billingDocuments().findByAc
 # Post Invoice
 
 ```java
+BillingDocument invoice = zuoraClient.billingDocuments().post({invoiceId});
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier for the invoice billing document. |
 
 
 ## Response Type
 
-
+[`BillingDocument`](/doc/models/billing-document.md)
 
 ## Example 
 
 ```java
+BillingDocument invoice = zuoraClient.billingDocuments().post({invoiceId});
 ```
 
 
 # Post Credit Memo
 
 ```java
+BillingDocument creditMemo = zuoraClient.billingDocuments().post({creditMemoId});
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier for the credit memo billing document. |
 
 
 ## Response Type
 
-
+[`BillingDocument`](/doc/models/billing-document.md)
 
 ## Example 
 
 ```java
+BillingDocument creditMemo = zuoraClient.billingDocuments().post({creditMemoId});
 ```
-
 
 # Post Debit Memo
 
 ```java
+BillingDocument debitMemo = zuoraClient.billingDocuments().post({debitMemoId});
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier for the debit memo billing document. |
 
 
 ## Response Type
 
-
+[`BillingDocument`](/doc/models/billing-document.md)
 
 ## Example 
 
 ```java
+BillingDocument debitMemo = zuoraClient.billingDocuments().post({debitMemoId});
 ```
-
 
 # Write Off Invoice
 
