@@ -239,8 +239,6 @@ String creditMemoId = zuoraClient.billingDocuments().writeOff({id}, {writeOffReq
 
 ```java
 InvoiceWriteOffRequest invoiceWriteOffRequest = InvoiceWriteOffRequest.builder()
-        .comment("")
-        .("")
         .reasonCode("7368")
         .build();
 
