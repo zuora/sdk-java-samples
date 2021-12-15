@@ -249,20 +249,28 @@ String creditMemoId = zuoraClient.billingDocuments().writeOff(invoiceId, invoice
 # Apply Credit Memo
 
 ```java
+BillingDocument creditMemo = zuoraClient.billingDocuments().apply({creditMemoId}, applicationCreateRequest);
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier of a credit memo billing document. |
+| `applicationCreateRequest` | [`ApplicationCreateRequest`](/doc/models/application-create-request.md) | Required | Credit memo application request. |
 
 
 ## Response Type
 
+[`BillingDocument`](/doc/models/billing-document.md)
 
 ## Example 
 
 ```java
+ApplicationCreateRequest applicationCreateRequest = ApplicationCreateRequest.builder()
+        .effectiveDate("2022-01-01")
+        .build();
+BillingDocument creditMemo = zuoraClient.billingDocuments().apply({creditMemoId}, applicationCreateRequest);
 ```
 
 
