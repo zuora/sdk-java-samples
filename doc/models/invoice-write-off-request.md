@@ -1,6 +1,6 @@
 # Invoice Write Off Request
 
-Describes a request to write off an invoice using [CreatePayment](/doc/payment-api.md#create-payment).
+Describes a request to write off an invoice using [WriteOffBillingDocument](/doc/billing-document-api.md#write-off).
 
 ## Fields
 
