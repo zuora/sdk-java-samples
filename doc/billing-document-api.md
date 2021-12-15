@@ -128,21 +128,25 @@ Stream<BillingDocument> billingDocuments = zuoraClient.billingDocuments().stream
 # Get Billing Documents By Account
 
 ```java
+BillingDocument billingDocument = zuoraClient.billingDocuments().findByAccount({accountId});
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
+| `accountId` | `String` | Required | The unique identifier of an account. |
 
 
 ## Response Type
 
+List[`<BillingDocument>`](/doc/models/billing-document.md)
 
 
 ## Example 
 
 ```java
+List<BillingDocument> billingDocuments = zuoraClient.billingDocuments().findByAccount({accountId});
 ```
 
 # Post Invoice
