@@ -15,16 +15,48 @@ Any customer credit on the account may be applied before determining the amount 
 
 ## Methods
 
+* [Create a billing document](/doc/billing-document-api.md#create-billing-document)
 * [Get a billing document](/doc/billing-document-api.md#get-billing-document)
+* [Update a billing document](/doc/billing-document-api.md#update-billing-document)
 * [Stream billing documents](/doc/billing-document-api.md#stream-billing-documents)
+* [Get billing documents by account](/doc/billing-document-api.md#get-billing-documents-by-account)
+* [Post an invoice](/doc/billing-document-api.md#post-invoice)
+* [Post a credit memo](/doc/billing-document-api.md#post-credit-memo)
+* [Post a debit memo](/doc/billing-document-api.md#post-debit-memo)
+* [Write off an invoice](/doc/billing-document-api.md#write-off-invoice)
+* [Apply a credit memo](/doc/billing-document-api.md#apply-credit-memo)
 * [Pay a billing document](/doc/billing-document-api.md#pay-billing-document)
 
 
 
+# Create Billing Document
+
+```java
+BillingDocument billingDocument = zuoraClient.billingDocuments().create(params);
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `params` | `BillingDocumentCreateRequest` | Required | A billing document create request. |
+
+
+## Response Type
+
+[`BillingDocument`](/doc/models/billing-document.md)
+
+
+## Example 
+
+```java
+BillingDocument billingDocument = zuoraClient.billingDocuments().create(params);
+```
+
 # Get Billing Document
 
 ```java
-BillingDocument billingDocument = BillingDocumentAPI.get(BILLING_DOCUMENT_ID);
+BillingDocument billingDocument = zuoraClient.billingDocuments().get({id});
 ```
 
 ## Parameters
@@ -44,7 +76,32 @@ BillingDocument billingDocument = BillingDocumentAPI.get(BILLING_DOCUMENT_ID);
 ```java
 String BILLING_DOCUMENT_ID = "billing_document_id8";
 
-BillingDocument billingDocument = billingDocumentAPI.get(BILLING_DOCUMENT_ID);
+BillingDocument billingDocument = zuoraClient.billingDocuments().get(BILLING_DOCUMENT_ID);
+```
+
+# Update Billing Document
+
+```java
+BillingDocument billingDocument = zuoraClient.billingDocuments().update();
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+
+
+## Response Type
+
+[`BillingDocument`](/doc/models/billing-document.md)
+
+
+## Example 
+
+```java
+BillingDocument billingDocument = zuoraClient.billingDocuments().get({id});
+billingDocument.setDocumentDate({date})
+billingDocument.update();
 ```
 
 # Stream Billing Documents
@@ -67,6 +124,18 @@ Stream[`<BillingDocument>`](/doc/models/billing-document.md)
 ```java
 Stream<BillingDocument> billingDocuments = zuoraClient.billingDocuments().stream();
 ```
+
+# Get Billing Documents By Account
+
+# Post Invoice
+
+# Post Credit Memo
+
+# Post Debit Memo
+
+# Write Off Invoice
+
+# Apply Credit Memo
 
 # Pay Billing Document
 
@@ -98,5 +167,5 @@ PaymentCreateRequest paymentCreateRequest = PaymentCreateRequest.builder()
         .external(true)
         .build();
 
-Payment payment = billingDocumentAPI.pay(number, paymentCreateRequest);
+Payment payment = zuoraClient.billingDocuments().pay(number, paymentCreateRequest);
 ```
