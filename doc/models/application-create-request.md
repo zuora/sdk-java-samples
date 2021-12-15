@@ -1,6 +1,6 @@
 # Application Create Request
 
-Describes a request to apply a credit memo to an invoice or debit memo using [Apply Credit Memo](/doc/billing-document-api.md#apply).
+Describes a request to apply a credit memo to an invoice or debit memo using [Apply Credit Memo](/doc/billing-document-api.md#apply-credit-memo).
 
 ## Fields
 
