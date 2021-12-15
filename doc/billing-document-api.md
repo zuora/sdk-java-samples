@@ -238,7 +238,13 @@ String creditMemoId = zuoraClient.billingDocuments().writeOff({id}, {writeOffReq
 ## Example 
 
 ```java
-String creditMemoId = zuoraClient.billingDocuments().writeOff({id}, {writeOffRequest});
+InvoiceWriteOffRequest invoiceWriteOffRequest = InvoiceWriteOffRequest.builder()
+        .comment("")
+        .("")
+        .reasonCode("7368")
+        .build();
+
+String creditMemoId = zuoraClient.billingDocuments().writeOff(invoiceId, invoiceWriteOffRequest);
 ```
 
 
