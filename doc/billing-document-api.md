@@ -220,21 +220,25 @@ BillingDocument debitMemo = zuoraClient.billingDocuments().post({debitMemoId});
 # Write Off Invoice
 
 ```java
+String creditMemoId = zuoraClient.billingDocuments().writeOff({id}, {writeOffRequest});
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
+| `id` | `String` | Required | The unique identifier of an invoice billing document. |
+| `writeOffRequest` | [`WriteOffRequest`](/doc/models/write-off-request.md) | Required | Invoice write off request. |
 
 
 ## Response Type
 
-
+`String`
 
 ## Example 
 
 ```java
+String creditMemoId = zuoraClient.billingDocuments().writeOff({id}, {writeOffRequest});
 ```
 
 
@@ -250,7 +254,6 @@ BillingDocument debitMemo = zuoraClient.billingDocuments().post({debitMemoId});
 
 
 ## Response Type
-
 
 
 ## Example 
