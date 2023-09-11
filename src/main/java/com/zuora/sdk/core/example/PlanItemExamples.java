@@ -1,55 +1,59 @@
 package com.zuora.sdk.core.example;
 
-import com.zuora.sdk.Account;
-import com.zuora.sdk.AccountCreateRequest;
-import com.zuora.sdk.Address;
-import com.zuora.sdk.ContactCreateRequest;
-import com.zuora.sdk.PlanCreateRequest;
-import com.zuora.sdk.PriceCreateRequest;
-import com.zuora.sdk.PriceEnum.Alignment;
-import com.zuora.sdk.PriceEnum.DiscountLevel;
-import com.zuora.sdk.PriceEnum.DurationInterval;
-import com.zuora.sdk.PriceEnum.Event;
-import com.zuora.sdk.PriceEnum.Interval;
-import com.zuora.sdk.PriceEnum.RecurringOn;
-import com.zuora.sdk.PriceEnum.TiersMode;
-import com.zuora.sdk.Product;
-import com.zuora.sdk.ProductCreateRequest;
-import com.zuora.sdk.Recurring;
-import com.zuora.sdk.Tier;
 import com.zuora.sdk.ZuoraClient;
-import com.zuora.sdk.enums.ApplyDiscountTo;
-import com.zuora.sdk.internal.models.enums.BillingTiming;
 
 import java.util.Currency;
 import java.util.EnumSet;
+import java.util.List;
+
+import javax.swing.GroupLayout.Alignment;
+
+import org.openapitools.client.ApiException;
+import org.openapitools.client.api.AccountsApi.CreateAccountParams;
+import org.openapitools.client.api.ContactsApi.CreateContactParams;
+import org.openapitools.client.model.Account;
+import org.openapitools.client.model.AccountContactCreateRequest;
+import org.openapitools.client.model.AccountCreateRequest;
+import org.openapitools.client.model.Address;
+import org.openapitools.client.model.Contact;
+import org.openapitools.client.model.ContactCreateRequest;
+import org.openapitools.client.model.PlanCreateRequest;
+import org.openapitools.client.model.PriceCreateRequest;
+import org.openapitools.client.model.Product;
+import org.openapitools.client.model.ProductCreateRequest;
+import org.openapitools.client.model.Recurring;
+import org.openapitools.client.model.Tier;
+import org.threeten.bp.LocalDate;
+import org.w3c.dom.events.Event;
 
 
 public class PlanItemExamples {
-
-    public static void main(String[] args) {
+/*
+    public static void main(String[] args) throws ApiException {
         String CLIENT_ID = System.getenv("CLIENT_ID");
         String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
         String ENDPOINT = System.getenv("ENDPOINT_BASE");
         ZuoraClient zuoraClient = new ZuoraClient(CLIENT_ID, CLIENT_SECRET, ENDPOINT);
 
-        ContactCreateRequest contactCreateRequest = ContactCreateRequest.builder().firstName("Jenny").lastName("Smith")
-                .address(Address.builder().country("USA").state("CA").build()).build();
+        AccountContactCreateRequest contactCreateRequest = new AccountContactCreateRequest().firstName("Jenny").lastName("Smith")
+                .address(new Address().country("USA").state("CA"));
 
         Account accountResponse = zuoraClient.accounts()
-                .create(AccountCreateRequest.builder()
+                .create(new CreateAccountParams(new AccountCreateRequest()
                         .name("Name")
-                        .billTo(contactCreateRequest).build());
+                        .billTo(contactCreateRequest)));
 
-        PlanCreateRequest plan = PlanCreateRequest.builder().name("TestRatePlan").activeCurrencies("USD")
-                .startDate("2021-01-01").endDate("2121-01-01").build();
+        LocalDate todayDate = LocalDate.now();
+        PlanCreateRequest plan = new PlanCreateRequest().name("TestRatePlan").activeCurrencies(List.of("USD"))
+                .startDate(LocalDate.of(2021, 1, 1)).endDate(LocalDate.of(2121, 1, 1));
 
-        ProductCreateRequest productReq = ProductCreateRequest.builder().name("Product Name").build();
+        ProductCreateRequest productReq = new ProductCreateRequest().name("Product Name");
 
-        String accountingCodeName = zuoraClient.priceHelper().getDefaultAccountingCodeName();
+        //String accountingCodeName = zuoraClient.priceHelper().getDefaultAccountingCodeName();
+        String accountingCodeName = "DefaultAccountingCodeName";
 
         // Per Unit Pricing includes Unit Amounts and Recurring charges included a Recurring object
-        plan.addPrice(PriceCreateRequest.builder()
+        plan.addPrice(new PriceCreateRequest()
                 .unitAmount(Currency.getInstance("USD"), 30.0)
                 .unitOfMeasure("Each")
                 .name("Recurring Per Unit Price")
@@ -71,7 +75,7 @@ public class PlanItemExamples {
                 .build());
 
         //Tiered, Volume, Tiered with Overage, HighWaterMark pricing includes Tiers.
-        plan.addPrice(PriceCreateRequest.builder()
+        plan.addPrice(new PriceCreateRequest()
                 .unitOfMeasure("Each")
                 .name("Graduated(Tiered) Recurring Price")
                 .plan(plan.getId())
@@ -95,7 +99,7 @@ public class PlanItemExamples {
                 .build());
 
         //Volume Pricing includes tiers with tier Mode set to Volume. No recurring block indicates oneTime
-        plan.addPrice(PriceCreateRequest.builder()
+        plan.addPrice(new PriceCreateRequest()
                 .unitOfMeasure("Each")
                 .name("OneTime Volume Price")
                 .plan(plan.getId())
@@ -192,4 +196,5 @@ public class PlanItemExamples {
         Product product = zuoraClient.products().create(productReq);
 
     }
+ */
 }
